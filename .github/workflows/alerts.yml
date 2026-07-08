@@ -1,0 +1,107 @@
+name: SafeGuide drug alerts
+
+# Runs the VPTS drug-notification scraper in GitHub's cloud (independent of any
+# local machine) and deploys alerts.json to IONOS only when it changes.
+#
+# Requires ONE repository secret:
+#   SFTP_KEY  — the dedicated CI SSH *private* key (ed25519). Its public half is
+#               registered under IONOS → SSH access for user a2629167.
+#
+# The scraper is stdlib-only Python + the `pdftotext` CLI (poppler-utils).
+# See alerts/fetch_notifications.py and alerts/run.sh.
+
+on:
+  schedule:
+    # VPTS posts irregularly; check twice daily. Times are UTC.
+    # 22:15 UTC ≈ 08:15/09:15 Melbourne, 10:15 UTC ≈ 20:15/21:15 Melbourne.
+    - cron: "15 22 * * *"
+    - cron: "15 10 * * *"
+  workflow_dispatch: {}   # allow manual "Run workflow" from the Actions tab
+
+concurrency:
+  group: safeguide-alerts
+  cancel-in-progress: false
+
+permissions:
+  contents: write   # to commit the refreshed alerts.json back to the repo
+
+env:
+  SFTP_HOST: access-5020258978.webspace-host.com
+  SFTP_USER: a2629167
+  SFTP_PORT: "22"
+  REMOTE: /app/harm-reduction/alerts/alerts.json
+  LOCAL: staging-site/alerts/alerts.json
+  PUBLIC_URL: https://app.veaea.org/harm-reduction/alerts/alerts.json
+
+jobs:
+  scrape-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install tools (poppler-utils, lftp)
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq poppler-utils lftp
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      # Persist the PDF text cache between runs so we don't re-download every PDF.
+      - name: Restore PDF cache
+        uses: actions/cache@v4
+        with:
+          path: alerts/.state
+          key: vpts-pdf-cache
+
+      - name: Run scraper
+        run: python3 alerts/fetch_notifications.py
+
+      - name: Detect change
+        id: diff
+        run: |
+          if git diff --quiet -- "$LOCAL"; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "No change in $LOCAL"
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+            echo "$LOCAL changed:"
+            git --no-pager diff --stat -- "$LOCAL"
+          fi
+
+      - name: Deploy to IONOS
+        if: steps.diff.outputs.changed == 'true'
+        run: |
+          umask 077
+          mkdir -p ~/.ssh
+          printf '%s\n' "${{ secrets.SFTP_KEY }}" > ~/.ssh/ci_key
+          chmod 600 ~/.ssh/ci_key
+          # OPERATIONS.md §2.1 — IONOS uploads land 0700 → 403; chmod 644 after put.
+          lftp -c "
+            set sftp:auto-confirm yes;
+            set sftp:connect-program 'ssh -a -x -i ~/.ssh/ci_key -o StrictHostKeyChecking=accept-new -o BatchMode=yes';
+            open -u \"$SFTP_USER,\" sftp://$SFTP_HOST:$SFTP_PORT;
+            put \"$LOCAL\" -o \"$REMOTE\";
+            chmod 644 \"$REMOTE\";
+            bye
+          "
+          rm -f ~/.ssh/ci_key
+
+      - name: Verify live URL
+        if: steps.diff.outputs.changed == 'true'
+        run: |
+          code=$(curl -s -o /dev/null -w "%{http_code}" -A "Mozilla/5.0" --max-time 20 \
+                   "${PUBLIC_URL}?bust=${GITHUB_RUN_ID}")
+          echo "$PUBLIC_URL → HTTP $code"
+          [ "$code" = "200" ] || { echo "::error::live verify failed (expected 200)"; exit 1; }
+
+      - name: Commit refreshed alerts.json (audit trail)
+        if: steps.diff.outputs.changed == 'true'
+        run: |
+          git config user.name  "safeguide-alerts-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add "$LOCAL"
+          git commit -m "chore(alerts): refresh VPTS drug notifications [skip ci]"
+          git push
