@@ -34,9 +34,14 @@ env:
   SFTP_HOST: access-5020258978.webspace-host.com
   SFTP_USER: a2629167
   SFTP_PORT: "22"
-  REMOTE: /app/harm-reduction/alerts/alerts-multi.json
+  # DEV ONLY. The multi-region feed is still in development and must NOT touch
+  # production (/app/harm-reduction) — prod serves the public build, whose alerts
+  # page reads the legacy alerts/alerts.json maintained by alerts.yml. Pointing
+  # this at prod would silently re-create alerts-multi.json there on every run.
+  # Promote to prod only when the multi-region build itself ships.
+  REMOTE: /app/harm-reduction-dev/alerts/alerts-multi.json
   LOCAL: staging-site/alerts/alerts-multi.json
-  PUBLIC_URL: https://app.veaea.org/harm-reduction/alerts/alerts-multi.json
+  PUBLIC_URL: https://app.veaea.org/harm-reduction-dev/alerts/alerts-multi.json
 
 jobs:
   fetch-and-deploy:
