@@ -70,13 +70,19 @@ jobs:
       - name: Detect change
         id: diff
         run: |
-          if git diff --quiet -- "$LOCAL"; then
-            echo "changed=false" >> "$GITHUB_OUTPUT"
-            echo "No change in $LOCAL"
-          else
+          # NOTE: use `git status --porcelain`, NOT `git diff`. `git diff` only sees
+          # TRACKED files — if the feed file is missing (first run, or it was removed)
+          # the fetcher recreates it as UNTRACKED, `git diff` reports no change, and the
+          # deploy silently never fires. Proven the hard way: a run went green having
+          # done nothing while prod stayed frozen. --porcelain catches both '??' (new)
+          # and ' M' (modified).
+          if [ -n "$(git status --porcelain -- "$LOCAL")" ]; then
             echo "changed=true" >> "$GITHUB_OUTPUT"
             echo "$LOCAL changed:"
-            git --no-pager diff --stat -- "$LOCAL"
+            git status --porcelain -- "$LOCAL"
+          else
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "No change in $LOCAL"
           fi
 
       - name: Deploy to IONOS
