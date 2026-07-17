@@ -1,0 +1,115 @@
+name: SafeGuide multi-region drug alerts
+
+# Fetches the multi-region AU drug-alert feed (The Know national aggregator, plus
+# any other enabled sources) via alerts/fetch_all_sources.py and deploys
+# alerts-multi.json to IONOS only when the alert content changes.
+#
+# This is SEPARATE from alerts.yml (the single-region VPTS pipeline that writes
+# alerts/alerts.json). They target DIFFERENT files and never clobber each other:
+#   alerts.yml        -> alerts/alerts.json        (legacy single-region, VPTS)
+#   alerts-multi.yml  -> alerts/alerts-multi.json  (new multi-region, The Know)
+#
+# Reuses the SAME repository secret as alerts.yml:
+#   SFTP_KEY  — the dedicated CI SSH *private* key (ed25519), public half
+#               registered under IONOS -> SSH access for user a2629167.
+#
+# The Know parser is Python-stdlib-only (urllib + json). poppler-utils / requests
+# are installed defensively so re-enabling the VIC/ACT PDF parsers later Just Works.
+
+on:
+  schedule:
+    # The Know updates through the day; once daily is plenty. 20:00 UTC ≈ 06:00/07:00
+    # Melbourne. Offset from alerts.yml (10:15 & 22:15 UTC) to avoid overlapping SFTP.
+    - cron: "0 20 * * *"
+  workflow_dispatch: {}   # allow manual "Run workflow" from the Actions tab
+
+concurrency:
+  group: safeguide-alerts-multi
+  cancel-in-progress: false
+
+permissions:
+  contents: write   # to commit the refreshed alerts-multi.json back to the repo
+
+env:
+  SFTP_HOST: access-5020258978.webspace-host.com
+  SFTP_USER: a2629167
+  SFTP_PORT: "22"
+  REMOTE: /app/harm-reduction/alerts/alerts-multi.json
+  LOCAL: staging-site/alerts/alerts-multi.json
+  PUBLIC_URL: https://app.veaea.org/harm-reduction/alerts/alerts-multi.json
+
+jobs:
+  fetch-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install tools (poppler-utils, lftp)
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq poppler-utils lftp
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install Python deps (defensive — for future PDF parsers)
+        run: pip install --quiet requests
+
+      # Persist the PDF text cache between runs (used only if PDF parsers are enabled).
+      - name: Restore PDF cache
+        uses: actions/cache@v4
+        with:
+          path: alerts/.state
+          key: safeguide-multi-pdf-cache
+
+      - name: Run unified fetcher
+        run: python3 alerts/fetch_all_sources.py
+
+      - name: Detect change
+        id: diff
+        run: |
+          if git diff --quiet -- "$LOCAL"; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "No change in $LOCAL"
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+            echo "$LOCAL changed:"
+            git --no-pager diff --stat -- "$LOCAL"
+          fi
+
+      - name: Deploy to IONOS
+        if: steps.diff.outputs.changed == 'true'
+        run: |
+          umask 077
+          mkdir -p ~/.ssh
+          printf '%s\n' "${{ secrets.SFTP_KEY }}" > ~/.ssh/ci_key
+          chmod 600 ~/.ssh/ci_key
+          # OPERATIONS.md §2.1 — IONOS uploads land 0700 → 403; chmod 644 after put.
+          lftp -c "
+            set sftp:auto-confirm yes;
+            set sftp:connect-program 'ssh -a -x -i ~/.ssh/ci_key -o StrictHostKeyChecking=accept-new -o BatchMode=yes';
+            open -u \"$SFTP_USER,\" sftp://$SFTP_HOST:$SFTP_PORT;
+            put \"$LOCAL\" -o \"$REMOTE\";
+            chmod 644 \"$REMOTE\";
+            bye
+          "
+          rm -f ~/.ssh/ci_key
+
+      - name: Verify live URL
+        if: steps.diff.outputs.changed == 'true'
+        run: |
+          code=$(curl -s -o /dev/null -w "%{http_code}" -A "Mozilla/5.0" --max-time 20 \
+                   "${PUBLIC_URL}?bust=${GITHUB_RUN_ID}")
+          echo "$PUBLIC_URL → HTTP $code"
+          [ "$code" = "200" ] || { echo "::error::live verify failed (expected 200)"; exit 1; }
+
+      - name: Commit refreshed alerts-multi.json (audit trail)
+        if: steps.diff.outputs.changed == 'true'
+        run: |
+          git config user.name  "safeguide-alerts-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add "$LOCAL"
+          git commit -m "chore(alerts): refresh multi-region drug alerts [skip ci]"
+          git push

@@ -1,0 +1,247 @@
+{
+  "meta": {
+    "version": "3.0",
+    "description": "Unified SafeGuide alert sources. All AU sources below were verified to resolve on 2026-07-17. The v2 config contained fabricated Twitter handles/orgs (@QldNexus, @SADHRC, @TasHarmRed, 'Drug Harm Reduction Collective', 'ACT Harm Reduction Alliance', 'aodservices.wa.gov.au') — ALL confirmed non-existent and removed. Ground truth: 4 jurisdictions have real standalone alert feeds (VIC, NSW, ACT, NT); QLD/SA/WA/TAS have NO verifiable standalone public drug-alert URL and are covered by the national aggregator 'The Know'.",
+    "last_updated": "2026-07-17"
+  },
+  "sources": {
+    "australia": {
+      "the_know": {
+        "enabled": true,
+        "priority": 1,
+        "name": "The Know (National — QLD Health / NCCRED)",
+        "country": "AU",
+        "state_code": "AU",
+        "region": "Australia (national)",
+        "url": "https://theknow.org.au/",
+        "community_url": "https://community.theknow.org.au/",
+        "social": { "instagram": "@theknow_au" },
+        "type": "web_aggregator",
+        "parser": "the_know_parser",
+        "parser_status": "TODO",
+        "schedule": "daily",
+        "description": "National drug-alert aggregator run by Queensland Health (Metro North MH-ADS) + NCCRED. Clean WordPress REST API (wp/v2/alerts_warnings) with per-alert drug/location/severity taxonomies. Set as the national BASELINE covering ALL states: it is currently the only working source of NSW alerts (NSW web-scraper still TODO) and the only channel for QLD/SA/WA/TAS when they issue. VPTS (VIC) and CanTEST (ACT) remain enabled as enrichment — they add pdf_url + fuller PDF summaries for their states. Overlap is handled by fetcher dedup; refine dedup key to (state_code, date_iso, primary substance) if VIC/ACT show duplicates.",
+        "covers_state_codes": []
+      },
+      "victoria": {
+        "enabled": false,
+        "_enabled_note": "Disabled in the UNIFIED feed because The Know already aggregates VIC with cleaner structured data — enabling both double-counts VIC (title-based dedup can't merge differently-worded versions of the same alert). Parser is tested/working and kept for future pdf_url enrichment (match VPTS PDFs onto The Know's VIC entries by date+substance). NOTE: the standalone VPTS GitHub Actions pipeline (infoveaea-arch/safeguide-alerts) is UNTOUCHED and still produces the production single-region alerts.json the current app reads.",
+        "priority": 1,
+        "name": "Victorian Pill Testing Service (VPTS)",
+        "country": "AU",
+        "state_code": "VIC",
+        "region": "Victoria",
+        "url": "https://www.vicpilltesting.org.au/drug-notifications",
+        "type": "html_pdf",
+        "parser": "vpts_parser",
+        "parser_status": "WORKING (adapter over fetch_notifications.py; tested live 2026-07-17)",
+        "schedule": "daily",
+        "note": "Runs as its own GitHub Actions pipeline (infoveaea-arch/safeguide-alerts, 2x/day). NOT launchd. The unified fetcher is additive and must not clobber that.",
+        "description": "Daily drug notifications from Victoria's official pill-testing service."
+      },
+      "nsw": {
+        "enabled": true,
+        "priority": 1,
+        "name": "NSW Health — Public Drug Warnings",
+        "country": "AU",
+        "state_code": "NSW",
+        "region": "New South Wales",
+        "url": "https://www.health.nsw.gov.au/aod/public-drug-alerts/Pages/default.aspx",
+        "secondary_urls": [
+          "https://nuaa.org.au/drug-alerts",
+          "https://www.dancewizensw.org.au/drug-alerts"
+        ],
+        "type": "web_scrape",
+        "parser": "web_scraper",
+        "parser_status": "TODO",
+        "schedule": "daily",
+        "description": "NSW Health official public drug warnings (dated entries, each links to a detail page). NUAA and DanceWize NSW repost these as community secondary channels."
+      },
+      "act": {
+        "enabled": false,
+        "_enabled_note": "Disabled in the UNIFIED feed for the same reason as VIC — The Know aggregates CanTEST/ACT with cleaner data; enabling both double-counts ACT. Parser tested/working, kept for future pdf_url enrichment.",
+        "priority": 1,
+        "name": "CanTEST Health & Drug Checking Service",
+        "country": "AU",
+        "state_code": "ACT",
+        "region": "Australian Capital Territory",
+        "url": "https://cantest.com.au/drug-notifications/",
+        "results_url": "https://cantest.com.au/results/",
+        "social": { "instagram": "@cantestcbr", "x": "https://x.com/cantestcbr" },
+        "type": "html_pdf",
+        "parser": "cantest_parser",
+        "parser_status": "TODO (PDF notifications — structurally similar to VPTS; can likely reuse the vpts adapter shape)",
+        "schedule": "daily",
+        "description": "ACT fixed-site drug-checking notifications (PDFs on web, through May 2026), operated by Directions Health Services. Strongest state-level source after VIC."
+      },
+      "nt": {
+        "enabled": true,
+        "priority": 2,
+        "name": "NT Health — Health Alerts",
+        "country": "AU",
+        "state_code": "NT",
+        "region": "Northern Territory",
+        "url": "https://health.nt.gov.au/health-alerts",
+        "type": "web_scrape",
+        "parser": "web_scraper",
+        "parser_status": "TODO",
+        "schedule": "weekly",
+        "description": "NT Health alerts hub — issues public drug warnings (e.g. nitazenes). Web pages under the health-alerts section."
+      },
+      "_qld_sa_wa_tas": {
+        "enabled": false,
+        "note": "QLD, SA, WA, TAS have NO verified standalone public drug-alert URL (research 2026-07-17). QLD banned pill testing Sept 2025; CheQpoint sites closed. SA's SADEWS 'High Alert' URL fails DNS. WA's MHC Early Warning System publishes no public feed. TAS has no dedicated illicit-drug alert page. ALL FOUR are covered by 'the_know' above — do NOT invent per-state feeds for them."
+      }
+    },
+    "international": {
+      "wedinos": {
+        "enabled": true,
+        "priority": 1,
+        "name": "WEDINOS (Welsh Emerging Drugs & Identification)",
+        "country": "UK",
+        "region": "Wales",
+        "url": "https://wedinos.wales/publications/",
+        "type": "pdf",
+        "parser": "wedinos_parser",
+        "schedule": "quarterly",
+        "schedule_time": "1st of Mar, Jun, Sep, Dec @ 10:00 UTC",
+        "description": "Quarterly Philtre reports on drug composition and trends in Wales"
+      },
+      "radar": {
+        "enabled": true,
+        "priority": 1,
+        "name": "RADAR (Rapid Action Drug Alerts & Response)",
+        "country": "UK",
+        "region": "Scotland",
+        "url": "https://publichealthscotland.scot/publications/rapid-action-drug-alerts-and-response-radar-quarterly-report/",
+        "type": "pdf_web",
+        "parser": "radar_parser",
+        "schedule": "monthly",
+        "schedule_time": "1st of month @ 10:00 UTC",
+        "description": "Monthly harm indicators and drug alerts from Public Health Scotland"
+      },
+      "dancesafe": {
+        "enabled": true,
+        "priority": 2,
+        "name": "DanceSafe",
+        "country": "US",
+        "region": "North America",
+        "url": "https://twitter.com/DanceSafe_org",
+        "type": "twitter",
+        "parser": "twitter_parser",
+        "schedule": "real-time",
+        "schedule_time": "Every 2 hours",
+        "description": "Real-time drug alerts and testing updates from DanceSafe"
+      },
+      "emcdda": {
+        "enabled": false,
+        "priority": 2,
+        "name": "EMCDDA (European Monitoring Centre)",
+        "country": "EU",
+        "region": "European Union",
+        "url": "https://www.emcdda.europa.eu/",
+        "type": "api_web",
+        "parser": "emcdda_parser",
+        "schedule": "quarterly",
+        "description": "EU-wide drug monitoring and early warning system (not yet integrated)"
+      }
+    }
+  },
+  "parsers": {
+    "vpts_parser": {
+      "module": "parsers/vpts_parser.py",
+      "description": "Extract PDF + HTML from VicPillTesting drug-notifications page",
+      "dependencies": ["pdftotext", "requests", "re"]
+    },
+    "wedinos_parser": {
+      "module": "parsers/wedinos_parser.py",
+      "description": "Parse WEDINOS Philtre quarterly PDF reports",
+      "dependencies": ["pdftotext", "PyPDF2", "re"]
+    },
+    "radar_parser": {
+      "module": "parsers/radar_parser.py",
+      "description": "Parse RADAR monthly PDF and web reports",
+      "dependencies": ["pdftotext", "requests"]
+    },
+    "twitter_parser": {
+      "module": "parsers/twitter_parser.py",
+      "description": "Monitor Twitter/X accounts for drug alerts",
+      "dependencies": ["tweepy", "requests"]
+    },
+    "email_parser": {
+      "module": "parsers/email_parser.py",
+      "description": "Parse email subscriptions from harm reduction organizations",
+      "dependencies": ["imaplib", "email"]
+    },
+    "web_scraper": {
+      "module": "parsers/web_scraper.py",
+      "description": "Generic web page scraper for health bulletins (NSW Health, NT Health). TODO",
+      "dependencies": ["requests", "beautifulsoup4"]
+    },
+    "cantest_parser": {
+      "module": "parsers/cantest_parser.py",
+      "description": "CanTEST (ACT) PDF drug-notifications — reuses fetch_notifications machinery. WORKING (tested live 2026-07-17)",
+      "dependencies": ["pdftotext", "requests", "re"]
+    },
+    "the_know_parser": {
+      "module": "parsers/the_know_parser.py",
+      "description": "The Know national aggregator via WordPress REST API (wp/v2/alerts_warnings). No scraping. WORKING (tested live 2026-07-17)",
+      "dependencies": ["stdlib only (urllib, json)"]
+    }
+  },
+  "output": {
+    "file": "staging-site/alerts/alerts.json",
+    "schema": {
+      "alerts": [
+        {
+          "id": "string (unique UUID)",
+          "location": {
+            "region": "string",
+            "state_code": "string (VIC, NSW, WLS, etc.)",
+            "country": "string (AU, UK, US, etc.)",
+            "city": "string or null"
+          },
+          "date_iso": "ISO 8601 date",
+          "date_human": "Human-readable date",
+          "severity": "general|caution|urgent",
+          "title": "string",
+          "summary": "string",
+          "substances": [
+            {
+              "name": "string",
+              "type": "expected_only|adulterant|substitute",
+              "confidence": "confirmed|high|moderate|low",
+              "samples": "integer (if available)"
+            }
+          ],
+          "source": {
+            "name": "string",
+            "url": "string",
+            "type": "institutional|community|social_media"
+          },
+          "pdf_url": "string or null",
+          "scope": "local|national|international",
+          "affected_services": "[list of venue types]",
+          "notes": "string or null",
+          "last_updated": "ISO 8601 timestamp"
+        }
+      ],
+      "metadata": {
+        "generated_at": "ISO 8601 timestamp",
+        "total_alerts": "integer",
+        "by_location": { "string": "integer" },
+        "by_severity": { "general|caution|urgent": "integer" },
+        "errors": "[list of parsing errors]"
+      }
+    }
+  },
+  "scheduling": {
+    "daily_jobs": ["the_know"],
+    "weekly_jobs": [],
+    "monthly_jobs": ["radar"],
+    "quarterly_jobs": ["wedinos"],
+    "realtime_jobs": ["dancesafe"],
+    "note": "The Know is the canonical multi-region AU feed (all states, clean taxonomy, deduped by nature). VIC/ACT dedicated parsers are disabled here to avoid double-counting what The Know aggregates (see their _enabled_note). The standalone VPTS GitHub Actions pipeline is separate and untouched. NSW web-scraper is deprioritised since The Know already carries NSW. NT will appear via The Know when NT issues alerts.",
+    "cron_expression": "0 9 * * * (daily the_know), 0 10 1 * * (monthly radar), 0 10 1 1,4,7,10 * (quarterly wedinos)"
+  }
+}
