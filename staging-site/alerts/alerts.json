@@ -1,9 +1,25 @@
 {
   "source": "https://www.vicpilltesting.org.au/drug-notifications",
   "source_name": "Victorian Pill Testing Service (VPTS)",
-  "generated_at": "2026-07-10T12:38:19+00:00",
-  "count": 26,
+  "generated_at": "2026-08-01T11:35:41+00:00",
+  "count": 28,
   "alerts": [
+    {
+      "date_iso": "2026-07-24",
+      "date_human": "24 July 2026",
+      "severity": "general",
+      "title": "FLUALPRAZOLAMMedetomidine",
+      "summary": "Medetomidine detected in more Xanax Bars expected to contain Flualprazolam Two new separate samples were recently submitted.",
+      "pdf_url": "https://www.vicpilltesting.org.au/s/24th-July-2026-Public-Notification-FLUALPRAZOLAMMedetomidine-update.pdf"
+    },
+    {
+      "date_iso": "2026-07-23",
+      "date_human": "23 July 2026",
+      "severity": "general",
+      "title": "General LSDDOI",
+      "summary": "DOI (2,5-dimethoxy-4-iodoamphetamine) detected in blotter expected to contain LSD.",
+      "pdf_url": "https://www.vicpilltesting.org.au/s/220726-General-Notification_LSDDOI.pdf"
+    },
     {
       "date_iso": "2026-07-10",
       "date_human": "10 July 2026",
