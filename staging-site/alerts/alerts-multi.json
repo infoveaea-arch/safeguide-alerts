@@ -42,7 +42,7 @@
         "drug-notification",
         "gen-drug-notifcation"
       ],
-      "last_updated": "2026-08-20T20:17:42+00:00"
+      "last_updated": "2026-08-21T20:14:33+00:00"
     },
     {
       "id": "tk-2406",
@@ -86,7 +86,7 @@
         "drug-notification",
         "gen-drug-notifcation"
       ],
-      "last_updated": "2026-08-20T20:17:42+00:00"
+      "last_updated": "2026-08-21T20:14:33+00:00"
     },
     {
       "id": "tk-2401",
@@ -135,7 +135,7 @@
         "community-notice",
         "red-community-notice"
       ],
-      "last_updated": "2026-08-20T20:17:42+00:00"
+      "last_updated": "2026-08-21T20:14:33+00:00"
     },
     {
       "id": "tk-2403",
@@ -179,7 +179,7 @@
         "drug-notification",
         "gen-drug-notifcation"
       ],
-      "last_updated": "2026-08-20T20:17:42+00:00"
+      "last_updated": "2026-08-21T20:14:33+00:00"
     },
     {
       "id": "tk-2393",
@@ -223,7 +223,7 @@
         "drug-notification",
         "gen-drug-notifcation"
       ],
-      "last_updated": "2026-08-20T20:17:42+00:00"
+      "last_updated": "2026-08-21T20:14:33+00:00"
     },
     {
       "id": "tk-2382",
@@ -276,45 +276,7 @@
       "alert_types": [
         "drug-advisory"
       ],
-      "last_updated": "2026-08-20T20:17:42+00:00"
-    },
-    {
-      "id": "tk-2367",
-      "location": {
-        "region": "Victoria",
-        "state_code": "VIC",
-        "country": "AU",
-        "city": null
-      },
-      "date_iso": "2026-06-23",
-      "date_human": "23 June 2026",
-      "severity": "caution",
-      "title": "Vape containing potent sedative \u2018etomidate\u2019 sold in Melbourne",
-      "summary": "Vape containing potent sedative \u2018etomidate\u2019 sold in Melbourne",
-      "substances": [
-        {
-          "name": "Depressants",
-          "type": "reported",
-          "confidence": "reported"
-        },
-        {
-          "name": "Etomidate",
-          "type": "reported",
-          "confidence": "reported"
-        }
-      ],
-      "source": {
-        "name": "The Know (via Victorian Department of Health)",
-        "url": "https://theknow.org.au/alerts_warnings/vape-containing-potent-sedative-etomidate-sold-in-melbourne/",
-        "type": "aggregator",
-        "original_url": "https://www.health.vic.gov.au/drug-alerts/vape-containing-potent-sedative-etomidate-sold-in-melbourne"
-      },
-      "pdf_url": null,
-      "scope": "local",
-      "alert_types": [
-        "drug-advisory"
-      ],
-      "last_updated": "2026-08-20T20:17:42+00:00"
+      "last_updated": "2026-08-21T20:14:33+00:00"
     },
     {
       "id": "tk-2370",
@@ -358,7 +320,45 @@
         "community-notice",
         "yellow-community-notice"
       ],
-      "last_updated": "2026-08-20T20:17:42+00:00"
+      "last_updated": "2026-08-21T20:14:33+00:00"
+    },
+    {
+      "id": "tk-2367",
+      "location": {
+        "region": "Victoria",
+        "state_code": "VIC",
+        "country": "AU",
+        "city": null
+      },
+      "date_iso": "2026-06-23",
+      "date_human": "23 June 2026",
+      "severity": "caution",
+      "title": "Vape containing potent sedative \u2018etomidate\u2019 sold in Melbourne",
+      "summary": "Vape containing potent sedative \u2018etomidate\u2019 sold in Melbourne",
+      "substances": [
+        {
+          "name": "Depressants",
+          "type": "reported",
+          "confidence": "reported"
+        },
+        {
+          "name": "Etomidate",
+          "type": "reported",
+          "confidence": "reported"
+        }
+      ],
+      "source": {
+        "name": "The Know (via Victorian Department of Health)",
+        "url": "https://theknow.org.au/alerts_warnings/vape-containing-potent-sedative-etomidate-sold-in-melbourne/",
+        "type": "aggregator",
+        "original_url": "https://www.health.vic.gov.au/drug-alerts/vape-containing-potent-sedative-etomidate-sold-in-melbourne"
+      },
+      "pdf_url": null,
+      "scope": "local",
+      "alert_types": [
+        "drug-advisory"
+      ],
+      "last_updated": "2026-08-21T20:14:33+00:00"
     },
     {
       "id": "tk-2356",
@@ -392,7 +392,7 @@
         "community-notice",
         "yellow-community-notice"
       ],
-      "last_updated": "2026-08-20T20:17:42+00:00"
+      "last_updated": "2026-08-21T20:14:33+00:00"
     },
     {
       "id": "tk-2349",
@@ -446,7 +446,7 @@
         "community-notice",
         "yellow-community-notice"
       ],
-      "last_updated": "2026-08-20T20:17:42+00:00"
+      "last_updated": "2026-08-21T20:14:33+00:00"
     },
     {
       "id": "tk-2346",
@@ -494,7 +494,7 @@
       "alert_types": [
         "drug-advisory"
       ],
-      "last_updated": "2026-08-20T20:17:42+00:00"
+      "last_updated": "2026-08-21T20:14:33+00:00"
     },
     {
       "id": "tk-2343",
@@ -538,7 +538,7 @@
         "drug-notification",
         "gen-drug-notifcation"
       ],
-      "last_updated": "2026-08-20T20:17:42+00:00"
+      "last_updated": "2026-08-21T20:14:33+00:00"
     },
     {
       "id": "tk-2338",
@@ -582,7 +582,7 @@
         "drug-notification",
         "gen-drug-notifcation"
       ],
-      "last_updated": "2026-08-20T20:17:42+00:00"
+      "last_updated": "2026-08-21T20:14:33+00:00"
     },
     {
       "id": "tk-2334",
@@ -621,7 +621,7 @@
         "drug-notification",
         "gen-drug-notifcation"
       ],
-      "last_updated": "2026-08-20T20:17:42+00:00"
+      "last_updated": "2026-08-21T20:14:33+00:00"
     },
     {
       "id": "tk-2328",
@@ -665,7 +665,7 @@
         "community-notice",
         "red-community-notice"
       ],
-      "last_updated": "2026-08-20T20:17:42+00:00"
+      "last_updated": "2026-08-21T20:14:33+00:00"
     },
     {
       "id": "tk-2320",
@@ -704,7 +704,7 @@
         "community-notice",
         "yellow-community-notice"
       ],
-      "last_updated": "2026-08-20T20:17:42+00:00"
+      "last_updated": "2026-08-21T20:14:33+00:00"
     },
     {
       "id": "tk-2307",
@@ -748,7 +748,7 @@
         "community-notice",
         "yellow-community-notice"
       ],
-      "last_updated": "2026-08-20T20:17:42+00:00"
+      "last_updated": "2026-08-21T20:14:33+00:00"
     },
     {
       "id": "tk-2302",
@@ -792,7 +792,7 @@
         "community-notice",
         "red-community-notice"
       ],
-      "last_updated": "2026-08-20T20:17:42+00:00"
+      "last_updated": "2026-08-21T20:14:33+00:00"
     },
     {
       "id": "tk-2299",
@@ -835,7 +835,7 @@
       "alert_types": [
         "public-drug-warning"
       ],
-      "last_updated": "2026-08-20T20:17:42+00:00"
+      "last_updated": "2026-08-21T20:14:33+00:00"
     },
     {
       "id": "tk-2290",
@@ -874,7 +874,7 @@
         "community-notice",
         "yellow-community-notice"
       ],
-      "last_updated": "2026-08-20T20:17:42+00:00"
+      "last_updated": "2026-08-21T20:14:33+00:00"
     },
     {
       "id": "tk-2287",
@@ -918,7 +918,7 @@
         "community-notice",
         "yellow-community-notice"
       ],
-      "last_updated": "2026-08-20T20:17:42+00:00"
+      "last_updated": "2026-08-21T20:14:33+00:00"
     },
     {
       "id": "tk-2276",
@@ -967,7 +967,7 @@
         "community-notice",
         "yellow-community-notice"
       ],
-      "last_updated": "2026-08-20T20:17:42+00:00"
+      "last_updated": "2026-08-21T20:14:33+00:00"
     },
     {
       "id": "tk-2269",
@@ -1016,7 +1016,7 @@
         "drug-notification",
         "gen-drug-notifcation"
       ],
-      "last_updated": "2026-08-20T20:17:42+00:00"
+      "last_updated": "2026-08-21T20:14:33+00:00"
     },
     {
       "id": "tk-2265",
@@ -1055,66 +1055,7 @@
         "drug-notification",
         "gen-drug-notifcation"
       ],
-      "last_updated": "2026-08-20T20:17:42+00:00"
-    },
-    {
-      "id": "tk-2242",
-      "location": {
-        "region": "Australian Capital Territory",
-        "state_code": "ACT",
-        "country": "AU",
-        "city": null
-      },
-      "date_iso": "2026-03-04",
-      "date_human": "4 March 2026",
-      "severity": "caution",
-      "title": "2\u2019fluoro-2-oxo-PCE & N,N-dimethylpentylone sold as ketamine",
-      "summary": "2\u2019fluoro-2-oxo-PCE & N,N-dimethylpentylone sold as ketamine",
-      "substances": [
-        {
-          "name": "Cathinones",
-          "type": "reported",
-          "confidence": "reported"
-        },
-        {
-          "name": "Ketamine",
-          "type": "reported",
-          "confidence": "reported"
-        },
-        {
-          "name": "Ketamine Mdma",
-          "type": "reported",
-          "confidence": "reported"
-        },
-        {
-          "name": "K Analog",
-          "type": "reported",
-          "confidence": "reported"
-        },
-        {
-          "name": "Mdma Ecstasy",
-          "type": "reported",
-          "confidence": "reported"
-        },
-        {
-          "name": "Stimulants",
-          "type": "reported",
-          "confidence": "reported"
-        }
-      ],
-      "source": {
-        "name": "The Know (via Pill Testing Austraila)",
-        "url": "https://theknow.org.au/alerts_warnings/2fluoro-2-oxo-pce-nn-dimethylpentylone-sold-as-ketamine/",
-        "type": "aggregator",
-        "original_url": "https://www.instagram.com/p/DVcZ6owEpfq/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
-      },
-      "pdf_url": null,
-      "scope": "local",
-      "alert_types": [
-        "drug-alert",
-        "yellow-drug-alert"
-      ],
-      "last_updated": "2026-08-20T20:17:42+00:00"
+      "last_updated": "2026-08-21T20:14:33+00:00"
     },
     {
       "id": "tk-2245",
@@ -1173,7 +1114,7 @@
         "drug-alert",
         "yellow-drug-alert"
       ],
-      "last_updated": "2026-08-20T20:17:42+00:00"
+      "last_updated": "2026-08-21T20:14:33+00:00"
     },
     {
       "id": "tk-2249",
@@ -1222,7 +1163,7 @@
         "drug-alert",
         "yellow-drug-alert"
       ],
-      "last_updated": "2026-08-20T20:17:42+00:00"
+      "last_updated": "2026-08-21T20:14:33+00:00"
     },
     {
       "id": "tk-2254",
@@ -1261,7 +1202,66 @@
         "drug-alert",
         "yellow-drug-alert"
       ],
-      "last_updated": "2026-08-20T20:17:42+00:00"
+      "last_updated": "2026-08-21T20:14:33+00:00"
+    },
+    {
+      "id": "tk-2242",
+      "location": {
+        "region": "Australian Capital Territory",
+        "state_code": "ACT",
+        "country": "AU",
+        "city": null
+      },
+      "date_iso": "2026-03-04",
+      "date_human": "4 March 2026",
+      "severity": "caution",
+      "title": "2\u2019fluoro-2-oxo-PCE & N,N-dimethylpentylone sold as ketamine",
+      "summary": "2\u2019fluoro-2-oxo-PCE & N,N-dimethylpentylone sold as ketamine",
+      "substances": [
+        {
+          "name": "Cathinones",
+          "type": "reported",
+          "confidence": "reported"
+        },
+        {
+          "name": "Ketamine",
+          "type": "reported",
+          "confidence": "reported"
+        },
+        {
+          "name": "Ketamine Mdma",
+          "type": "reported",
+          "confidence": "reported"
+        },
+        {
+          "name": "K Analog",
+          "type": "reported",
+          "confidence": "reported"
+        },
+        {
+          "name": "Mdma Ecstasy",
+          "type": "reported",
+          "confidence": "reported"
+        },
+        {
+          "name": "Stimulants",
+          "type": "reported",
+          "confidence": "reported"
+        }
+      ],
+      "source": {
+        "name": "The Know (via Pill Testing Austraila)",
+        "url": "https://theknow.org.au/alerts_warnings/2fluoro-2-oxo-pce-nn-dimethylpentylone-sold-as-ketamine/",
+        "type": "aggregator",
+        "original_url": "https://www.instagram.com/p/DVcZ6owEpfq/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+      },
+      "pdf_url": null,
+      "scope": "local",
+      "alert_types": [
+        "drug-alert",
+        "yellow-drug-alert"
+      ],
+      "last_updated": "2026-08-21T20:14:33+00:00"
     },
     {
       "id": "tk-2236",
@@ -1310,7 +1310,7 @@
         "drug-alert",
         "red-drug-alert"
       ],
-      "last_updated": "2026-08-20T20:17:42+00:00"
+      "last_updated": "2026-08-21T20:14:33+00:00"
     },
     {
       "id": "tk-2229",
@@ -1359,7 +1359,7 @@
         "community-notice",
         "yellow-community-notice"
       ],
-      "last_updated": "2026-08-20T20:17:42+00:00"
+      "last_updated": "2026-08-21T20:14:33+00:00"
     },
     {
       "id": "tk-2223",
@@ -1403,7 +1403,7 @@
         "drug-notification",
         "gen-drug-notifcation"
       ],
-      "last_updated": "2026-08-20T20:17:42+00:00"
+      "last_updated": "2026-08-21T20:14:33+00:00"
     },
     {
       "id": "tk-2217",
@@ -1436,7 +1436,7 @@
       "alert_types": [
         "drug-alert"
       ],
-      "last_updated": "2026-08-20T20:17:42+00:00"
+      "last_updated": "2026-08-21T20:14:33+00:00"
     },
     {
       "id": "tk-2212",
@@ -1475,7 +1475,7 @@
         "drug-notification",
         "gen-drug-notifcation"
       ],
-      "last_updated": "2026-08-20T20:17:42+00:00"
+      "last_updated": "2026-08-21T20:14:33+00:00"
     },
     {
       "id": "tk-2200",
@@ -1519,7 +1519,7 @@
         "drug-notification",
         "gen-drug-notifcation"
       ],
-      "last_updated": "2026-08-20T20:17:42+00:00"
+      "last_updated": "2026-08-21T20:14:33+00:00"
     },
     {
       "id": "tk-2193",
@@ -1568,7 +1568,7 @@
         "drug-notification",
         "gen-drug-notifcation"
       ],
-      "last_updated": "2026-08-20T20:17:42+00:00"
+      "last_updated": "2026-08-21T20:14:33+00:00"
     },
     {
       "id": "tk-2188",
@@ -1612,7 +1612,7 @@
         "drug-notification",
         "gen-drug-notifcation"
       ],
-      "last_updated": "2026-08-20T20:17:42+00:00"
+      "last_updated": "2026-08-21T20:14:33+00:00"
     },
     {
       "id": "tk-2175",
@@ -1661,7 +1661,7 @@
         "community-notice",
         "yellow-community-notice"
       ],
-      "last_updated": "2026-08-20T20:17:42+00:00"
+      "last_updated": "2026-08-21T20:14:33+00:00"
     },
     {
       "id": "tk-2181",
@@ -1700,7 +1700,7 @@
         "drug-notification",
         "gen-drug-notifcation"
       ],
-      "last_updated": "2026-08-20T20:17:42+00:00"
+      "last_updated": "2026-08-21T20:14:33+00:00"
     },
     {
       "id": "tk-2167",
@@ -1749,7 +1749,7 @@
         "drug-notification",
         "gen-drug-notifcation"
       ],
-      "last_updated": "2026-08-20T20:17:42+00:00"
+      "last_updated": "2026-08-21T20:14:33+00:00"
     },
     {
       "id": "tk-2159",
@@ -1797,7 +1797,7 @@
       "alert_types": [
         "public-drug-warning"
       ],
-      "last_updated": "2026-08-20T20:17:42+00:00"
+      "last_updated": "2026-08-21T20:14:33+00:00"
     },
     {
       "id": "tk-2154",
@@ -1841,7 +1841,7 @@
         "community-notice",
         "yellow-community-notice"
       ],
-      "last_updated": "2026-08-20T20:17:42+00:00"
+      "last_updated": "2026-08-21T20:14:33+00:00"
     },
     {
       "id": "tk-2150",
@@ -1885,7 +1885,7 @@
         "drug-notification",
         "gen-drug-notifcation"
       ],
-      "last_updated": "2026-08-20T20:17:42+00:00"
+      "last_updated": "2026-08-21T20:14:33+00:00"
     },
     {
       "id": "tk-2141",
@@ -1929,7 +1929,7 @@
         "drug-notification",
         "gen-drug-notifcation"
       ],
-      "last_updated": "2026-08-20T20:17:42+00:00"
+      "last_updated": "2026-08-21T20:14:33+00:00"
     },
     {
       "id": "tk-2136",
@@ -1968,7 +1968,7 @@
         "drug-notification",
         "gen-drug-notifcation"
       ],
-      "last_updated": "2026-08-20T20:17:42+00:00"
+      "last_updated": "2026-08-21T20:14:33+00:00"
     },
     {
       "id": "tk-2115",
@@ -2037,7 +2037,7 @@
         "drug-notification",
         "gen-drug-notifcation"
       ],
-      "last_updated": "2026-08-20T20:17:42+00:00"
+      "last_updated": "2026-08-21T20:14:33+00:00"
     },
     {
       "id": "tk-2102",
@@ -2070,7 +2070,7 @@
       "alert_types": [
         "public-drug-warning"
       ],
-      "last_updated": "2026-08-20T20:17:42+00:00"
+      "last_updated": "2026-08-21T20:14:33+00:00"
     },
     {
       "id": "tk-2096",
@@ -2109,11 +2109,11 @@
         "drug-notification",
         "gen-drug-notifcation"
       ],
-      "last_updated": "2026-08-20T20:17:42+00:00"
+      "last_updated": "2026-08-21T20:14:33+00:00"
     }
   ],
   "metadata": {
-    "generated_at": "2026-08-20T20:17:42.522472Z",
+    "generated_at": "2026-08-21T20:14:33.878139Z",
     "total_alerts": 47,
     "by_location": {
       "VIC": 25,
