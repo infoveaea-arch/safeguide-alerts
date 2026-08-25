@@ -1,9 +1,17 @@
 {
   "source": "https://www.vicpilltesting.org.au/drug-notifications",
   "source_name": "Victorian Pill Testing Service (VPTS)",
-  "generated_at": "2026-08-18T10:08:41+00:00",
-  "count": 29,
+  "generated_at": "2026-08-25T10:51:00+00:00",
+  "count": 30,
   "alerts": [
+    {
+      "date_iso": "2026-08-25",
+      "date_human": "25 August 2026",
+      "severity": "general",
+      "title": "General Oxandrolone",
+      "summary": "Turinabol (T-bol) and methandienone (D-bol) detected in a sample expected to contain oxandrolone No oxandrolone was detected 25 August 2026 What is Oxandrolone? Oxandrolone, also known as Anavar, is a…",
+      "pdf_url": "https://www.vicpilltesting.org.au/s/250826-General-Notification_Oxandrolone.pdf"
+    },
     {
       "date_iso": "2026-08-11",
       "date_human": "11 August 2026",
