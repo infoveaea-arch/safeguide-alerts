@@ -1,10 +1,2125 @@
 {
-  "alerts": [],
+  "alerts": [
+    {
+      "id": "tk-2417",
+      "location": {
+        "region": "Victoria",
+        "state_code": "VIC",
+        "country": "AU",
+        "city": null
+      },
+      "date_iso": "2026-08-25",
+      "date_human": "25 August 2026",
+      "severity": "general",
+      "title": "Turinabol (T-bol) and methandienone (D-bol) detected in a sample expected to contain oxandrolone",
+      "summary": "Turinabol (T-bol) and methandienone (D-bol) detected in a sample expected to contain oxandrolone",
+      "substances": [
+        {
+          "name": "Pieds",
+          "type": "reported",
+          "confidence": "reported"
+        }
+      ],
+      "source": {
+        "name": "The Know (via Victorian Pill Testing Service)",
+        "url": "https://theknow.org.au/alerts_warnings/turinabol-t-bol-and-methandienone-d-bol-detected-in-a-sample-expected-to-contain-oxandrolone/",
+        "type": "aggregator",
+        "original_url": "https://static1.squarespace.com/static/68246f9efe435317efa3188a/t/6a8d2a0f389b2b59c932be8c/1787636239991/25.08.26+-+General+Notification_Oxandrolone.pdf"
+      },
+      "pdf_url": null,
+      "scope": "local",
+      "alert_types": [
+        "drug-notification",
+        "gen-drug-notifcation"
+      ],
+      "last_updated": "2026-08-29T22:07:01+00:00"
+    },
+    {
+      "id": "tk-2411",
+      "location": {
+        "region": "Victoria",
+        "state_code": "VIC",
+        "country": "AU",
+        "city": null
+      },
+      "date_iso": "2026-08-11",
+      "date_human": "11 August 2026",
+      "severity": "general",
+      "title": "N-Sec-butyl butlyone detected in a sample expected to be cocaine",
+      "summary": "N-Sec-butyl butlyone detected in a sample expected to be cocaine",
+      "substances": [
+        {
+          "name": "Cathinones",
+          "type": "reported",
+          "confidence": "reported"
+        },
+        {
+          "name": "Cocaine",
+          "type": "reported",
+          "confidence": "reported"
+        },
+        {
+          "name": "Stimulants",
+          "type": "reported",
+          "confidence": "reported"
+        }
+      ],
+      "source": {
+        "name": "The Know (via Victorian Pill Testing Service)",
+        "url": "https://theknow.org.au/alerts_warnings/n-sec-butyl-butlyone-detected-in-a-sample-expected-to-be-cocaine/",
+        "type": "aggregator",
+        "original_url": "https://static1.squarespace.com/static/68246f9efe435317efa3188a/t/6a7aaa654fce576727b0fa9c/1786423909174/11.08.26+-+General+Drug+Notification+N-Sec-Butyl+butylone.pdf"
+      },
+      "pdf_url": null,
+      "scope": "local",
+      "alert_types": [
+        "drug-notification",
+        "gen-drug-notifcation"
+      ],
+      "last_updated": "2026-08-29T22:07:01+00:00"
+    },
+    {
+      "id": "tk-2406",
+      "location": {
+        "region": "Victoria",
+        "state_code": "VIC",
+        "country": "AU",
+        "city": null
+      },
+      "date_iso": "2026-07-24",
+      "date_human": "24 July 2026",
+      "severity": "general",
+      "title": "Medetomidine found in \u2018Xanax Bars\u2019 expected to contain flualprazolam (new samples)",
+      "summary": "Medetomidine found in \u2018Xanax Bars\u2019 expected to contain flualprazolam (new samples)",
+      "substances": [
+        {
+          "name": "Benzodiazepines",
+          "type": "reported",
+          "confidence": "reported"
+        },
+        {
+          "name": "Depressants",
+          "type": "reported",
+          "confidence": "reported"
+        },
+        {
+          "name": "Medetomodine",
+          "type": "reported",
+          "confidence": "reported"
+        }
+      ],
+      "source": {
+        "name": "The Know (via Victorian Pill Testing Service)",
+        "url": "https://theknow.org.au/alerts_warnings/medetomidine-found-in-xanax-bars-expected-to-contain-flualprazolam-new-samples/",
+        "type": "aggregator",
+        "original_url": "https://static1.squarespace.com/static/68246f9efe435317efa3188a/t/6a6311fc22575b5733850d9d/1784877564961/24th+July+2026+Public+Notification+FLUALPRAZOLAMMedetomidine+update.pdf"
+      },
+      "pdf_url": null,
+      "scope": "local",
+      "alert_types": [
+        "drug-notification",
+        "gen-drug-notifcation"
+      ],
+      "last_updated": "2026-08-29T22:07:01+00:00"
+    },
+    {
+      "id": "tk-2401",
+      "location": {
+        "region": "Australian Capital Territory",
+        "state_code": "ACT",
+        "country": "AU",
+        "city": null
+      },
+      "date_iso": "2026-07-23",
+      "date_human": "23 July 2026",
+      "severity": "urgent",
+      "title": "Heroin found in expected \u2018cocaine\u2019 sample",
+      "summary": "Heroin found in expected \u2018cocaine\u2019 sample",
+      "substances": [
+        {
+          "name": "Cocaine",
+          "type": "reported",
+          "confidence": "reported"
+        },
+        {
+          "name": "Heroin",
+          "type": "reported",
+          "confidence": "reported"
+        },
+        {
+          "name": "Opioids",
+          "type": "reported",
+          "confidence": "reported"
+        },
+        {
+          "name": "Stimulants",
+          "type": "reported",
+          "confidence": "reported"
+        }
+      ],
+      "source": {
+        "name": "The Know (via CanTEST)",
+        "url": "https://theknow.org.au/alerts_warnings/heroin-found-in-expected-cocaine-sample-2/",
+        "type": "aggregator",
+        "original_url": "https://www.instagram.com/p/DbIWgCBD8uO/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+      },
+      "pdf_url": null,
+      "scope": "local",
+      "alert_types": [
+        "community-notice",
+        "red-community-notice"
+      ],
+      "last_updated": "2026-08-29T22:07:01+00:00"
+    },
+    {
+      "id": "tk-2403",
+      "location": {
+        "region": "Victoria",
+        "state_code": "VIC",
+        "country": "AU",
+        "city": null
+      },
+      "date_iso": "2026-07-23",
+      "date_human": "23 July 2026",
+      "severity": "general",
+      "title": "DOI (2,5-dimethoxy-4-iodoamphetamine) detected in blotter expected to contain LSD",
+      "summary": "DOI (2,5-dimethoxy-4-iodoamphetamine) detected in blotter expected to contain LSD",
+      "substances": [
+        {
+          "name": "Doi",
+          "type": "reported",
+          "confidence": "reported"
+        },
+        {
+          "name": "Lsd",
+          "type": "reported",
+          "confidence": "reported"
+        },
+        {
+          "name": "Psychedelics",
+          "type": "reported",
+          "confidence": "reported"
+        }
+      ],
+      "source": {
+        "name": "The Know (via Victorian Pill Testing Service)",
+        "url": "https://theknow.org.au/alerts_warnings/doi-25-dimethoxy-4-iodoamphetamine-detected-in-blotter-expected-to-contain-lsd/",
+        "type": "aggregator",
+        "original_url": "https://static1.squarespace.com/static/68246f9efe435317efa3188a/t/6a61c0e04955ff5d0dc25663/1784791264307/22.07.26+-+General+Notification_LSDDOI.pdf"
+      },
+      "pdf_url": null,
+      "scope": "local",
+      "alert_types": [
+        "drug-notification",
+        "gen-drug-notifcation"
+      ],
+      "last_updated": "2026-08-29T22:07:01+00:00"
+    },
+    {
+      "id": "tk-2393",
+      "location": {
+        "region": "Victoria",
+        "state_code": "VIC",
+        "country": "AU",
+        "city": null
+      },
+      "date_iso": "2026-07-10",
+      "date_human": "10 July 2026",
+      "severity": "general",
+      "title": "MDMA and methamphetamine found in orange Tesla pills",
+      "summary": "MDMA and methamphetamine found in orange Tesla pills",
+      "substances": [
+        {
+          "name": "Amphetamines",
+          "type": "reported",
+          "confidence": "reported"
+        },
+        {
+          "name": "Mdma Ecstasy",
+          "type": "reported",
+          "confidence": "reported"
+        },
+        {
+          "name": "Stimulants",
+          "type": "reported",
+          "confidence": "reported"
+        }
+      ],
+      "source": {
+        "name": "The Know (via Victorian Pill Testing Service)",
+        "url": "https://theknow.org.au/alerts_warnings/mdma-and-methamphetamine-found-in-orange-tesla-pills/",
+        "type": "aggregator",
+        "original_url": "https://static1.squarespace.com/static/68246f9efe435317efa3188a/t/6a50a1f3ce67902971e2c053/1783669235219/10+July+2026_+Public+Notification+_MethinMDMA.pdf"
+      },
+      "pdf_url": null,
+      "scope": "local",
+      "alert_types": [
+        "drug-notification",
+        "gen-drug-notifcation"
+      ],
+      "last_updated": "2026-08-29T22:07:01+00:00"
+    },
+    {
+      "id": "tk-2382",
+      "location": {
+        "region": "Victoria",
+        "state_code": "VIC",
+        "country": "AU",
+        "city": null
+      },
+      "date_iso": "2026-07-01",
+      "date_human": "1 July 2026",
+      "severity": "caution",
+      "title": "Heroin found in methamphetamine and cocaine products across Victoria",
+      "summary": "Heroin found in methamphetamine and cocaine products across Victoria",
+      "substances": [
+        {
+          "name": "Amphetamines",
+          "type": "reported",
+          "confidence": "reported"
+        },
+        {
+          "name": "Cocaine",
+          "type": "reported",
+          "confidence": "reported"
+        },
+        {
+          "name": "Heroin",
+          "type": "reported",
+          "confidence": "reported"
+        },
+        {
+          "name": "Opioids",
+          "type": "reported",
+          "confidence": "reported"
+        },
+        {
+          "name": "Stimulants",
+          "type": "reported",
+          "confidence": "reported"
+        }
+      ],
+      "source": {
+        "name": "The Know (via Victorian Department of Health)",
+        "url": "https://theknow.org.au/alerts_warnings/heroin-found-in-methamphetamine-and-cocaine-products-across-victoria/",
+        "type": "aggregator",
+        "original_url": "https://www.health.vic.gov.au/drug-alerts/heroin-found-in-methamphetamine-cocaine-products"
+      },
+      "pdf_url": null,
+      "scope": "local",
+      "alert_types": [
+        "drug-advisory"
+      ],
+      "last_updated": "2026-08-29T22:07:01+00:00"
+    },
+    {
+      "id": "tk-2367",
+      "location": {
+        "region": "Victoria",
+        "state_code": "VIC",
+        "country": "AU",
+        "city": null
+      },
+      "date_iso": "2026-06-23",
+      "date_human": "23 June 2026",
+      "severity": "caution",
+      "title": "Vape containing potent sedative \u2018etomidate\u2019 sold in Melbourne",
+      "summary": "Vape containing potent sedative \u2018etomidate\u2019 sold in Melbourne",
+      "substances": [
+        {
+          "name": "Depressants",
+          "type": "reported",
+          "confidence": "reported"
+        },
+        {
+          "name": "Etomidate",
+          "type": "reported",
+          "confidence": "reported"
+        }
+      ],
+      "source": {
+        "name": "The Know (via Victorian Department of Health)",
+        "url": "https://theknow.org.au/alerts_warnings/vape-containing-potent-sedative-etomidate-sold-in-melbourne/",
+        "type": "aggregator",
+        "original_url": "https://www.health.vic.gov.au/drug-alerts/vape-containing-potent-sedative-etomidate-sold-in-melbourne"
+      },
+      "pdf_url": null,
+      "scope": "local",
+      "alert_types": [
+        "drug-advisory"
+      ],
+      "last_updated": "2026-08-29T22:07:01+00:00"
+    },
+    {
+      "id": "tk-2370",
+      "location": {
+        "region": "Australian Capital Territory",
+        "state_code": "ACT",
+        "country": "AU",
+        "city": null
+      },
+      "date_iso": "2026-06-23",
+      "date_human": "23 June 2026",
+      "severity": "caution",
+      "title": "Multiple high dose MDMA pills",
+      "summary": "Multiple high dose MDMA pills",
+      "substances": [
+        {
+          "name": "Mdma",
+          "type": "reported",
+          "confidence": "reported"
+        },
+        {
+          "name": "Mdma Ecstasy",
+          "type": "reported",
+          "confidence": "reported"
+        },
+        {
+          "name": "Stimulants",
+          "type": "reported",
+          "confidence": "reported"
+        }
+      ],
+      "source": {
+        "name": "The Know (via CanTEST)",
+        "url": "https://theknow.org.au/alerts_warnings/multiple-high-dose-mdma-pills-5/",
+        "type": "aggregator",
+        "original_url": "https://www.instagram.com/p/DZ7EYUdlULa/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+      },
+      "pdf_url": null,
+      "scope": "local",
+      "alert_types": [
+        "community-notice",
+        "yellow-community-notice"
+      ],
+      "last_updated": "2026-08-29T22:07:01+00:00"
+    },
+    {
+      "id": "tk-2356",
+      "location": {
+        "region": "Australian Capital Territory",
+        "state_code": "ACT",
+        "country": "AU",
+        "city": null
+      },
+      "date_iso": "2026-06-05",
+      "date_human": "5 June 2026",
+      "severity": "caution",
+      "title": "Synthetic cannabinoid CUMYL-PINACA found in plant material",
+      "summary": "Unexpected detection",
+      "substances": [
+        {
+          "name": "Cannabinoids",
+          "type": "reported",
+          "confidence": "reported"
+        }
+      ],
+      "source": {
+        "name": "The Know (via CanTEST)",
+        "url": "https://theknow.org.au/alerts_warnings/synthetic-cannabinoid-cumyl-pinaca-found-in-plant-material/",
+        "type": "aggregator",
+        "original_url": "https://www.instagram.com/p/DZMelu4j0P4/?img_index=1"
+      },
+      "pdf_url": null,
+      "scope": "local",
+      "alert_types": [
+        "community-notice",
+        "yellow-community-notice"
+      ],
+      "last_updated": "2026-08-29T22:07:01+00:00"
+    },
+    {
+      "id": "tk-2349",
+      "location": {
+        "region": "Australian Capital Territory",
+        "state_code": "ACT",
+        "country": "AU",
+        "city": null
+      },
+      "date_iso": "2026-06-01",
+      "date_human": "1 June 2026",
+      "severity": "caution",
+      "title": "Caffeine, chloroquine, ketamine, & heroin found in \u2018oxycodone\u2019 sample",
+      "summary": "Caffeine, chloroquine, ketamine, & heroin found in \u2018oxycodone\u2019 sample",
+      "substances": [
+        {
+          "name": "Ketamine",
+          "type": "reported",
+          "confidence": "reported"
+        },
+        {
+          "name": "Heroin",
+          "type": "reported",
+          "confidence": "reported"
+        },
+        {
+          "name": "Ketamine Mdma",
+          "type": "reported",
+          "confidence": "reported"
+        },
+        {
+          "name": "Opioids",
+          "type": "reported",
+          "confidence": "reported"
+        },
+        {
+          "name": "Oxycodone",
+          "type": "reported",
+          "confidence": "reported"
+        }
+      ],
+      "source": {
+        "name": "The Know (via CanTEST)",
+        "url": "https://theknow.org.au/alerts_warnings/caffeine-chloroquine-ketamine-heroin-found-in-oxycodone-sample/",
+        "type": "aggregator",
+        "original_url": "https://www.instagram.com/p/DZBZ3xkjy9X/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+      },
+      "pdf_url": null,
+      "scope": "local",
+      "alert_types": [
+        "community-notice",
+        "yellow-community-notice"
+      ],
+      "last_updated": "2026-08-29T22:07:01+00:00"
+    },
+    {
+      "id": "tk-2346",
+      "location": {
+        "region": "Victoria",
+        "state_code": "VIC",
+        "country": "AU",
+        "city": null
+      },
+      "date_iso": "2026-05-22",
+      "date_human": "22 May 2026",
+      "severity": "caution",
+      "title": "Heroin found in cocaine products across Melbourne",
+      "summary": "Heroin found in cocaine products across Melbourne",
+      "substances": [
+        {
+          "name": "Cocaine",
+          "type": "reported",
+          "confidence": "reported"
+        },
+        {
+          "name": "Heroin",
+          "type": "reported",
+          "confidence": "reported"
+        },
+        {
+          "name": "Opioids",
+          "type": "reported",
+          "confidence": "reported"
+        },
+        {
+          "name": "Stimulants",
+          "type": "reported",
+          "confidence": "reported"
+        }
+      ],
+      "source": {
+        "name": "The Know (via Victorian Department of Health)",
+        "url": "https://theknow.org.au/alerts_warnings/heroin-found-in-cocaine-products-across-melbourne/",
+        "type": "aggregator",
+        "original_url": "https://www.health.vic.gov.au/drug-alerts/heroin-found-in-cocaine-products-across-melbourne"
+      },
+      "pdf_url": null,
+      "scope": "local",
+      "alert_types": [
+        "drug-advisory"
+      ],
+      "last_updated": "2026-08-29T22:07:01+00:00"
+    },
+    {
+      "id": "tk-2343",
+      "location": {
+        "region": "Victoria",
+        "state_code": "VIC",
+        "country": "AU",
+        "city": null
+      },
+      "date_iso": "2026-05-21",
+      "date_human": "21 May 2026",
+      "severity": "general",
+      "title": "AB-MDMSBA found in a sample expected to contain alprazolam (Xanax)",
+      "summary": "AB-MDMSBA found in a sample expected to contain alprazolam (Xanax)",
+      "substances": [
+        {
+          "name": "Benzodiazepines",
+          "type": "reported",
+          "confidence": "reported"
+        },
+        {
+          "name": "Cannabinoids",
+          "type": "reported",
+          "confidence": "reported"
+        },
+        {
+          "name": "Depressants",
+          "type": "reported",
+          "confidence": "reported"
+        }
+      ],
+      "source": {
+        "name": "The Know (via Victorian Pill Testing Service)",
+        "url": "https://theknow.org.au/alerts_warnings/ab-mdmsba-found-in-a-sample-expected-to-contain-alprazolam-xanax/",
+        "type": "aggregator",
+        "original_url": "https://static1.squarespace.com/static/68246f9efe435317efa3188a/t/6a0e9e11aa3efa37055573c5/1779342865276/21+May+2026+Public+Notification+_AB+MDMSBA.pdf"
+      },
+      "pdf_url": null,
+      "scope": "local",
+      "alert_types": [
+        "drug-notification",
+        "gen-drug-notifcation"
+      ],
+      "last_updated": "2026-08-29T22:07:01+00:00"
+    },
+    {
+      "id": "tk-2338",
+      "location": {
+        "region": "Victoria",
+        "state_code": "VIC",
+        "country": "AU",
+        "city": null
+      },
+      "date_iso": "2026-05-18",
+      "date_human": "18 May 2026",
+      "severity": "general",
+      "title": "Medetomidine found in \u2018Xanax Bars\u2019 expected to contain flualprazolam",
+      "summary": "Medetomidine found in \u2018Xanax Bars\u2019 expected to contain flualprazolam",
+      "substances": [
+        {
+          "name": "Benzodiazepines",
+          "type": "reported",
+          "confidence": "reported"
+        },
+        {
+          "name": "Depressants",
+          "type": "reported",
+          "confidence": "reported"
+        },
+        {
+          "name": "Medetomodine",
+          "type": "reported",
+          "confidence": "reported"
+        }
+      ],
+      "source": {
+        "name": "The Know (via Victorian Pill Testing Service)",
+        "url": "https://theknow.org.au/alerts_warnings/medetomidine-found-in-xanax-bars-expected-to-contain-flualprazolam/",
+        "type": "aggregator",
+        "original_url": "https://static1.squarespace.com/static/68246f9efe435317efa3188a/t/6a0ab421cc48ee3edc826a50/1779086369984/18th+May+2026+Public+Notification+-+Medetomidine.pdf"
+      },
+      "pdf_url": null,
+      "scope": "local",
+      "alert_types": [
+        "drug-notification",
+        "gen-drug-notifcation"
+      ],
+      "last_updated": "2026-08-29T22:07:01+00:00"
+    },
+    {
+      "id": "tk-2334",
+      "location": {
+        "region": "Victoria",
+        "state_code": "VIC",
+        "country": "AU",
+        "city": null
+      },
+      "date_iso": "2026-05-15",
+      "date_human": "15 May 2026",
+      "severity": "general",
+      "title": "Tadalafil (Cialis) and methandienone (Dianabol) detected in a pressed pill acquired as MDMA",
+      "summary": "Tadalafil (Cialis) and methandienone (Dianabol) detected in a pressed pill acquired as MDMA",
+      "substances": [
+        {
+          "name": "Mdma Ecstasy",
+          "type": "reported",
+          "confidence": "reported"
+        },
+        {
+          "name": "Pieds",
+          "type": "reported",
+          "confidence": "reported"
+        }
+      ],
+      "source": {
+        "name": "The Know (via Victorian Pill Testing Service)",
+        "url": "https://theknow.org.au/alerts_warnings/tadalafil-cialis-and-methandienone-dianabol-detected-in-a-pressed-pill-acquired-as-mdma/",
+        "type": "aggregator",
+        "original_url": "https://static1.squarespace.com/static/68246f9efe435317efa3188a/t/6a0650875a5a335841ab723f/1778798727384/14th+May+2026_Tadafinil+and+methandienone+in+MDMA_Public+notification+%28Instagram+Reel%29.pdf"
+      },
+      "pdf_url": null,
+      "scope": "local",
+      "alert_types": [
+        "drug-notification",
+        "gen-drug-notifcation"
+      ],
+      "last_updated": "2026-08-29T22:07:01+00:00"
+    },
+    {
+      "id": "tk-2328",
+      "location": {
+        "region": "Australian Capital Territory",
+        "state_code": "ACT",
+        "country": "AU",
+        "city": null
+      },
+      "date_iso": "2026-05-08",
+      "date_human": "8 May 2026",
+      "severity": "urgent",
+      "title": "Fentanyl found in heroin sample",
+      "summary": "Fentanyl found in heroin sample",
+      "substances": [
+        {
+          "name": "Fentanyl",
+          "type": "reported",
+          "confidence": "reported"
+        },
+        {
+          "name": "Heroin",
+          "type": "reported",
+          "confidence": "reported"
+        },
+        {
+          "name": "Opioids",
+          "type": "reported",
+          "confidence": "reported"
+        }
+      ],
+      "source": {
+        "name": "The Know (via CanTEST)",
+        "url": "https://theknow.org.au/alerts_warnings/fentanyl-found-in-heroin-sample/",
+        "type": "aggregator",
+        "original_url": "https://www.instagram.com/p/DYEqKYZHH35/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+      },
+      "pdf_url": null,
+      "scope": "local",
+      "alert_types": [
+        "community-notice",
+        "red-community-notice"
+      ],
+      "last_updated": "2026-08-29T22:07:01+00:00"
+    },
+    {
+      "id": "tk-2320",
+      "location": {
+        "region": "Australian Capital Territory",
+        "state_code": "ACT",
+        "country": "AU",
+        "city": null
+      },
+      "date_iso": "2026-04-24",
+      "date_human": "24 April 2026",
+      "severity": "caution",
+      "title": "Rilmazafone found in \u2018benzo\u2019 pill",
+      "summary": "Rilmazafone found in \u2018benzo\u2019 pill",
+      "substances": [
+        {
+          "name": "Benzodiazepines",
+          "type": "reported",
+          "confidence": "reported"
+        },
+        {
+          "name": "Depressants",
+          "type": "reported",
+          "confidence": "reported"
+        }
+      ],
+      "source": {
+        "name": "The Know (via CanTEST)",
+        "url": "https://theknow.org.au/alerts_warnings/rilmazafone-found-in-benzo-pill/",
+        "type": "aggregator",
+        "original_url": "https://www.instagram.com/p/DXhx-Eyk0Sj/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+      },
+      "pdf_url": null,
+      "scope": "local",
+      "alert_types": [
+        "community-notice",
+        "yellow-community-notice"
+      ],
+      "last_updated": "2026-08-29T22:07:01+00:00"
+    },
+    {
+      "id": "tk-2307",
+      "location": {
+        "region": "Australian Capital Territory",
+        "state_code": "ACT",
+        "country": "AU",
+        "city": null
+      },
+      "date_iso": "2026-04-07",
+      "date_human": "7 April 2026",
+      "severity": "caution",
+      "title": "N-ethylhexedrone found in cocaine sample",
+      "summary": "N-ethylhexedrone found in cocaine sample",
+      "substances": [
+        {
+          "name": "Cathinones",
+          "type": "reported",
+          "confidence": "reported"
+        },
+        {
+          "name": "Cocaine",
+          "type": "reported",
+          "confidence": "reported"
+        },
+        {
+          "name": "Stimulants",
+          "type": "reported",
+          "confidence": "reported"
+        }
+      ],
+      "source": {
+        "name": "The Know (via CanTEST)",
+        "url": "https://theknow.org.au/alerts_warnings/n-ethylhexedrone-found-in-cocaine-sample/",
+        "type": "aggregator",
+        "original_url": "https://www.instagram.com/p/DW1UPvtj72o/?img_index=3"
+      },
+      "pdf_url": null,
+      "scope": "local",
+      "alert_types": [
+        "community-notice",
+        "yellow-community-notice"
+      ],
+      "last_updated": "2026-08-29T22:07:01+00:00"
+    },
+    {
+      "id": "tk-2302",
+      "location": {
+        "region": "Australian Capital Territory",
+        "state_code": "ACT",
+        "country": "AU",
+        "city": null
+      },
+      "date_iso": "2026-04-03",
+      "date_human": "3 April 2026",
+      "severity": "urgent",
+      "title": "Protonitazene found in heroin sample",
+      "summary": "Protonitazene found in heroin sample",
+      "substances": [
+        {
+          "name": "Heroin",
+          "type": "reported",
+          "confidence": "reported"
+        },
+        {
+          "name": "Nitazenes",
+          "type": "reported",
+          "confidence": "reported"
+        },
+        {
+          "name": "Opioids",
+          "type": "reported",
+          "confidence": "reported"
+        }
+      ],
+      "source": {
+        "name": "The Know (via CanTEST)",
+        "url": "https://theknow.org.au/alerts_warnings/protonitazene-found-in-heroin-sample/",
+        "type": "aggregator",
+        "original_url": "https://www.instagram.com/p/DWqB0znD9XC/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+      },
+      "pdf_url": null,
+      "scope": "local",
+      "alert_types": [
+        "community-notice",
+        "red-community-notice"
+      ],
+      "last_updated": "2026-08-29T22:07:01+00:00"
+    },
+    {
+      "id": "tk-2299",
+      "location": {
+        "region": "New South Wales",
+        "state_code": "NSW",
+        "country": "AU",
+        "city": null
+      },
+      "date_iso": "2026-03-30",
+      "date_human": "30 March 2026",
+      "severity": "caution",
+      "title": "Multiple opioid overdoses following use of cocaine",
+      "summary": "Opioid overdose resulting in hospitalizations",
+      "substances": [
+        {
+          "name": "Cocaine",
+          "type": "reported",
+          "confidence": "reported"
+        },
+        {
+          "name": "Opioids",
+          "type": "reported",
+          "confidence": "reported"
+        },
+        {
+          "name": "Stimulants",
+          "type": "reported",
+          "confidence": "reported"
+        }
+      ],
+      "source": {
+        "name": "The Know (via NSW Health)",
+        "url": "https://theknow.org.au/alerts_warnings/multiple-opioid-overdoses-following-use-of-cocaine-2/",
+        "type": "aggregator",
+        "original_url": "https://www.health.nsw.gov.au/aod/public-drug-alerts/Pages/opioid-overdose-cocaine-Mar26.aspx"
+      },
+      "pdf_url": null,
+      "scope": "local",
+      "alert_types": [
+        "public-drug-warning"
+      ],
+      "last_updated": "2026-08-29T22:07:01+00:00"
+    },
+    {
+      "id": "tk-2290",
+      "location": {
+        "region": "Australian Capital Territory",
+        "state_code": "ACT",
+        "country": "AU",
+        "city": null
+      },
+      "date_iso": "2026-03-27",
+      "date_human": "27 March 2026",
+      "severity": "caution",
+      "title": "Ethylflualprazolam found in expected \u2018alprazolam\u2019 pills",
+      "summary": "Ethylflualprazolam found in expected \u2018alprazolam\u2019 pills",
+      "substances": [
+        {
+          "name": "Benzodiazepines",
+          "type": "reported",
+          "confidence": "reported"
+        },
+        {
+          "name": "Depressants",
+          "type": "reported",
+          "confidence": "reported"
+        }
+      ],
+      "source": {
+        "name": "The Know (via CanTEST)",
+        "url": "https://theknow.org.au/alerts_warnings/ethylflualprazolam-found-in-expected-alprazolam-pills/",
+        "type": "aggregator",
+        "original_url": "https://www.instagram.com/p/DWW850ZkzIY/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+      },
+      "pdf_url": null,
+      "scope": "local",
+      "alert_types": [
+        "community-notice",
+        "yellow-community-notice"
+      ],
+      "last_updated": "2026-08-29T22:07:01+00:00"
+    },
+    {
+      "id": "tk-2287",
+      "location": {
+        "region": "Australian Capital Territory",
+        "state_code": "ACT",
+        "country": "AU",
+        "city": null
+      },
+      "date_iso": "2026-03-26",
+      "date_human": "26 March 2026",
+      "severity": "caution",
+      "title": "High dose MDMA pill",
+      "summary": "High dose MDMA pill",
+      "substances": [
+        {
+          "name": "Mdma",
+          "type": "reported",
+          "confidence": "reported"
+        },
+        {
+          "name": "Mdma Ecstasy",
+          "type": "reported",
+          "confidence": "reported"
+        },
+        {
+          "name": "Stimulants",
+          "type": "reported",
+          "confidence": "reported"
+        }
+      ],
+      "source": {
+        "name": "The Know (via CanTEST)",
+        "url": "https://theknow.org.au/alerts_warnings/high-dose-mdma-pill-8/",
+        "type": "aggregator",
+        "original_url": "https://www.instagram.com/p/DWV8sFnD7Bk/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+      },
+      "pdf_url": null,
+      "scope": "local",
+      "alert_types": [
+        "community-notice",
+        "yellow-community-notice"
+      ],
+      "last_updated": "2026-08-29T22:07:01+00:00"
+    },
+    {
+      "id": "tk-2276",
+      "location": {
+        "region": "Australian Capital Territory",
+        "state_code": "ACT",
+        "country": "AU",
+        "city": null
+      },
+      "date_iso": "2026-03-13",
+      "date_human": "13 March 2026",
+      "severity": "caution",
+      "title": "N,N-dimethylpentylone found in MDMA pills",
+      "summary": "N,N-dimethylpentylone found in MDMA pills",
+      "substances": [
+        {
+          "name": "Cathinones",
+          "type": "reported",
+          "confidence": "reported"
+        },
+        {
+          "name": "Mdma",
+          "type": "reported",
+          "confidence": "reported"
+        },
+        {
+          "name": "Mdma Ecstasy",
+          "type": "reported",
+          "confidence": "reported"
+        },
+        {
+          "name": "Stimulants",
+          "type": "reported",
+          "confidence": "reported"
+        }
+      ],
+      "source": {
+        "name": "The Know (via CanTEST)",
+        "url": "https://theknow.org.au/alerts_warnings/nn-dimethylpentylone-found-in-mdma-pills/",
+        "type": "aggregator",
+        "original_url": "https://www.instagram.com/p/DV-OqKPD3X-/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+      },
+      "pdf_url": null,
+      "scope": "local",
+      "alert_types": [
+        "community-notice",
+        "yellow-community-notice"
+      ],
+      "last_updated": "2026-08-29T22:07:01+00:00"
+    },
+    {
+      "id": "tk-2269",
+      "location": {
+        "region": "Victoria",
+        "state_code": "VIC",
+        "country": "AU",
+        "city": null
+      },
+      "date_iso": "2026-03-11",
+      "date_human": "11 March 2026",
+      "severity": "general",
+      "title": "Heroin found in sample expected to contain ketamine",
+      "summary": "Heroin found in sample expected to contain ketamine",
+      "substances": [
+        {
+          "name": "Ketamine",
+          "type": "reported",
+          "confidence": "reported"
+        },
+        {
+          "name": "Heroin",
+          "type": "reported",
+          "confidence": "reported"
+        },
+        {
+          "name": "Ketamine Mdma",
+          "type": "reported",
+          "confidence": "reported"
+        },
+        {
+          "name": "Opioids",
+          "type": "reported",
+          "confidence": "reported"
+        }
+      ],
+      "source": {
+        "name": "The Know (via Victorian Pill Testing Service)",
+        "url": "https://theknow.org.au/alerts_warnings/heroin-found-in-sample-expected-to-contain-ketamine/",
+        "type": "aggregator",
+        "original_url": "https://static1.squarespace.com/static/68246f9efe435317efa3188a/t/69b0fa2379d875427ac66d10/1773206051715/11+March+2026+-+Heroin+in+Ketamine+Public+Notification.pdf"
+      },
+      "pdf_url": null,
+      "scope": "local",
+      "alert_types": [
+        "drug-notification",
+        "gen-drug-notifcation"
+      ],
+      "last_updated": "2026-08-29T22:07:01+00:00"
+    },
+    {
+      "id": "tk-2265",
+      "location": {
+        "region": "Victoria",
+        "state_code": "VIC",
+        "country": "AU",
+        "city": null
+      },
+      "date_iso": "2026-03-05",
+      "date_human": "5 March 2026",
+      "severity": "general",
+      "title": "UPDATED 20/5/26: Unknown cathinone identified as N-sec-butyl butlyone",
+      "summary": "UPDATED 20/5/26: Unknown cathinone identified as N-sec-butyl butlyone",
+      "substances": [
+        {
+          "name": "Cathinones",
+          "type": "reported",
+          "confidence": "reported"
+        },
+        {
+          "name": "Stimulants",
+          "type": "reported",
+          "confidence": "reported"
+        }
+      ],
+      "source": {
+        "name": "The Know (via Victorian Pill Testing Service)",
+        "url": "https://theknow.org.au/alerts_warnings/unknown-synthetic-cathinone/",
+        "type": "aggregator",
+        "original_url": "https://static1.squarespace.com/static/68246f9efe435317efa3188a/t/6a0d4e7ba01c9746fb0f2afc/1779256955941/20+May+2026+-+Cathinone+Public+Notification+UPDATE.pdf"
+      },
+      "pdf_url": null,
+      "scope": "local",
+      "alert_types": [
+        "drug-notification",
+        "gen-drug-notifcation"
+      ],
+      "last_updated": "2026-08-29T22:07:01+00:00"
+    },
+    {
+      "id": "tk-2249",
+      "location": {
+        "region": "Australian Capital Territory",
+        "state_code": "ACT",
+        "country": "AU",
+        "city": null
+      },
+      "date_iso": "2026-03-04",
+      "date_human": "4 March 2026",
+      "severity": "caution",
+      "title": "MDA & MDMA found in MDMA pill",
+      "summary": "MDA & MDMA found in MDMA pill",
+      "substances": [
+        {
+          "name": "Mdma",
+          "type": "reported",
+          "confidence": "reported"
+        },
+        {
+          "name": "Mda",
+          "type": "reported",
+          "confidence": "reported"
+        },
+        {
+          "name": "Mdma Ecstasy",
+          "type": "reported",
+          "confidence": "reported"
+        },
+        {
+          "name": "Stimulants",
+          "type": "reported",
+          "confidence": "reported"
+        }
+      ],
+      "source": {
+        "name": "The Know (via Pill Testing Austraila)",
+        "url": "https://theknow.org.au/alerts_warnings/mda-mdma-found-in-mdma-pill/",
+        "type": "aggregator",
+        "original_url": "https://www.instagram.com/p/DVcZ6owEpfq/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+      },
+      "pdf_url": null,
+      "scope": "local",
+      "alert_types": [
+        "drug-alert",
+        "yellow-drug-alert"
+      ],
+      "last_updated": "2026-08-29T22:07:01+00:00"
+    },
+    {
+      "id": "tk-2254",
+      "location": {
+        "region": "Australian Capital Territory",
+        "state_code": "ACT",
+        "country": "AU",
+        "city": null
+      },
+      "date_iso": "2026-03-04",
+      "date_human": "4 March 2026",
+      "severity": "caution",
+      "title": "Bromazolam and clonazolam detected in \u2018Mylan\u2019 pill",
+      "summary": "Bromazolam and clonazolam detected in \u2018Mylan\u2019 pill",
+      "substances": [
+        {
+          "name": "Benzodiazepines",
+          "type": "reported",
+          "confidence": "reported"
+        },
+        {
+          "name": "Depressants",
+          "type": "reported",
+          "confidence": "reported"
+        }
+      ],
+      "source": {
+        "name": "The Know (via Pill Testing Austraila)",
+        "url": "https://theknow.org.au/alerts_warnings/bromazolam-and-clonazolam-detected-in-mylan-pill/",
+        "type": "aggregator",
+        "original_url": "https://www.instagram.com/p/DVcZ6owEpfq/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+      },
+      "pdf_url": null,
+      "scope": "local",
+      "alert_types": [
+        "drug-alert",
+        "yellow-drug-alert"
+      ],
+      "last_updated": "2026-08-29T22:07:01+00:00"
+    },
+    {
+      "id": "tk-2242",
+      "location": {
+        "region": "Australian Capital Territory",
+        "state_code": "ACT",
+        "country": "AU",
+        "city": null
+      },
+      "date_iso": "2026-03-04",
+      "date_human": "4 March 2026",
+      "severity": "caution",
+      "title": "2\u2019fluoro-2-oxo-PCE & N,N-dimethylpentylone sold as ketamine",
+      "summary": "2\u2019fluoro-2-oxo-PCE & N,N-dimethylpentylone sold as ketamine",
+      "substances": [
+        {
+          "name": "Cathinones",
+          "type": "reported",
+          "confidence": "reported"
+        },
+        {
+          "name": "Ketamine",
+          "type": "reported",
+          "confidence": "reported"
+        },
+        {
+          "name": "Ketamine Mdma",
+          "type": "reported",
+          "confidence": "reported"
+        },
+        {
+          "name": "K Analog",
+          "type": "reported",
+          "confidence": "reported"
+        },
+        {
+          "name": "Mdma Ecstasy",
+          "type": "reported",
+          "confidence": "reported"
+        },
+        {
+          "name": "Stimulants",
+          "type": "reported",
+          "confidence": "reported"
+        }
+      ],
+      "source": {
+        "name": "The Know (via Pill Testing Austraila)",
+        "url": "https://theknow.org.au/alerts_warnings/2fluoro-2-oxo-pce-nn-dimethylpentylone-sold-as-ketamine/",
+        "type": "aggregator",
+        "original_url": "https://www.instagram.com/p/DVcZ6owEpfq/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+      },
+      "pdf_url": null,
+      "scope": "local",
+      "alert_types": [
+        "drug-alert",
+        "yellow-drug-alert"
+      ],
+      "last_updated": "2026-08-29T22:07:01+00:00"
+    },
+    {
+      "id": "tk-2245",
+      "location": {
+        "region": "Australian Capital Territory",
+        "state_code": "ACT",
+        "country": "AU",
+        "city": null
+      },
+      "date_iso": "2026-03-04",
+      "date_human": "4 March 2026",
+      "severity": "caution",
+      "title": "Ketamine, MDMA & caffeine detected in sample expected to contain cocaine & MDMA",
+      "summary": "Ketamine, MDMA & caffeine detected in sample expected to contain cocaine & MDMA",
+      "substances": [
+        {
+          "name": "Cocaine",
+          "type": "reported",
+          "confidence": "reported"
+        },
+        {
+          "name": "Ketamine",
+          "type": "reported",
+          "confidence": "reported"
+        },
+        {
+          "name": "Mdma",
+          "type": "reported",
+          "confidence": "reported"
+        },
+        {
+          "name": "Ketamine Mdma",
+          "type": "reported",
+          "confidence": "reported"
+        },
+        {
+          "name": "Mdma Ecstasy",
+          "type": "reported",
+          "confidence": "reported"
+        },
+        {
+          "name": "Stimulants",
+          "type": "reported",
+          "confidence": "reported"
+        }
+      ],
+      "source": {
+        "name": "The Know (via Pill Testing Austraila)",
+        "url": "https://theknow.org.au/alerts_warnings/ketamine-mdma-caffeine-detected-in-sample-expected-to-contain-cocaine-mdma/",
+        "type": "aggregator",
+        "original_url": "https://www.instagram.com/p/DVcZ6owEpfq/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+      },
+      "pdf_url": null,
+      "scope": "local",
+      "alert_types": [
+        "drug-alert",
+        "yellow-drug-alert"
+      ],
+      "last_updated": "2026-08-29T22:07:01+00:00"
+    },
+    {
+      "id": "tk-2236",
+      "location": {
+        "region": "Australian Capital Territory",
+        "state_code": "ACT",
+        "country": "AU",
+        "city": null
+      },
+      "date_iso": "2026-02-28",
+      "date_human": "28 February 2026",
+      "severity": "urgent",
+      "title": "Heroin sold as ketamine",
+      "summary": "Heroin sold as ketamine",
+      "substances": [
+        {
+          "name": "Ketamine",
+          "type": "reported",
+          "confidence": "reported"
+        },
+        {
+          "name": "Heroin",
+          "type": "reported",
+          "confidence": "reported"
+        },
+        {
+          "name": "Ketamine Mdma",
+          "type": "reported",
+          "confidence": "reported"
+        },
+        {
+          "name": "Opioids",
+          "type": "reported",
+          "confidence": "reported"
+        }
+      ],
+      "source": {
+        "name": "The Know (via Pill Testing Austraila)",
+        "url": "https://theknow.org.au/alerts_warnings/heroin-sold-as-ketamine/",
+        "type": "aggregator",
+        "original_url": "https://www.instagram.com/p/DVSpmegjJ4o/?utm_source=ig_web_copy_link&igsh=NTc4MTIwNjQ2YQ=="
+      },
+      "pdf_url": null,
+      "scope": "local",
+      "alert_types": [
+        "drug-alert",
+        "red-drug-alert"
+      ],
+      "last_updated": "2026-08-29T22:07:01+00:00"
+    },
+    {
+      "id": "tk-2229",
+      "location": {
+        "region": "Australian Capital Territory",
+        "state_code": "ACT",
+        "country": "AU",
+        "city": null
+      },
+      "date_iso": "2026-02-27",
+      "date_human": "27 February 2026",
+      "severity": "caution",
+      "title": "MDA Found in MDMA Pill",
+      "summary": "MDA Found in MDMA Pill",
+      "substances": [
+        {
+          "name": "Mdma",
+          "type": "reported",
+          "confidence": "reported"
+        },
+        {
+          "name": "Mda",
+          "type": "reported",
+          "confidence": "reported"
+        },
+        {
+          "name": "Mdma Ecstasy",
+          "type": "reported",
+          "confidence": "reported"
+        },
+        {
+          "name": "Stimulants",
+          "type": "reported",
+          "confidence": "reported"
+        }
+      ],
+      "source": {
+        "name": "The Know (via CanTEST)",
+        "url": "https://theknow.org.au/alerts_warnings/mda-found-in-mdma-pill/",
+        "type": "aggregator",
+        "original_url": "https://www.instagram.com/p/DVPd7eJEiNX/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+      },
+      "pdf_url": null,
+      "scope": "local",
+      "alert_types": [
+        "community-notice",
+        "yellow-community-notice"
+      ],
+      "last_updated": "2026-08-29T22:07:01+00:00"
+    },
+    {
+      "id": "tk-2223",
+      "location": {
+        "region": "Victoria",
+        "state_code": "VIC",
+        "country": "AU",
+        "city": null
+      },
+      "date_iso": "2026-02-26",
+      "date_human": "26 February 2026",
+      "severity": "general",
+      "title": "N-Isopropyl butylone found in a cocaine sample",
+      "summary": "N-Isopropyl butylone found in a cocaine sample",
+      "substances": [
+        {
+          "name": "Cathinones",
+          "type": "reported",
+          "confidence": "reported"
+        },
+        {
+          "name": "Cocaine",
+          "type": "reported",
+          "confidence": "reported"
+        },
+        {
+          "name": "Stimulants",
+          "type": "reported",
+          "confidence": "reported"
+        }
+      ],
+      "source": {
+        "name": "The Know (via Victorian Pill Testing Service)",
+        "url": "https://theknow.org.au/alerts_warnings/n-isopropyl-butylone-found-in-a-cocaine-sample/",
+        "type": "aggregator",
+        "original_url": "https://static1.squarespace.com/static/68246f9efe435317efa3188a/t/69a0d22fe8214b4f2c776310/1772147247803/26FEB+2026+-+CathinoneISO+Public+Notification.pdf"
+      },
+      "pdf_url": null,
+      "scope": "local",
+      "alert_types": [
+        "drug-notification",
+        "gen-drug-notifcation"
+      ],
+      "last_updated": "2026-08-29T22:07:01+00:00"
+    },
+    {
+      "id": "tk-2217",
+      "location": {
+        "region": "Victoria",
+        "state_code": "VIC",
+        "country": "AU",
+        "city": null
+      },
+      "date_iso": "2026-02-21",
+      "date_human": "21 February 2026",
+      "severity": "caution",
+      "title": "Toxic \u2018alkaloid\u2019 poppies diverted from a regulated crop",
+      "summary": "Toxic \u2018alkaloid\u2019 poppies diverted from a regulated crop",
+      "substances": [
+        {
+          "name": "Opioids",
+          "type": "reported",
+          "confidence": "reported"
+        }
+      ],
+      "source": {
+        "name": "The Know (via Victorian Department of Health)",
+        "url": "https://theknow.org.au/alerts_warnings/toxic-alkaloid-poppies-diverted-from-a-regulated-crop/",
+        "type": "aggregator",
+        "original_url": "https://www.health.vic.gov.au/drug-alerts/toxic-alkaloid-poppies-diverted-from-a-regulated-crop"
+      },
+      "pdf_url": null,
+      "scope": "local",
+      "alert_types": [
+        "drug-alert"
+      ],
+      "last_updated": "2026-08-29T22:07:01+00:00"
+    },
+    {
+      "id": "tk-2212",
+      "location": {
+        "region": "Victoria",
+        "state_code": "VIC",
+        "country": "AU",
+        "city": null
+      },
+      "date_iso": "2026-02-19",
+      "date_human": "19 February 2026",
+      "severity": "general",
+      "title": "Carisoprodol (Soma\u00ae) sold as diazepam",
+      "summary": "Carisoprodol (Soma\u00ae) sold as diazepam",
+      "substances": [
+        {
+          "name": "Benzodiazepines",
+          "type": "reported",
+          "confidence": "reported"
+        },
+        {
+          "name": "Depressants",
+          "type": "reported",
+          "confidence": "reported"
+        }
+      ],
+      "source": {
+        "name": "The Know (via Victorian Pill Testing Service)",
+        "url": "https://theknow.org.au/alerts_warnings/carisoprodol-soma-sold-as-diazepam/",
+        "type": "aggregator",
+        "original_url": "https://static1.squarespace.com/static/68246f9efe435317efa3188a/t/69969a20e19d03013ded11a4/1771477536846/19+FEB+2026+-+Carisoprodol+Public+Notification.pdf"
+      },
+      "pdf_url": null,
+      "scope": "local",
+      "alert_types": [
+        "drug-notification",
+        "gen-drug-notifcation"
+      ],
+      "last_updated": "2026-08-29T22:07:01+00:00"
+    },
+    {
+      "id": "tk-2200",
+      "location": {
+        "region": "Victoria",
+        "state_code": "VIC",
+        "country": "AU",
+        "city": null
+      },
+      "date_iso": "2026-02-17",
+      "date_human": "17 February 2026",
+      "severity": "general",
+      "title": "High dose MDMA pill",
+      "summary": "High dose MDMA pill",
+      "substances": [
+        {
+          "name": "Mdma",
+          "type": "reported",
+          "confidence": "reported"
+        },
+        {
+          "name": "Mdma Ecstasy",
+          "type": "reported",
+          "confidence": "reported"
+        },
+        {
+          "name": "Stimulants",
+          "type": "reported",
+          "confidence": "reported"
+        }
+      ],
+      "source": {
+        "name": "The Know (via Victorian Pill Testing Service)",
+        "url": "https://theknow.org.au/alerts_warnings/high-dose-mdma-pill-6/",
+        "type": "aggregator",
+        "original_url": "https://static1.squarespace.com/static/68246f9efe435317efa3188a/t/6993c25be5922e0ea88e91e1/1771291227981/17+FEB+2026+-+High+Dose+MDMA+Public+Notification.pdf"
+      },
+      "pdf_url": null,
+      "scope": "local",
+      "alert_types": [
+        "drug-notification",
+        "gen-drug-notifcation"
+      ],
+      "last_updated": "2026-08-29T22:07:01+00:00"
+    },
+    {
+      "id": "tk-2193",
+      "location": {
+        "region": "Victoria",
+        "state_code": "VIC",
+        "country": "AU",
+        "city": null
+      },
+      "date_iso": "2026-02-16",
+      "date_human": "16 February 2026",
+      "severity": "general",
+      "title": "N,N-Dimethylpentylone and MDMA detected in terracotta \u2018Chupa Chup\u2019 pill",
+      "summary": "N,N-Dimethylpentylone and MDMA detected in terracotta \u2018Chupa Chup\u2019 pill",
+      "substances": [
+        {
+          "name": "Cathinones",
+          "type": "reported",
+          "confidence": "reported"
+        },
+        {
+          "name": "Mdma",
+          "type": "reported",
+          "confidence": "reported"
+        },
+        {
+          "name": "Mdma Ecstasy",
+          "type": "reported",
+          "confidence": "reported"
+        },
+        {
+          "name": "Stimulants",
+          "type": "reported",
+          "confidence": "reported"
+        }
+      ],
+      "source": {
+        "name": "The Know (via Victorian Pill Testing Service)",
+        "url": "https://theknow.org.au/alerts_warnings/nn-dimethylpentylone-and-mdma-detected-in-terracotta-chupa-chup-pill/",
+        "type": "aggregator",
+        "original_url": "https://static1.squarespace.com/static/68246f9efe435317efa3188a/t/6992adb012159d6f2f6f1a2d/1771220400327/16+Feb++2026+-+N%2CN-Dimethylpentylone+Public+Notification.pdf"
+      },
+      "pdf_url": null,
+      "scope": "local",
+      "alert_types": [
+        "drug-notification",
+        "gen-drug-notifcation"
+      ],
+      "last_updated": "2026-08-29T22:07:01+00:00"
+    },
+    {
+      "id": "tk-2188",
+      "location": {
+        "region": "Victoria",
+        "state_code": "VIC",
+        "country": "AU",
+        "city": null
+      },
+      "date_iso": "2026-02-13",
+      "date_human": "13 February 2026",
+      "severity": "general",
+      "title": "Potent dissociative \u2018O-PCE\u2019(deschloro-N-ethyl-ketamine) found in ketamine",
+      "summary": "Potent dissociative \u2018O-PCE\u2019(deschloro-N-ethyl-ketamine) found in ketamine",
+      "substances": [
+        {
+          "name": "Ketamine",
+          "type": "reported",
+          "confidence": "reported"
+        },
+        {
+          "name": "Ketamine Mdma",
+          "type": "reported",
+          "confidence": "reported"
+        },
+        {
+          "name": "K Analog",
+          "type": "reported",
+          "confidence": "reported"
+        }
+      ],
+      "source": {
+        "name": "The Know (via Victorian Pill Testing Service)",
+        "url": "https://theknow.org.au/alerts_warnings/potent-dissociative-o-pcedeschloro-n-ethyl-ketamine-found-in-ketamine/",
+        "type": "aggregator",
+        "original_url": "https://static1.squarespace.com/static/68246f9efe435317efa3188a/t/698e82b48916cc670335b2e0/1770947252040/13+February+2026_%27O-PCE%27+_Public+notification.pdf"
+      },
+      "pdf_url": null,
+      "scope": "local",
+      "alert_types": [
+        "drug-notification",
+        "gen-drug-notifcation"
+      ],
+      "last_updated": "2026-08-29T22:07:01+00:00"
+    },
+    {
+      "id": "tk-2181",
+      "location": {
+        "region": "Victoria",
+        "state_code": "VIC",
+        "country": "AU",
+        "city": null
+      },
+      "date_iso": "2026-02-12",
+      "date_human": "12 February 2026",
+      "severity": "general",
+      "title": "AB-MDMSBA (a synthetic cannabinoid) found in alprazolam (Xanax\u00ae)",
+      "summary": "AB-MDMSBA (a synthetic cannabinoid) found in alprazolam (Xanax\u00ae)",
+      "substances": [
+        {
+          "name": "Benzodiazepines",
+          "type": "reported",
+          "confidence": "reported"
+        },
+        {
+          "name": "Cannabinoids",
+          "type": "reported",
+          "confidence": "reported"
+        }
+      ],
+      "source": {
+        "name": "The Know (via Victorian Pill Testing Service)",
+        "url": "https://theknow.org.au/alerts_warnings/ab-mdmsba-a-synthetic-cannabinoid-found-in-alprazolam-xanax/",
+        "type": "aggregator",
+        "original_url": "https://static1.squarespace.com/static/68246f9efe435317efa3188a/t/698d8079cdb47a13f82b42bf/1770881145652/12+February+2026+Alprazolam+as+AB-MDMSBA_Public+notification.pdf"
+      },
+      "pdf_url": null,
+      "scope": "local",
+      "alert_types": [
+        "drug-notification",
+        "gen-drug-notifcation"
+      ],
+      "last_updated": "2026-08-29T22:07:01+00:00"
+    },
+    {
+      "id": "tk-2175",
+      "location": {
+        "region": "Australian Capital Territory",
+        "state_code": "ACT",
+        "country": "AU",
+        "city": null
+      },
+      "date_iso": "2026-02-12",
+      "date_human": "12 February 2026",
+      "severity": "caution",
+      "title": "Meth found in expected ketamine sample",
+      "summary": "Meth found in expected ketamine sample",
+      "substances": [
+        {
+          "name": "Amphetamines",
+          "type": "reported",
+          "confidence": "reported"
+        },
+        {
+          "name": "Ketamine",
+          "type": "reported",
+          "confidence": "reported"
+        },
+        {
+          "name": "Ketamine Mdma",
+          "type": "reported",
+          "confidence": "reported"
+        },
+        {
+          "name": "Stimulants",
+          "type": "reported",
+          "confidence": "reported"
+        }
+      ],
+      "source": {
+        "name": "The Know (via CanTEST)",
+        "url": "https://theknow.org.au/alerts_warnings/meth-found-in-expected-ketamine-sample/",
+        "type": "aggregator",
+        "original_url": "https://www.instagram.com/p/DUpIPR5DC8Y/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+      },
+      "pdf_url": null,
+      "scope": "local",
+      "alert_types": [
+        "community-notice",
+        "yellow-community-notice"
+      ],
+      "last_updated": "2026-08-29T22:07:01+00:00"
+    },
+    {
+      "id": "tk-2167",
+      "location": {
+        "region": "Victoria",
+        "state_code": "VIC",
+        "country": "AU",
+        "city": null
+      },
+      "date_iso": "2026-02-10",
+      "date_human": "10 February 2026",
+      "severity": "general",
+      "title": "Tramadol sold as MDMA caps",
+      "summary": "Tramadol sold as MDMA caps",
+      "substances": [
+        {
+          "name": "Mdma",
+          "type": "reported",
+          "confidence": "reported"
+        },
+        {
+          "name": "Mdma Ecstasy",
+          "type": "reported",
+          "confidence": "reported"
+        },
+        {
+          "name": "Opioids",
+          "type": "reported",
+          "confidence": "reported"
+        },
+        {
+          "name": "Stimulants",
+          "type": "reported",
+          "confidence": "reported"
+        }
+      ],
+      "source": {
+        "name": "The Know (via Victorian Pill Testing Service)",
+        "url": "https://theknow.org.au/alerts_warnings/tramadol-sold-as-mdma-caps/",
+        "type": "aggregator",
+        "original_url": "https://static1.squarespace.com/static/68246f9efe435317efa3188a/t/698adc249a7aaa2845eaba0f/1770708004431/10th+February+2026+Tramadol+sold+as+MDMA+Public+notification.pdf"
+      },
+      "pdf_url": null,
+      "scope": "local",
+      "alert_types": [
+        "drug-notification",
+        "gen-drug-notifcation"
+      ],
+      "last_updated": "2026-08-29T22:07:01+00:00"
+    },
+    {
+      "id": "tk-2159",
+      "location": {
+        "region": "New South Wales",
+        "state_code": "NSW",
+        "country": "AU",
+        "city": null
+      },
+      "date_iso": "2026-02-02",
+      "date_human": "2 February 2026",
+      "severity": "caution",
+      "title": "Multiple tablets containing a high dose of MDMA (ecstasy) and multiple tablets containing a synthetic cathinone (dipentylone) in NSW",
+      "summary": "Multiple tablets containing a high dose of MDMA (ecstasy) and multiple tablets containing a synthetic cathinone (dipentylone) in NSW",
+      "substances": [
+        {
+          "name": "Cathinones",
+          "type": "reported",
+          "confidence": "reported"
+        },
+        {
+          "name": "Mdma",
+          "type": "reported",
+          "confidence": "reported"
+        },
+        {
+          "name": "Mdma Ecstasy",
+          "type": "reported",
+          "confidence": "reported"
+        },
+        {
+          "name": "Stimulants",
+          "type": "reported",
+          "confidence": "reported"
+        }
+      ],
+      "source": {
+        "name": "The Know (via NSW Health)",
+        "url": "https://theknow.org.au/alerts_warnings/multiple-tablets-containing-a-high-dose-of-mdma-ecstasy-and-multiple-tablets-containing-a-synthetic-cathinone-dipentylone-in-nsw/",
+        "type": "aggregator",
+        "original_url": "https://www.health.nsw.gov.au/aod/public-drug-alerts/Pages/high-dose-mdma-jan26.aspx"
+      },
+      "pdf_url": null,
+      "scope": "local",
+      "alert_types": [
+        "public-drug-warning"
+      ],
+      "last_updated": "2026-08-29T22:07:01+00:00"
+    },
+    {
+      "id": "tk-2154",
+      "location": {
+        "region": "Australian Capital Territory",
+        "state_code": "ACT",
+        "country": "AU",
+        "city": null
+      },
+      "date_iso": "2026-01-30",
+      "date_human": "30 January 2026",
+      "severity": "caution",
+      "title": "High Dose MDMA Pill",
+      "summary": "High Dose MDMA Pill",
+      "substances": [
+        {
+          "name": "Mdma",
+          "type": "reported",
+          "confidence": "reported"
+        },
+        {
+          "name": "Mdma Ecstasy",
+          "type": "reported",
+          "confidence": "reported"
+        },
+        {
+          "name": "Stimulants",
+          "type": "reported",
+          "confidence": "reported"
+        }
+      ],
+      "source": {
+        "name": "The Know (via CanTEST)",
+        "url": "https://theknow.org.au/alerts_warnings/high-dose-mdma-pill-5/",
+        "type": "aggregator",
+        "original_url": "https://www.instagram.com/p/DUIjnXCj7Jg/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+      },
+      "pdf_url": null,
+      "scope": "local",
+      "alert_types": [
+        "community-notice",
+        "yellow-community-notice"
+      ],
+      "last_updated": "2026-08-29T22:07:01+00:00"
+    },
+    {
+      "id": "tk-2150",
+      "location": {
+        "region": "Victoria",
+        "state_code": "VIC",
+        "country": "AU",
+        "city": null
+      },
+      "date_iso": "2026-01-29",
+      "date_human": "29 January 2026",
+      "severity": "general",
+      "title": "High dose MDMA pills",
+      "summary": "High dose MDMA pills",
+      "substances": [
+        {
+          "name": "Mdma",
+          "type": "reported",
+          "confidence": "reported"
+        },
+        {
+          "name": "Mdma Ecstasy",
+          "type": "reported",
+          "confidence": "reported"
+        },
+        {
+          "name": "Stimulants",
+          "type": "reported",
+          "confidence": "reported"
+        }
+      ],
+      "source": {
+        "name": "The Know (via Victorian Pill Testing Service)",
+        "url": "https://theknow.org.au/alerts_warnings/high-dose-mdma-pills-2/",
+        "type": "aggregator",
+        "original_url": "https://static1.squarespace.com/static/68246f9efe435317efa3188a/t/697af92202f64853c65c606c/1769666850990/29+January+2026+-+High+Dose+MDMA+Public+Notification.pdf"
+      },
+      "pdf_url": null,
+      "scope": "local",
+      "alert_types": [
+        "drug-notification",
+        "gen-drug-notifcation"
+      ],
+      "last_updated": "2026-08-29T22:07:01+00:00"
+    },
+    {
+      "id": "tk-2141",
+      "location": {
+        "region": "Victoria",
+        "state_code": "VIC",
+        "country": "AU",
+        "city": null
+      },
+      "date_iso": "2026-01-24",
+      "date_human": "24 January 2026",
+      "severity": "general",
+      "title": "N,N-Dimethylpentylone sold as MDMA",
+      "summary": "N,N-Dimethylpentylone sold as MDMA",
+      "substances": [
+        {
+          "name": "Cathinones",
+          "type": "reported",
+          "confidence": "reported"
+        },
+        {
+          "name": "Mdma Ecstasy",
+          "type": "reported",
+          "confidence": "reported"
+        },
+        {
+          "name": "Stimulants",
+          "type": "reported",
+          "confidence": "reported"
+        }
+      ],
+      "source": {
+        "name": "The Know (via Victorian Pill Testing Service)",
+        "url": "https://theknow.org.au/alerts_warnings/nn-dimethylpentylone-sold-as-mdma/",
+        "type": "aggregator",
+        "original_url": "https://static1.squarespace.com/static/68246f9efe435317efa3188a/t/6974a0068490156780d193b9/1769250822271/24+January+2026+-+N%2CN-Dimethylpentylone+Public+Notification.pdf"
+      },
+      "pdf_url": null,
+      "scope": "local",
+      "alert_types": [
+        "drug-notification",
+        "gen-drug-notifcation"
+      ],
+      "last_updated": "2026-08-29T22:07:01+00:00"
+    },
+    {
+      "id": "tk-2136",
+      "location": {
+        "region": "Victoria",
+        "state_code": "VIC",
+        "country": "AU",
+        "city": null
+      },
+      "date_iso": "2026-01-20",
+      "date_human": "20 January 2026",
+      "severity": "general",
+      "title": "4-CMC sold as 4-MMC (mephedrone)",
+      "summary": "4-CMC sold as 4-MMC (mephedrone)",
+      "substances": [
+        {
+          "name": "Cathinones",
+          "type": "reported",
+          "confidence": "reported"
+        },
+        {
+          "name": "Stimulants",
+          "type": "reported",
+          "confidence": "reported"
+        }
+      ],
+      "source": {
+        "name": "The Know (via Victorian Pill Testing Service)",
+        "url": "https://theknow.org.au/alerts_warnings/4-cmc-sold-as-4-mmc-mephedrone/",
+        "type": "aggregator",
+        "original_url": "https://static1.squarespace.com/static/68246f9efe435317efa3188a/t/697016c776bf2a5d342facd3/1768953543234/20+January+2026+4-CMC+sold+as+4-MMC+Public+Notification.pdf"
+      },
+      "pdf_url": null,
+      "scope": "local",
+      "alert_types": [
+        "drug-notification",
+        "gen-drug-notifcation"
+      ],
+      "last_updated": "2026-08-29T22:07:01+00:00"
+    },
+    {
+      "id": "tk-2115",
+      "location": {
+        "region": "Victoria",
+        "state_code": "VIC",
+        "country": "AU",
+        "city": null
+      },
+      "date_iso": "2026-01-08",
+      "date_human": "8 January 2026",
+      "severity": "general",
+      "title": "Ketamine, MDMA, methamphetamine and 2C-B found in pills expected to contain only 2C-B",
+      "summary": "Unexpected detection",
+      "substances": [
+        {
+          "name": "2C B",
+          "type": "reported",
+          "confidence": "reported"
+        },
+        {
+          "name": "Amphetamines",
+          "type": "reported",
+          "confidence": "reported"
+        },
+        {
+          "name": "Ketamine",
+          "type": "reported",
+          "confidence": "reported"
+        },
+        {
+          "name": "Mdma",
+          "type": "reported",
+          "confidence": "reported"
+        },
+        {
+          "name": "Ketamine Mdma",
+          "type": "reported",
+          "confidence": "reported"
+        },
+        {
+          "name": "Mdma Ecstasy",
+          "type": "reported",
+          "confidence": "reported"
+        },
+        {
+          "name": "Psychedelics",
+          "type": "reported",
+          "confidence": "reported"
+        },
+        {
+          "name": "Stimulants",
+          "type": "reported",
+          "confidence": "reported"
+        }
+      ],
+      "source": {
+        "name": "The Know (via Victorian Pill Testing Service)",
+        "url": "https://theknow.org.au/alerts_warnings/ketamine-mdma-methamphetamine-and-2c-b-found-in-pills-expected-to-contain-only-2c-b/",
+        "type": "aggregator",
+        "original_url": "https://static1.squarespace.com/static/68246f9efe435317efa3188a/t/695f23083ac898180b4090f6/1767842568637/8+January+2026+-+2C-B+Public+Notification.pdf"
+      },
+      "pdf_url": null,
+      "scope": "local",
+      "alert_types": [
+        "drug-notification",
+        "gen-drug-notifcation"
+      ],
+      "last_updated": "2026-08-29T22:07:01+00:00"
+    },
+    {
+      "id": "tk-2102",
+      "location": {
+        "region": "New South Wales",
+        "state_code": "NSW",
+        "country": "AU",
+        "city": null
+      },
+      "date_iso": "2025-12-31",
+      "date_human": "31 December 2025",
+      "severity": "caution",
+      "title": "Multiple high dose MDMA (ecstasy) tablets circulating in NSW",
+      "summary": "Multiple high dose MDMA (ecstasy) tablets circulating in NSW",
+      "substances": [
+        {
+          "name": "Mdma Ecstasy",
+          "type": "reported",
+          "confidence": "reported"
+        }
+      ],
+      "source": {
+        "name": "The Know (via NSW Health)",
+        "url": "https://theknow.org.au/alerts_warnings/multiple-high-dose-mdma-ecstasy-tablets-circulating-in-nsw-4/",
+        "type": "aggregator",
+        "original_url": "https://www.health.nsw.gov.au/aod/public-drug-alerts/Pages/mdma-multiple-dec25.aspx"
+      },
+      "pdf_url": null,
+      "scope": "local",
+      "alert_types": [
+        "public-drug-warning"
+      ],
+      "last_updated": "2026-08-29T22:07:01+00:00"
+    }
+  ],
   "metadata": {
-    "generated_at": "2026-08-29T02:37:09.144831Z",
-    "total_alerts": 0,
-    "by_location": {},
-    "by_severity": {},
+    "generated_at": "2026-08-29T22:07:01.053230Z",
+    "total_alerts": 47,
+    "by_location": {
+      "VIC": 25,
+      "ACT": 19,
+      "NSW": 3
+    },
+    "by_severity": {
+      "general": 21,
+      "urgent": 4,
+      "caution": 22
+    },
     "errors": []
   }
 }
