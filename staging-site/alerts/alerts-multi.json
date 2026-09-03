@@ -1,6 +1,55 @@
 {
   "alerts": [
     {
+      "id": "tk-2422",
+      "location": {
+        "region": "Australian Capital Territory",
+        "state_code": "ACT",
+        "country": "AU",
+        "city": null
+      },
+      "date_iso": "2026-09-01",
+      "date_human": "1 September 2026",
+      "severity": "caution",
+      "title": "Meth found in expected ketamine sample",
+      "summary": "Meth found in expected ketamine sample",
+      "substances": [
+        {
+          "name": "Amphetamines",
+          "type": "reported",
+          "confidence": "reported"
+        },
+        {
+          "name": "Ketamine",
+          "type": "reported",
+          "confidence": "reported"
+        },
+        {
+          "name": "Ketamine Mdma",
+          "type": "reported",
+          "confidence": "reported"
+        },
+        {
+          "name": "Stimulants",
+          "type": "reported",
+          "confidence": "reported"
+        }
+      ],
+      "source": {
+        "name": "The Know (via CanTEST)",
+        "url": "https://theknow.org.au/alerts_warnings/meth-found-in-expected-ketamine-sample-2/",
+        "type": "aggregator",
+        "original_url": "https://www.instagram.com/p/DcvReuwjv6i/?utm_source=ig_web_copy_link&igsi=MzRlODBiNWFlZA=="
+      },
+      "pdf_url": null,
+      "scope": "local",
+      "alert_types": [
+        "community-notice",
+        "yellow-community-notice"
+      ],
+      "last_updated": "2026-09-03T22:00:09+00:00"
+    },
+    {
       "id": "tk-2417",
       "location": {
         "region": "Victoria",
@@ -32,7 +81,7 @@
         "drug-notification",
         "gen-drug-notifcation"
       ],
-      "last_updated": "2026-09-01T22:11:13+00:00"
+      "last_updated": "2026-09-03T22:00:09+00:00"
     },
     {
       "id": "tk-2411",
@@ -76,7 +125,7 @@
         "drug-notification",
         "gen-drug-notifcation"
       ],
-      "last_updated": "2026-09-01T22:11:13+00:00"
+      "last_updated": "2026-09-03T22:00:09+00:00"
     },
     {
       "id": "tk-2406",
@@ -120,7 +169,7 @@
         "drug-notification",
         "gen-drug-notifcation"
       ],
-      "last_updated": "2026-09-01T22:11:13+00:00"
+      "last_updated": "2026-09-03T22:00:09+00:00"
     },
     {
       "id": "tk-2401",
@@ -169,7 +218,7 @@
         "community-notice",
         "red-community-notice"
       ],
-      "last_updated": "2026-09-01T22:11:13+00:00"
+      "last_updated": "2026-09-03T22:00:09+00:00"
     },
     {
       "id": "tk-2403",
@@ -213,7 +262,7 @@
         "drug-notification",
         "gen-drug-notifcation"
       ],
-      "last_updated": "2026-09-01T22:11:13+00:00"
+      "last_updated": "2026-09-03T22:00:09+00:00"
     },
     {
       "id": "tk-2393",
@@ -257,7 +306,7 @@
         "drug-notification",
         "gen-drug-notifcation"
       ],
-      "last_updated": "2026-09-01T22:11:13+00:00"
+      "last_updated": "2026-09-03T22:00:09+00:00"
     },
     {
       "id": "tk-2382",
@@ -310,7 +359,7 @@
       "alert_types": [
         "drug-advisory"
       ],
-      "last_updated": "2026-09-01T22:11:13+00:00"
+      "last_updated": "2026-09-03T22:00:09+00:00"
     },
     {
       "id": "tk-2367",
@@ -348,7 +397,7 @@
       "alert_types": [
         "drug-advisory"
       ],
-      "last_updated": "2026-09-01T22:11:13+00:00"
+      "last_updated": "2026-09-03T22:00:09+00:00"
     },
     {
       "id": "tk-2370",
@@ -392,7 +441,7 @@
         "community-notice",
         "yellow-community-notice"
       ],
-      "last_updated": "2026-09-01T22:11:13+00:00"
+      "last_updated": "2026-09-03T22:00:09+00:00"
     },
     {
       "id": "tk-2356",
@@ -426,7 +475,7 @@
         "community-notice",
         "yellow-community-notice"
       ],
-      "last_updated": "2026-09-01T22:11:13+00:00"
+      "last_updated": "2026-09-03T22:00:09+00:00"
     },
     {
       "id": "tk-2349",
@@ -480,7 +529,7 @@
         "community-notice",
         "yellow-community-notice"
       ],
-      "last_updated": "2026-09-01T22:11:13+00:00"
+      "last_updated": "2026-09-03T22:00:09+00:00"
     },
     {
       "id": "tk-2346",
@@ -528,7 +577,7 @@
       "alert_types": [
         "drug-advisory"
       ],
-      "last_updated": "2026-09-01T22:11:13+00:00"
+      "last_updated": "2026-09-03T22:00:09+00:00"
     },
     {
       "id": "tk-2343",
@@ -572,7 +621,7 @@
         "drug-notification",
         "gen-drug-notifcation"
       ],
-      "last_updated": "2026-09-01T22:11:13+00:00"
+      "last_updated": "2026-09-03T22:00:09+00:00"
     },
     {
       "id": "tk-2338",
@@ -616,7 +665,7 @@
         "drug-notification",
         "gen-drug-notifcation"
       ],
-      "last_updated": "2026-09-01T22:11:13+00:00"
+      "last_updated": "2026-09-03T22:00:09+00:00"
     },
     {
       "id": "tk-2334",
@@ -655,7 +704,7 @@
         "drug-notification",
         "gen-drug-notifcation"
       ],
-      "last_updated": "2026-09-01T22:11:13+00:00"
+      "last_updated": "2026-09-03T22:00:09+00:00"
     },
     {
       "id": "tk-2328",
@@ -699,7 +748,7 @@
         "community-notice",
         "red-community-notice"
       ],
-      "last_updated": "2026-09-01T22:11:13+00:00"
+      "last_updated": "2026-09-03T22:00:09+00:00"
     },
     {
       "id": "tk-2320",
@@ -738,7 +787,7 @@
         "community-notice",
         "yellow-community-notice"
       ],
-      "last_updated": "2026-09-01T22:11:13+00:00"
+      "last_updated": "2026-09-03T22:00:09+00:00"
     },
     {
       "id": "tk-2307",
@@ -782,7 +831,7 @@
         "community-notice",
         "yellow-community-notice"
       ],
-      "last_updated": "2026-09-01T22:11:13+00:00"
+      "last_updated": "2026-09-03T22:00:09+00:00"
     },
     {
       "id": "tk-2302",
@@ -826,7 +875,7 @@
         "community-notice",
         "red-community-notice"
       ],
-      "last_updated": "2026-09-01T22:11:13+00:00"
+      "last_updated": "2026-09-03T22:00:09+00:00"
     },
     {
       "id": "tk-2299",
@@ -869,7 +918,7 @@
       "alert_types": [
         "public-drug-warning"
       ],
-      "last_updated": "2026-09-01T22:11:13+00:00"
+      "last_updated": "2026-09-03T22:00:09+00:00"
     },
     {
       "id": "tk-2290",
@@ -908,7 +957,7 @@
         "community-notice",
         "yellow-community-notice"
       ],
-      "last_updated": "2026-09-01T22:11:13+00:00"
+      "last_updated": "2026-09-03T22:00:09+00:00"
     },
     {
       "id": "tk-2287",
@@ -952,7 +1001,7 @@
         "community-notice",
         "yellow-community-notice"
       ],
-      "last_updated": "2026-09-01T22:11:13+00:00"
+      "last_updated": "2026-09-03T22:00:09+00:00"
     },
     {
       "id": "tk-2276",
@@ -1001,7 +1050,7 @@
         "community-notice",
         "yellow-community-notice"
       ],
-      "last_updated": "2026-09-01T22:11:13+00:00"
+      "last_updated": "2026-09-03T22:00:09+00:00"
     },
     {
       "id": "tk-2269",
@@ -1050,7 +1099,7 @@
         "drug-notification",
         "gen-drug-notifcation"
       ],
-      "last_updated": "2026-09-01T22:11:13+00:00"
+      "last_updated": "2026-09-03T22:00:09+00:00"
     },
     {
       "id": "tk-2265",
@@ -1089,7 +1138,7 @@
         "drug-notification",
         "gen-drug-notifcation"
       ],
-      "last_updated": "2026-09-01T22:11:13+00:00"
+      "last_updated": "2026-09-03T22:00:09+00:00"
     },
     {
       "id": "tk-2242",
@@ -1148,7 +1197,7 @@
         "drug-alert",
         "yellow-drug-alert"
       ],
-      "last_updated": "2026-09-01T22:11:13+00:00"
+      "last_updated": "2026-09-03T22:00:09+00:00"
     },
     {
       "id": "tk-2245",
@@ -1207,7 +1256,7 @@
         "drug-alert",
         "yellow-drug-alert"
       ],
-      "last_updated": "2026-09-01T22:11:13+00:00"
+      "last_updated": "2026-09-03T22:00:09+00:00"
     },
     {
       "id": "tk-2249",
@@ -1256,7 +1305,7 @@
         "drug-alert",
         "yellow-drug-alert"
       ],
-      "last_updated": "2026-09-01T22:11:13+00:00"
+      "last_updated": "2026-09-03T22:00:09+00:00"
     },
     {
       "id": "tk-2254",
@@ -1295,7 +1344,7 @@
         "drug-alert",
         "yellow-drug-alert"
       ],
-      "last_updated": "2026-09-01T22:11:13+00:00"
+      "last_updated": "2026-09-03T22:00:09+00:00"
     },
     {
       "id": "tk-2236",
@@ -1344,7 +1393,7 @@
         "drug-alert",
         "red-drug-alert"
       ],
-      "last_updated": "2026-09-01T22:11:13+00:00"
+      "last_updated": "2026-09-03T22:00:09+00:00"
     },
     {
       "id": "tk-2229",
@@ -1393,7 +1442,7 @@
         "community-notice",
         "yellow-community-notice"
       ],
-      "last_updated": "2026-09-01T22:11:13+00:00"
+      "last_updated": "2026-09-03T22:00:09+00:00"
     },
     {
       "id": "tk-2223",
@@ -1437,7 +1486,7 @@
         "drug-notification",
         "gen-drug-notifcation"
       ],
-      "last_updated": "2026-09-01T22:11:13+00:00"
+      "last_updated": "2026-09-03T22:00:09+00:00"
     },
     {
       "id": "tk-2217",
@@ -1470,7 +1519,7 @@
       "alert_types": [
         "drug-alert"
       ],
-      "last_updated": "2026-09-01T22:11:13+00:00"
+      "last_updated": "2026-09-03T22:00:09+00:00"
     },
     {
       "id": "tk-2212",
@@ -1509,7 +1558,7 @@
         "drug-notification",
         "gen-drug-notifcation"
       ],
-      "last_updated": "2026-09-01T22:11:13+00:00"
+      "last_updated": "2026-09-03T22:00:09+00:00"
     },
     {
       "id": "tk-2200",
@@ -1553,7 +1602,7 @@
         "drug-notification",
         "gen-drug-notifcation"
       ],
-      "last_updated": "2026-09-01T22:11:13+00:00"
+      "last_updated": "2026-09-03T22:00:09+00:00"
     },
     {
       "id": "tk-2193",
@@ -1602,7 +1651,7 @@
         "drug-notification",
         "gen-drug-notifcation"
       ],
-      "last_updated": "2026-09-01T22:11:13+00:00"
+      "last_updated": "2026-09-03T22:00:09+00:00"
     },
     {
       "id": "tk-2188",
@@ -1646,56 +1695,7 @@
         "drug-notification",
         "gen-drug-notifcation"
       ],
-      "last_updated": "2026-09-01T22:11:13+00:00"
-    },
-    {
-      "id": "tk-2175",
-      "location": {
-        "region": "Australian Capital Territory",
-        "state_code": "ACT",
-        "country": "AU",
-        "city": null
-      },
-      "date_iso": "2026-02-12",
-      "date_human": "12 February 2026",
-      "severity": "caution",
-      "title": "Meth found in expected ketamine sample",
-      "summary": "Meth found in expected ketamine sample",
-      "substances": [
-        {
-          "name": "Amphetamines",
-          "type": "reported",
-          "confidence": "reported"
-        },
-        {
-          "name": "Ketamine",
-          "type": "reported",
-          "confidence": "reported"
-        },
-        {
-          "name": "Ketamine Mdma",
-          "type": "reported",
-          "confidence": "reported"
-        },
-        {
-          "name": "Stimulants",
-          "type": "reported",
-          "confidence": "reported"
-        }
-      ],
-      "source": {
-        "name": "The Know (via CanTEST)",
-        "url": "https://theknow.org.au/alerts_warnings/meth-found-in-expected-ketamine-sample/",
-        "type": "aggregator",
-        "original_url": "https://www.instagram.com/p/DUpIPR5DC8Y/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
-      },
-      "pdf_url": null,
-      "scope": "local",
-      "alert_types": [
-        "community-notice",
-        "yellow-community-notice"
-      ],
-      "last_updated": "2026-09-01T22:11:13+00:00"
+      "last_updated": "2026-09-03T22:00:09+00:00"
     },
     {
       "id": "tk-2181",
@@ -1734,7 +1734,7 @@
         "drug-notification",
         "gen-drug-notifcation"
       ],
-      "last_updated": "2026-09-01T22:11:13+00:00"
+      "last_updated": "2026-09-03T22:00:09+00:00"
     },
     {
       "id": "tk-2167",
@@ -1783,7 +1783,7 @@
         "drug-notification",
         "gen-drug-notifcation"
       ],
-      "last_updated": "2026-09-01T22:11:13+00:00"
+      "last_updated": "2026-09-03T22:00:09+00:00"
     },
     {
       "id": "tk-2159",
@@ -1831,7 +1831,7 @@
       "alert_types": [
         "public-drug-warning"
       ],
-      "last_updated": "2026-09-01T22:11:13+00:00"
+      "last_updated": "2026-09-03T22:00:09+00:00"
     },
     {
       "id": "tk-2154",
@@ -1875,7 +1875,7 @@
         "community-notice",
         "yellow-community-notice"
       ],
-      "last_updated": "2026-09-01T22:11:13+00:00"
+      "last_updated": "2026-09-03T22:00:09+00:00"
     },
     {
       "id": "tk-2150",
@@ -1919,7 +1919,7 @@
         "drug-notification",
         "gen-drug-notifcation"
       ],
-      "last_updated": "2026-09-01T22:11:13+00:00"
+      "last_updated": "2026-09-03T22:00:09+00:00"
     },
     {
       "id": "tk-2141",
@@ -1963,7 +1963,7 @@
         "drug-notification",
         "gen-drug-notifcation"
       ],
-      "last_updated": "2026-09-01T22:11:13+00:00"
+      "last_updated": "2026-09-03T22:00:09+00:00"
     },
     {
       "id": "tk-2136",
@@ -2002,7 +2002,7 @@
         "drug-notification",
         "gen-drug-notifcation"
       ],
-      "last_updated": "2026-09-01T22:11:13+00:00"
+      "last_updated": "2026-09-03T22:00:09+00:00"
     },
     {
       "id": "tk-2115",
@@ -2071,54 +2071,21 @@
         "drug-notification",
         "gen-drug-notifcation"
       ],
-      "last_updated": "2026-09-01T22:11:13+00:00"
-    },
-    {
-      "id": "tk-2102",
-      "location": {
-        "region": "New South Wales",
-        "state_code": "NSW",
-        "country": "AU",
-        "city": null
-      },
-      "date_iso": "2025-12-31",
-      "date_human": "31 December 2025",
-      "severity": "caution",
-      "title": "Multiple high dose MDMA (ecstasy) tablets circulating in NSW",
-      "summary": "Multiple high dose MDMA (ecstasy) tablets circulating in NSW",
-      "substances": [
-        {
-          "name": "Mdma Ecstasy",
-          "type": "reported",
-          "confidence": "reported"
-        }
-      ],
-      "source": {
-        "name": "The Know (via NSW Health)",
-        "url": "https://theknow.org.au/alerts_warnings/multiple-high-dose-mdma-ecstasy-tablets-circulating-in-nsw-4/",
-        "type": "aggregator",
-        "original_url": "https://www.health.nsw.gov.au/aod/public-drug-alerts/Pages/mdma-multiple-dec25.aspx"
-      },
-      "pdf_url": null,
-      "scope": "local",
-      "alert_types": [
-        "public-drug-warning"
-      ],
-      "last_updated": "2026-09-01T22:11:13+00:00"
+      "last_updated": "2026-09-03T22:00:09+00:00"
     }
   ],
   "metadata": {
-    "generated_at": "2026-09-01T22:11:13.769359Z",
-    "total_alerts": 47,
+    "generated_at": "2026-09-03T22:00:09.947707Z",
+    "total_alerts": 46,
     "by_location": {
-      "VIC": 25,
       "ACT": 19,
-      "NSW": 3
+      "VIC": 25,
+      "NSW": 2
     },
     "by_severity": {
+      "caution": 21,
       "general": 21,
-      "urgent": 4,
-      "caution": 22
+      "urgent": 4
     },
     "errors": []
   }
