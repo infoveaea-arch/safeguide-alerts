@@ -1,6 +1,55 @@
 {
   "alerts": [
     {
+      "id": "tk-2425",
+      "location": {
+        "region": "Australian Capital Territory",
+        "state_code": "ACT",
+        "country": "AU",
+        "city": null
+      },
+      "date_iso": "2026-09-04",
+      "date_human": "4 September 2026",
+      "severity": "urgent",
+      "title": "Heroin found in expected \u2018cocaine\u2019 sample",
+      "summary": "Heroin found in expected \u2018cocaine\u2019 sample",
+      "substances": [
+        {
+          "name": "Cocaine",
+          "type": "reported",
+          "confidence": "reported"
+        },
+        {
+          "name": "Heroin",
+          "type": "reported",
+          "confidence": "reported"
+        },
+        {
+          "name": "Opioids",
+          "type": "reported",
+          "confidence": "reported"
+        },
+        {
+          "name": "Stimulants",
+          "type": "reported",
+          "confidence": "reported"
+        }
+      ],
+      "source": {
+        "name": "The Know (via CanTEST)",
+        "url": "https://theknow.org.au/alerts_warnings/heroin-found-in-expected-cocaine-sample-3/",
+        "type": "aggregator",
+        "original_url": "https://www.instagram.com/p/Dc2pHrZDCVz/?utm_source=ig_web_copy_link&igsi=MzRlODBiNWFlZA=="
+      },
+      "pdf_url": null,
+      "scope": "local",
+      "alert_types": [
+        "community-notice",
+        "red-community-notice"
+      ],
+      "last_updated": "2026-09-04T21:57:25+00:00"
+    },
+    {
       "id": "tk-2422",
       "location": {
         "region": "Australian Capital Territory",
@@ -47,7 +96,7 @@
         "community-notice",
         "yellow-community-notice"
       ],
-      "last_updated": "2026-09-03T22:00:09+00:00"
+      "last_updated": "2026-09-04T21:57:25+00:00"
     },
     {
       "id": "tk-2417",
@@ -81,7 +130,7 @@
         "drug-notification",
         "gen-drug-notifcation"
       ],
-      "last_updated": "2026-09-03T22:00:09+00:00"
+      "last_updated": "2026-09-04T21:57:25+00:00"
     },
     {
       "id": "tk-2411",
@@ -125,7 +174,7 @@
         "drug-notification",
         "gen-drug-notifcation"
       ],
-      "last_updated": "2026-09-03T22:00:09+00:00"
+      "last_updated": "2026-09-04T21:57:25+00:00"
     },
     {
       "id": "tk-2406",
@@ -169,56 +218,7 @@
         "drug-notification",
         "gen-drug-notifcation"
       ],
-      "last_updated": "2026-09-03T22:00:09+00:00"
-    },
-    {
-      "id": "tk-2401",
-      "location": {
-        "region": "Australian Capital Territory",
-        "state_code": "ACT",
-        "country": "AU",
-        "city": null
-      },
-      "date_iso": "2026-07-23",
-      "date_human": "23 July 2026",
-      "severity": "urgent",
-      "title": "Heroin found in expected \u2018cocaine\u2019 sample",
-      "summary": "Heroin found in expected \u2018cocaine\u2019 sample",
-      "substances": [
-        {
-          "name": "Cocaine",
-          "type": "reported",
-          "confidence": "reported"
-        },
-        {
-          "name": "Heroin",
-          "type": "reported",
-          "confidence": "reported"
-        },
-        {
-          "name": "Opioids",
-          "type": "reported",
-          "confidence": "reported"
-        },
-        {
-          "name": "Stimulants",
-          "type": "reported",
-          "confidence": "reported"
-        }
-      ],
-      "source": {
-        "name": "The Know (via CanTEST)",
-        "url": "https://theknow.org.au/alerts_warnings/heroin-found-in-expected-cocaine-sample-2/",
-        "type": "aggregator",
-        "original_url": "https://www.instagram.com/p/DbIWgCBD8uO/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
-      },
-      "pdf_url": null,
-      "scope": "local",
-      "alert_types": [
-        "community-notice",
-        "red-community-notice"
-      ],
-      "last_updated": "2026-09-03T22:00:09+00:00"
+      "last_updated": "2026-09-04T21:57:25+00:00"
     },
     {
       "id": "tk-2403",
@@ -262,7 +262,7 @@
         "drug-notification",
         "gen-drug-notifcation"
       ],
-      "last_updated": "2026-09-03T22:00:09+00:00"
+      "last_updated": "2026-09-04T21:57:25+00:00"
     },
     {
       "id": "tk-2393",
@@ -306,7 +306,7 @@
         "drug-notification",
         "gen-drug-notifcation"
       ],
-      "last_updated": "2026-09-03T22:00:09+00:00"
+      "last_updated": "2026-09-04T21:57:25+00:00"
     },
     {
       "id": "tk-2382",
@@ -359,7 +359,7 @@
       "alert_types": [
         "drug-advisory"
       ],
-      "last_updated": "2026-09-03T22:00:09+00:00"
+      "last_updated": "2026-09-04T21:57:25+00:00"
     },
     {
       "id": "tk-2367",
@@ -397,7 +397,7 @@
       "alert_types": [
         "drug-advisory"
       ],
-      "last_updated": "2026-09-03T22:00:09+00:00"
+      "last_updated": "2026-09-04T21:57:25+00:00"
     },
     {
       "id": "tk-2370",
@@ -441,7 +441,7 @@
         "community-notice",
         "yellow-community-notice"
       ],
-      "last_updated": "2026-09-03T22:00:09+00:00"
+      "last_updated": "2026-09-04T21:57:25+00:00"
     },
     {
       "id": "tk-2356",
@@ -475,7 +475,7 @@
         "community-notice",
         "yellow-community-notice"
       ],
-      "last_updated": "2026-09-03T22:00:09+00:00"
+      "last_updated": "2026-09-04T21:57:25+00:00"
     },
     {
       "id": "tk-2349",
@@ -529,7 +529,7 @@
         "community-notice",
         "yellow-community-notice"
       ],
-      "last_updated": "2026-09-03T22:00:09+00:00"
+      "last_updated": "2026-09-04T21:57:25+00:00"
     },
     {
       "id": "tk-2346",
@@ -577,7 +577,7 @@
       "alert_types": [
         "drug-advisory"
       ],
-      "last_updated": "2026-09-03T22:00:09+00:00"
+      "last_updated": "2026-09-04T21:57:25+00:00"
     },
     {
       "id": "tk-2343",
@@ -621,7 +621,7 @@
         "drug-notification",
         "gen-drug-notifcation"
       ],
-      "last_updated": "2026-09-03T22:00:09+00:00"
+      "last_updated": "2026-09-04T21:57:25+00:00"
     },
     {
       "id": "tk-2338",
@@ -665,7 +665,7 @@
         "drug-notification",
         "gen-drug-notifcation"
       ],
-      "last_updated": "2026-09-03T22:00:09+00:00"
+      "last_updated": "2026-09-04T21:57:25+00:00"
     },
     {
       "id": "tk-2334",
@@ -704,7 +704,7 @@
         "drug-notification",
         "gen-drug-notifcation"
       ],
-      "last_updated": "2026-09-03T22:00:09+00:00"
+      "last_updated": "2026-09-04T21:57:25+00:00"
     },
     {
       "id": "tk-2328",
@@ -748,7 +748,7 @@
         "community-notice",
         "red-community-notice"
       ],
-      "last_updated": "2026-09-03T22:00:09+00:00"
+      "last_updated": "2026-09-04T21:57:25+00:00"
     },
     {
       "id": "tk-2320",
@@ -787,7 +787,7 @@
         "community-notice",
         "yellow-community-notice"
       ],
-      "last_updated": "2026-09-03T22:00:09+00:00"
+      "last_updated": "2026-09-04T21:57:25+00:00"
     },
     {
       "id": "tk-2307",
@@ -831,7 +831,7 @@
         "community-notice",
         "yellow-community-notice"
       ],
-      "last_updated": "2026-09-03T22:00:09+00:00"
+      "last_updated": "2026-09-04T21:57:25+00:00"
     },
     {
       "id": "tk-2302",
@@ -875,7 +875,7 @@
         "community-notice",
         "red-community-notice"
       ],
-      "last_updated": "2026-09-03T22:00:09+00:00"
+      "last_updated": "2026-09-04T21:57:25+00:00"
     },
     {
       "id": "tk-2299",
@@ -918,7 +918,7 @@
       "alert_types": [
         "public-drug-warning"
       ],
-      "last_updated": "2026-09-03T22:00:09+00:00"
+      "last_updated": "2026-09-04T21:57:25+00:00"
     },
     {
       "id": "tk-2290",
@@ -957,7 +957,7 @@
         "community-notice",
         "yellow-community-notice"
       ],
-      "last_updated": "2026-09-03T22:00:09+00:00"
+      "last_updated": "2026-09-04T21:57:25+00:00"
     },
     {
       "id": "tk-2287",
@@ -1001,7 +1001,7 @@
         "community-notice",
         "yellow-community-notice"
       ],
-      "last_updated": "2026-09-03T22:00:09+00:00"
+      "last_updated": "2026-09-04T21:57:25+00:00"
     },
     {
       "id": "tk-2276",
@@ -1050,7 +1050,7 @@
         "community-notice",
         "yellow-community-notice"
       ],
-      "last_updated": "2026-09-03T22:00:09+00:00"
+      "last_updated": "2026-09-04T21:57:25+00:00"
     },
     {
       "id": "tk-2269",
@@ -1099,7 +1099,7 @@
         "drug-notification",
         "gen-drug-notifcation"
       ],
-      "last_updated": "2026-09-03T22:00:09+00:00"
+      "last_updated": "2026-09-04T21:57:25+00:00"
     },
     {
       "id": "tk-2265",
@@ -1138,7 +1138,95 @@
         "drug-notification",
         "gen-drug-notifcation"
       ],
-      "last_updated": "2026-09-03T22:00:09+00:00"
+      "last_updated": "2026-09-04T21:57:25+00:00"
+    },
+    {
+      "id": "tk-2249",
+      "location": {
+        "region": "Australian Capital Territory",
+        "state_code": "ACT",
+        "country": "AU",
+        "city": null
+      },
+      "date_iso": "2026-03-04",
+      "date_human": "4 March 2026",
+      "severity": "caution",
+      "title": "MDA & MDMA found in MDMA pill",
+      "summary": "MDA & MDMA found in MDMA pill",
+      "substances": [
+        {
+          "name": "Mdma",
+          "type": "reported",
+          "confidence": "reported"
+        },
+        {
+          "name": "Mda",
+          "type": "reported",
+          "confidence": "reported"
+        },
+        {
+          "name": "Mdma Ecstasy",
+          "type": "reported",
+          "confidence": "reported"
+        },
+        {
+          "name": "Stimulants",
+          "type": "reported",
+          "confidence": "reported"
+        }
+      ],
+      "source": {
+        "name": "The Know (via Pill Testing Austraila)",
+        "url": "https://theknow.org.au/alerts_warnings/mda-mdma-found-in-mdma-pill/",
+        "type": "aggregator",
+        "original_url": "https://www.instagram.com/p/DVcZ6owEpfq/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+      },
+      "pdf_url": null,
+      "scope": "local",
+      "alert_types": [
+        "drug-alert",
+        "yellow-drug-alert"
+      ],
+      "last_updated": "2026-09-04T21:57:25+00:00"
+    },
+    {
+      "id": "tk-2254",
+      "location": {
+        "region": "Australian Capital Territory",
+        "state_code": "ACT",
+        "country": "AU",
+        "city": null
+      },
+      "date_iso": "2026-03-04",
+      "date_human": "4 March 2026",
+      "severity": "caution",
+      "title": "Bromazolam and clonazolam detected in \u2018Mylan\u2019 pill",
+      "summary": "Bromazolam and clonazolam detected in \u2018Mylan\u2019 pill",
+      "substances": [
+        {
+          "name": "Benzodiazepines",
+          "type": "reported",
+          "confidence": "reported"
+        },
+        {
+          "name": "Depressants",
+          "type": "reported",
+          "confidence": "reported"
+        }
+      ],
+      "source": {
+        "name": "The Know (via Pill Testing Austraila)",
+        "url": "https://theknow.org.au/alerts_warnings/bromazolam-and-clonazolam-detected-in-mylan-pill/",
+        "type": "aggregator",
+        "original_url": "https://www.instagram.com/p/DVcZ6owEpfq/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+      },
+      "pdf_url": null,
+      "scope": "local",
+      "alert_types": [
+        "drug-alert",
+        "yellow-drug-alert"
+      ],
+      "last_updated": "2026-09-04T21:57:25+00:00"
     },
     {
       "id": "tk-2242",
@@ -1197,7 +1285,7 @@
         "drug-alert",
         "yellow-drug-alert"
       ],
-      "last_updated": "2026-09-03T22:00:09+00:00"
+      "last_updated": "2026-09-04T21:57:25+00:00"
     },
     {
       "id": "tk-2245",
@@ -1256,95 +1344,7 @@
         "drug-alert",
         "yellow-drug-alert"
       ],
-      "last_updated": "2026-09-03T22:00:09+00:00"
-    },
-    {
-      "id": "tk-2249",
-      "location": {
-        "region": "Australian Capital Territory",
-        "state_code": "ACT",
-        "country": "AU",
-        "city": null
-      },
-      "date_iso": "2026-03-04",
-      "date_human": "4 March 2026",
-      "severity": "caution",
-      "title": "MDA & MDMA found in MDMA pill",
-      "summary": "MDA & MDMA found in MDMA pill",
-      "substances": [
-        {
-          "name": "Mdma",
-          "type": "reported",
-          "confidence": "reported"
-        },
-        {
-          "name": "Mda",
-          "type": "reported",
-          "confidence": "reported"
-        },
-        {
-          "name": "Mdma Ecstasy",
-          "type": "reported",
-          "confidence": "reported"
-        },
-        {
-          "name": "Stimulants",
-          "type": "reported",
-          "confidence": "reported"
-        }
-      ],
-      "source": {
-        "name": "The Know (via Pill Testing Austraila)",
-        "url": "https://theknow.org.au/alerts_warnings/mda-mdma-found-in-mdma-pill/",
-        "type": "aggregator",
-        "original_url": "https://www.instagram.com/p/DVcZ6owEpfq/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
-      },
-      "pdf_url": null,
-      "scope": "local",
-      "alert_types": [
-        "drug-alert",
-        "yellow-drug-alert"
-      ],
-      "last_updated": "2026-09-03T22:00:09+00:00"
-    },
-    {
-      "id": "tk-2254",
-      "location": {
-        "region": "Australian Capital Territory",
-        "state_code": "ACT",
-        "country": "AU",
-        "city": null
-      },
-      "date_iso": "2026-03-04",
-      "date_human": "4 March 2026",
-      "severity": "caution",
-      "title": "Bromazolam and clonazolam detected in \u2018Mylan\u2019 pill",
-      "summary": "Bromazolam and clonazolam detected in \u2018Mylan\u2019 pill",
-      "substances": [
-        {
-          "name": "Benzodiazepines",
-          "type": "reported",
-          "confidence": "reported"
-        },
-        {
-          "name": "Depressants",
-          "type": "reported",
-          "confidence": "reported"
-        }
-      ],
-      "source": {
-        "name": "The Know (via Pill Testing Austraila)",
-        "url": "https://theknow.org.au/alerts_warnings/bromazolam-and-clonazolam-detected-in-mylan-pill/",
-        "type": "aggregator",
-        "original_url": "https://www.instagram.com/p/DVcZ6owEpfq/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
-      },
-      "pdf_url": null,
-      "scope": "local",
-      "alert_types": [
-        "drug-alert",
-        "yellow-drug-alert"
-      ],
-      "last_updated": "2026-09-03T22:00:09+00:00"
+      "last_updated": "2026-09-04T21:57:25+00:00"
     },
     {
       "id": "tk-2236",
@@ -1393,7 +1393,7 @@
         "drug-alert",
         "red-drug-alert"
       ],
-      "last_updated": "2026-09-03T22:00:09+00:00"
+      "last_updated": "2026-09-04T21:57:25+00:00"
     },
     {
       "id": "tk-2229",
@@ -1442,7 +1442,7 @@
         "community-notice",
         "yellow-community-notice"
       ],
-      "last_updated": "2026-09-03T22:00:09+00:00"
+      "last_updated": "2026-09-04T21:57:25+00:00"
     },
     {
       "id": "tk-2223",
@@ -1486,7 +1486,7 @@
         "drug-notification",
         "gen-drug-notifcation"
       ],
-      "last_updated": "2026-09-03T22:00:09+00:00"
+      "last_updated": "2026-09-04T21:57:25+00:00"
     },
     {
       "id": "tk-2217",
@@ -1519,7 +1519,7 @@
       "alert_types": [
         "drug-alert"
       ],
-      "last_updated": "2026-09-03T22:00:09+00:00"
+      "last_updated": "2026-09-04T21:57:25+00:00"
     },
     {
       "id": "tk-2212",
@@ -1558,7 +1558,7 @@
         "drug-notification",
         "gen-drug-notifcation"
       ],
-      "last_updated": "2026-09-03T22:00:09+00:00"
+      "last_updated": "2026-09-04T21:57:25+00:00"
     },
     {
       "id": "tk-2200",
@@ -1602,7 +1602,7 @@
         "drug-notification",
         "gen-drug-notifcation"
       ],
-      "last_updated": "2026-09-03T22:00:09+00:00"
+      "last_updated": "2026-09-04T21:57:25+00:00"
     },
     {
       "id": "tk-2193",
@@ -1651,7 +1651,7 @@
         "drug-notification",
         "gen-drug-notifcation"
       ],
-      "last_updated": "2026-09-03T22:00:09+00:00"
+      "last_updated": "2026-09-04T21:57:25+00:00"
     },
     {
       "id": "tk-2188",
@@ -1695,7 +1695,7 @@
         "drug-notification",
         "gen-drug-notifcation"
       ],
-      "last_updated": "2026-09-03T22:00:09+00:00"
+      "last_updated": "2026-09-04T21:57:25+00:00"
     },
     {
       "id": "tk-2181",
@@ -1734,7 +1734,7 @@
         "drug-notification",
         "gen-drug-notifcation"
       ],
-      "last_updated": "2026-09-03T22:00:09+00:00"
+      "last_updated": "2026-09-04T21:57:25+00:00"
     },
     {
       "id": "tk-2167",
@@ -1783,7 +1783,7 @@
         "drug-notification",
         "gen-drug-notifcation"
       ],
-      "last_updated": "2026-09-03T22:00:09+00:00"
+      "last_updated": "2026-09-04T21:57:25+00:00"
     },
     {
       "id": "tk-2159",
@@ -1831,7 +1831,7 @@
       "alert_types": [
         "public-drug-warning"
       ],
-      "last_updated": "2026-09-03T22:00:09+00:00"
+      "last_updated": "2026-09-04T21:57:25+00:00"
     },
     {
       "id": "tk-2154",
@@ -1875,7 +1875,7 @@
         "community-notice",
         "yellow-community-notice"
       ],
-      "last_updated": "2026-09-03T22:00:09+00:00"
+      "last_updated": "2026-09-04T21:57:25+00:00"
     },
     {
       "id": "tk-2150",
@@ -1919,7 +1919,7 @@
         "drug-notification",
         "gen-drug-notifcation"
       ],
-      "last_updated": "2026-09-03T22:00:09+00:00"
+      "last_updated": "2026-09-04T21:57:25+00:00"
     },
     {
       "id": "tk-2141",
@@ -1963,7 +1963,7 @@
         "drug-notification",
         "gen-drug-notifcation"
       ],
-      "last_updated": "2026-09-03T22:00:09+00:00"
+      "last_updated": "2026-09-04T21:57:25+00:00"
     },
     {
       "id": "tk-2136",
@@ -2002,90 +2002,21 @@
         "drug-notification",
         "gen-drug-notifcation"
       ],
-      "last_updated": "2026-09-03T22:00:09+00:00"
-    },
-    {
-      "id": "tk-2115",
-      "location": {
-        "region": "Victoria",
-        "state_code": "VIC",
-        "country": "AU",
-        "city": null
-      },
-      "date_iso": "2026-01-08",
-      "date_human": "8 January 2026",
-      "severity": "general",
-      "title": "Ketamine, MDMA, methamphetamine and 2C-B found in pills expected to contain only 2C-B",
-      "summary": "Unexpected detection",
-      "substances": [
-        {
-          "name": "2C B",
-          "type": "reported",
-          "confidence": "reported"
-        },
-        {
-          "name": "Amphetamines",
-          "type": "reported",
-          "confidence": "reported"
-        },
-        {
-          "name": "Ketamine",
-          "type": "reported",
-          "confidence": "reported"
-        },
-        {
-          "name": "Mdma",
-          "type": "reported",
-          "confidence": "reported"
-        },
-        {
-          "name": "Ketamine Mdma",
-          "type": "reported",
-          "confidence": "reported"
-        },
-        {
-          "name": "Mdma Ecstasy",
-          "type": "reported",
-          "confidence": "reported"
-        },
-        {
-          "name": "Psychedelics",
-          "type": "reported",
-          "confidence": "reported"
-        },
-        {
-          "name": "Stimulants",
-          "type": "reported",
-          "confidence": "reported"
-        }
-      ],
-      "source": {
-        "name": "The Know (via Victorian Pill Testing Service)",
-        "url": "https://theknow.org.au/alerts_warnings/ketamine-mdma-methamphetamine-and-2c-b-found-in-pills-expected-to-contain-only-2c-b/",
-        "type": "aggregator",
-        "original_url": "https://static1.squarespace.com/static/68246f9efe435317efa3188a/t/695f23083ac898180b4090f6/1767842568637/8+January+2026+-+2C-B+Public+Notification.pdf"
-      },
-      "pdf_url": null,
-      "scope": "local",
-      "alert_types": [
-        "drug-notification",
-        "gen-drug-notifcation"
-      ],
-      "last_updated": "2026-09-03T22:00:09+00:00"
+      "last_updated": "2026-09-04T21:57:25+00:00"
     }
   ],
   "metadata": {
-    "generated_at": "2026-09-03T22:00:09.947707Z",
-    "total_alerts": 46,
+    "generated_at": "2026-09-04T21:57:25.890541Z",
+    "total_alerts": 45,
     "by_location": {
       "ACT": 19,
-      "VIC": 25,
+      "VIC": 24,
       "NSW": 2
     },
     "by_severity": {
+      "urgent": 4,
       "caution": 21,
-      "general": 21,
-      "urgent": 4
+      "general": 20
     },
     "errors": []
   }
