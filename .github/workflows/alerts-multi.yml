@@ -25,7 +25,9 @@ on:
 
 concurrency:
   group: safeguide-alerts-multi
-  cancel-in-progress: false
+  # Was `false`, which queued duplicate runs behind a hung one instead of
+  # replacing them — each queued run then sat until the 6h ceiling.
+  cancel-in-progress: true
 
 permissions:
   contents: write   # to commit the refreshed alerts-multi.json back to the repo
@@ -46,6 +48,11 @@ env:
 jobs:
   fetch-and-deploy:
     runs-on: ubuntu-latest
+    # This repo is PRIVATE, so every minute bills against the monthly quota.
+    # Without a timeout a hung run sits until GitHub's 6h ceiling; runs that did
+    # exactly that exhausted the quota, after which every run failed in ~3s with
+    # "job was not started ... spending limit". A normal run takes under a minute.
+    timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
 
