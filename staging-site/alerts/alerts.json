@@ -1,9 +1,17 @@
 {
   "source": "https://www.vicpilltesting.org.au/drug-notifications",
   "source_name": "Victorian Pill Testing Service (VPTS)",
-  "generated_at": "2026-08-25T10:51:00+00:00",
-  "count": 30,
+  "generated_at": "2026-09-11T14:27:41+00:00",
+  "count": 31,
   "alerts": [
+    {
+      "date_iso": "2026-09-11",
+      "date_human": "11 September 2026",
+      "severity": "general",
+      "title": "General Methamphetamine in expected MDMA",
+      "summary": "Methamphetamine detected in red capsules expected to be MDMA No MDMA was detected in the samples 11 September 2026 What has been detected? Methamphetamine was detected in two red capsules (with a smal…",
+      "pdf_url": "https://www.vicpilltesting.org.au/s/110926-General-Notification-Methamphetamine-in-expected-MDMA.pdf"
+    },
     {
       "date_iso": "2026-08-25",
       "date_human": "25 August 2026",
