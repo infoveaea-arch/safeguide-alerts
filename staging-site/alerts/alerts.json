@@ -1,7 +1,7 @@
 {
   "source": "https://www.vicpilltesting.org.au/drug-notifications",
   "source_name": "Victorian Pill Testing Service (VPTS)",
-  "generated_at": "2026-09-11T14:27:41+00:00",
+  "generated_at": "2026-09-28T16:30:18+00:00",
   "count": 31,
   "alerts": [
     {
@@ -10,7 +10,8 @@
       "severity": "general",
       "title": "General Methamphetamine in expected MDMA",
       "summary": "Methamphetamine detected in red capsules expected to be MDMA No MDMA was detected in the samples 11 September 2026 What has been detected? Methamphetamine was detected in two red capsules (with a smal…",
-      "pdf_url": "https://www.vicpilltesting.org.au/s/110926-General-Notification-Methamphetamine-in-expected-MDMA.pdf"
+      "pdf_url": "https://www.vicpilltesting.org.au/s/110926-General-Notification-Methamphetamine-in-expected-MDMA.pdf",
+      "image_url": "https://images.squarespace-cdn.com/content/v1/68246f9efe435317efa3188a/9d212f40-f173-47e7-bea7-910605ca75ad/11.09.26+_+Generalnotification.png"
     },
     {
       "date_iso": "2026-08-25",
@@ -18,7 +19,8 @@
       "severity": "general",
       "title": "General Oxandrolone",
       "summary": "Turinabol (T-bol) and methandienone (D-bol) detected in a sample expected to contain oxandrolone No oxandrolone was detected 25 August 2026 What is Oxandrolone? Oxandrolone, also known as Anavar, is a…",
-      "pdf_url": "https://www.vicpilltesting.org.au/s/250826-General-Notification_Oxandrolone.pdf"
+      "pdf_url": "https://www.vicpilltesting.org.au/s/250826-General-Notification_Oxandrolone.pdf",
+      "image_url": "https://images.squarespace-cdn.com/content/v1/68246f9efe435317efa3188a/486d21c7-6f0e-4d47-af8e-45b9348e00cb/dbol.png"
     },
     {
       "date_iso": "2026-08-11",
@@ -26,7 +28,8 @@
       "severity": "general",
       "title": "N Sec Butyl butylone",
       "summary": "N-Sec-butyl butylone detected in a sample expected to be Cocaine no Cocaine was detected in the sample 11 August 2026 What has been detected? A synthetic cathinone, N-sec-butyl- butylone was detected …",
-      "pdf_url": "https://www.vicpilltesting.org.au/s/110826-General-Drug-Notification-N-Sec-Butyl-butylone.pdf"
+      "pdf_url": "https://www.vicpilltesting.org.au/s/110826-General-Drug-Notification-N-Sec-Butyl-butylone.pdf",
+      "image_url": "https://images.squarespace-cdn.com/content/v1/68246f9efe435317efa3188a/002e94fe-05ec-4fef-8b8d-7c9335d6c65e/1.png"
     },
     {
       "date_iso": "2026-07-24",
@@ -34,7 +37,8 @@
       "severity": "general",
       "title": "FLUALPRAZOLAMMedetomidine",
       "summary": "Medetomidine detected in more Xanax Bars expected to contain Flualprazolam Two new separate samples were recently submitted.",
-      "pdf_url": "https://www.vicpilltesting.org.au/s/24th-July-2026-Public-Notification-FLUALPRAZOLAMMedetomidine-update.pdf"
+      "pdf_url": "https://www.vicpilltesting.org.au/s/24th-July-2026-Public-Notification-FLUALPRAZOLAMMedetomidine-update.pdf",
+      "image_url": "https://images.squarespace-cdn.com/content/v1/68246f9efe435317efa3188a/14077c1e-2d62-4da7-9711-66547fa1439f/Medetomidine.png"
     },
     {
       "date_iso": "2026-07-23",
@@ -42,7 +46,8 @@
       "severity": "general",
       "title": "General LSDDOI",
       "summary": "DOI (2,5-dimethoxy-4-iodoamphetamine) detected in blotter expected to contain LSD.",
-      "pdf_url": "https://www.vicpilltesting.org.au/s/220726-General-Notification_LSDDOI.pdf"
+      "pdf_url": "https://www.vicpilltesting.org.au/s/220726-General-Notification_LSDDOI.pdf",
+      "image_url": "https://images.squarespace-cdn.com/content/v1/68246f9efe435317efa3188a/f13319f4-6ca6-4c31-9ce9-8b1427773858/DOI.png"
     },
     {
       "date_iso": "2026-07-10",
@@ -50,7 +55,8 @@
       "severity": "general",
       "title": "MethinMDMA",
       "summary": "MDMA and methamphetamine found in orange Tesla pills One of these pills was expected to contain a mix of MDMA and amphetamine.",
-      "pdf_url": "https://www.vicpilltesting.org.au/s/10-July-2026_-Public-Notification-_MethinMDMA.pdf"
+      "pdf_url": "https://www.vicpilltesting.org.au/s/10-July-2026_-Public-Notification-_MethinMDMA.pdf",
+      "image_url": "https://images.squarespace-cdn.com/content/v1/68246f9efe435317efa3188a/153cd02a-b6b3-4477-8dea-47af9cc7caf3/1.png"
     },
     {
       "date_iso": "2026-05-21",
@@ -58,7 +64,8 @@
       "severity": "general",
       "title": "AB MDMSBA",
       "summary": "AB-MDMSBA found in a sample expected to contain Alprazolam (Xanax) An off-white powder/fine crystals expected to be alprazolam was found to be a synthetic cannabinoid AB-MDMSBA.",
-      "pdf_url": "https://www.vicpilltesting.org.au/s/21-May-2026-Public-Notification-_AB-MDMSBA.pdf"
+      "pdf_url": "https://www.vicpilltesting.org.au/s/21-May-2026-Public-Notification-_AB-MDMSBA.pdf",
+      "image_url": "https://images.squarespace-cdn.com/content/v1/68246f9efe435317efa3188a/43e42778-c99e-4c5c-8fc9-1afbcf9cbe70/Screenshot+2026-05-21+155306.png"
     },
     {
       "date_iso": "2026-05-20",
@@ -66,7 +73,8 @@
       "severity": "general",
       "title": "Cathinone",
       "summary": "On 6th March 2026, we issued a general drug cathinone that had been detected in three samples of white powder expected to contain 3-MMC or 4-MMC This compound has now been identified as N-sec-Butyl Bu…",
-      "pdf_url": "https://www.vicpilltesting.org.au/s/20-May-2026-Cathinone-Public-Notification-UPDATE.pdf"
+      "pdf_url": "https://www.vicpilltesting.org.au/s/20-May-2026-Cathinone-Public-Notification-UPDATE.pdf",
+      "image_url": "https://images.squarespace-cdn.com/content/v1/68246f9efe435317efa3188a/5ffc840c-98ed-4fd1-94c8-66a2fe08b553/Screenshot+2026-05-20+160133.png"
     },
     {
       "date_iso": "2026-05-18",
@@ -74,7 +82,8 @@
       "severity": "general",
       "title": "Medetomidine",
       "summary": "Medetomidine found in Xanax Bars expected to contain Flualprazolam Two separate samples were submitted.",
-      "pdf_url": "https://www.vicpilltesting.org.au/s/18th-May-2026-Public-Notification-Medetomidine.pdf"
+      "pdf_url": "https://www.vicpilltesting.org.au/s/18th-May-2026-Public-Notification-Medetomidine.pdf",
+      "image_url": "https://images.squarespace-cdn.com/content/v1/68246f9efe435317efa3188a/5d26a7f0-217d-4951-9b69-634f26f49a44/Screenshot+2026-05-18+163218.png"
     },
     {
       "date_iso": "2026-05-14",
@@ -82,7 +91,8 @@
       "severity": "general",
       "title": "Tadafinil and methandienone in MDMA",
       "summary": "Tadalafil (Cialis) and methandienone (Dianabol) detected in a pressed pill acquired as MDMA No MDMA was detected.",
-      "pdf_url": "https://www.vicpilltesting.org.au/s/14th-May-2026_Tadafinil-and-methandienone-in-MDMA_Public-notification-Instagram-Reel-2465.pdf"
+      "pdf_url": "https://www.vicpilltesting.org.au/s/14th-May-2026_Tadafinil-and-methandienone-in-MDMA_Public-notification-Instagram-Reel-2465.pdf",
+      "image_url": "https://images.squarespace-cdn.com/content/v1/68246f9efe435317efa3188a/39cabf14-9e6d-4e95-a73f-c7aad4d7708e/Screenshot+2026-05-14+165243.png"
     },
     {
       "date_iso": "2026-03-11",
@@ -90,7 +100,8 @@
       "severity": "general",
       "title": "Heroin in Ketamine",
       "summary": "Heroin found in a sample expected to contain ketamine 11 March 2026 The Victorian Pill Testing service has detected heroin in a sample expected to contain ketamine.",
-      "pdf_url": "https://www.vicpilltesting.org.au/s/11-March-2026-Heroin-in-Ketamine-Public-Notification.pdf"
+      "pdf_url": "https://www.vicpilltesting.org.au/s/11-March-2026-Heroin-in-Ketamine-Public-Notification.pdf",
+      "image_url": "https://images.squarespace-cdn.com/content/v1/68246f9efe435317efa3188a/8865a29f-095c-4686-bbb0-1c991ca1924c/1.jpg"
     },
     {
       "date_iso": "2026-03-05",
@@ -98,7 +109,8 @@
       "severity": "general",
       "title": "Cathinone",
       "summary": "An unknown synthetic cathinone has been detected in three samples of white powder expected to contain 3-MMC or 4-MMC Unknown synthetic cathinone This compound has not yet been fully identified.",
-      "pdf_url": "https://www.vicpilltesting.org.au/s/5MAR_2026-CathinonePublic-Notification-z6lg.pdf"
+      "pdf_url": "https://www.vicpilltesting.org.au/s/5MAR_2026-CathinonePublic-Notification-z6lg.pdf",
+      "image_url": "https://images.squarespace-cdn.com/content/v1/68246f9efe435317efa3188a/ef0d73f2-9c09-44a7-9c04-c9938d36684c/5MAR_2026+-+CathinonePublic+Notification.jpg"
     },
     {
       "date_iso": "2026-02-26",
@@ -106,7 +118,8 @@
       "severity": "general",
       "title": "CathinoneISO",
       "summary": "A synthetic cathinone has been detected in a sample that also contained cocaine.",
-      "pdf_url": "https://www.vicpilltesting.org.au/s/26FEB-2026-CathinoneISO-Public-Notification.pdf"
+      "pdf_url": "https://www.vicpilltesting.org.au/s/26FEB-2026-CathinoneISO-Public-Notification.pdf",
+      "image_url": "https://images.squarespace-cdn.com/content/v1/68246f9efe435317efa3188a/a08227a7-673d-487d-ac59-70737cdf0373/26FEB+2026+-+CathinoneISO+Public+Notification.jpg"
     },
     {
       "date_iso": "2026-02-19",
@@ -114,7 +127,8 @@
       "severity": "general",
       "title": "Carisoprodol",
       "summary": "® Carisoprodol (Soma ) sold as diazepam 19 Feb.",
-      "pdf_url": "https://www.vicpilltesting.org.au/s/19-FEB-2026-Carisoprodol-Public-Notification.pdf"
+      "pdf_url": "https://www.vicpilltesting.org.au/s/19-FEB-2026-Carisoprodol-Public-Notification.pdf",
+      "image_url": "https://images.squarespace-cdn.com/content/v1/68246f9efe435317efa3188a/67d88ec0-6544-417e-a8ba-2297c8aee707/19+FEB+2026+-+Carisoprodol+Public+Notification.jpg"
     },
     {
       "date_iso": "2026-02-17",
@@ -122,7 +136,8 @@
       "severity": "general",
       "title": "High Dose MDMA",
       "summary": "2026 A ‘Blue Moncler’ pill was tested and was found to contain 200mg of MDMA.",
-      "pdf_url": "https://www.vicpilltesting.org.au/s/17-FEB-2026-High-Dose-MDMA-Public-Notification.pdf"
+      "pdf_url": "https://www.vicpilltesting.org.au/s/17-FEB-2026-High-Dose-MDMA-Public-Notification.pdf",
+      "image_url": "https://images.squarespace-cdn.com/content/v1/68246f9efe435317efa3188a/67430101-dd12-4f15-bbf7-1a7c8c51dad6/17+FEB+2026+-+High+Dose+MDMA+Public+Notification.jpg"
     },
     {
       "date_iso": "2026-02-16",
@@ -130,7 +145,8 @@
       "severity": "general",
       "title": "NN Dimethylpentylone",
       "summary": "N,N-Dimethylpentylone and MDMA detected in terracotta ‘Chupa Chup’ pill 16 Feb.",
-      "pdf_url": "https://www.vicpilltesting.org.au/s/16-Feb-2026-NN-Dimethylpentylone-Public-Notification.pdf"
+      "pdf_url": "https://www.vicpilltesting.org.au/s/16-Feb-2026-NN-Dimethylpentylone-Public-Notification.pdf",
+      "image_url": "https://images.squarespace-cdn.com/content/v1/68246f9efe435317efa3188a/d876c18e-6870-4e5f-89e0-1f6fc806dfea/16+Feb++2026+-+N%2CN-Dimethylpentylone+Public+Notification.jpg"
     },
     {
       "date_iso": "2026-02-13",
@@ -138,7 +154,8 @@
       "severity": "general",
       "title": "O PCE",
       "summary": "Potent dissociative ‘O-PCE’ (deschloro-N-ethyl-Ketamine) found in Ketamine Two separate samples expected to be ketamine were found to contain O-PCE 13 Feb.",
-      "pdf_url": "https://www.vicpilltesting.org.au/s/13-February-2026_O-PCE-_Public-notification.pdf"
+      "pdf_url": "https://www.vicpilltesting.org.au/s/13-February-2026_O-PCE-_Public-notification.pdf",
+      "image_url": "https://images.squarespace-cdn.com/content/v1/68246f9efe435317efa3188a/d0d88083-29d3-4fb1-92d8-7a8becf6409f/13+February+2026_%27O-PCE%27+_Public+notification.jpg"
     },
     {
       "date_iso": "2026-02-12",
@@ -146,7 +163,8 @@
       "severity": "general",
       "title": "Alprazolam as AB MDMSBA",
       "summary": "AB- MDMSBA (a synthetic cannabinoid) found in alprazolam (Xanax®) A white tablet expected to contain Alprazolam was found to contain a synthetic cannabinoid - AB-MDMSBA.",
-      "pdf_url": "https://www.vicpilltesting.org.au/s/12-February-2026-Alprazolam-as-AB-MDMSBA_Public-notification.pdf"
+      "pdf_url": "https://www.vicpilltesting.org.au/s/12-February-2026-Alprazolam-as-AB-MDMSBA_Public-notification.pdf",
+      "image_url": "https://images.squarespace-cdn.com/content/v1/68246f9efe435317efa3188a/128b0393-dd07-4cc2-8366-9c1a33db3fba/12+February+2026+Alprazolam+as+AB-MDMSBA_Public+notification.jpg"
     },
     {
       "date_iso": "2026-02-10",
@@ -154,7 +172,8 @@
       "severity": "general",
       "title": "Tramadol sold as MDMA",
       "summary": "Tramadol sold as MDMA caps Yellow and green capsules that were acquired as ‘MDMA’ were tested and found to contain only tramadol.",
-      "pdf_url": "https://www.vicpilltesting.org.au/s/10th-February-2026-Tramadol-sold-as-MDMA-Public-notification.pdf"
+      "pdf_url": "https://www.vicpilltesting.org.au/s/10th-February-2026-Tramadol-sold-as-MDMA-Public-notification.pdf",
+      "image_url": "https://images.squarespace-cdn.com/content/v1/68246f9efe435317efa3188a/f7c33fc9-a70e-43a1-8d46-5d0895d1d5cb/1.jpg"
     },
     {
       "date_iso": "2026-01-29",
@@ -162,7 +181,8 @@
       "severity": "general",
       "title": "High Dose MDMA",
       "summary": "High dose MDMA pills Tablets containing high dose (equal or greater than 2x standard dose) of MDMA 'Hello Kitty’ 229 mg 'Pop Smoke’ 230 mg *dosage reported as MDMA HCl salt 29 Jan.…",
-      "pdf_url": "https://www.vicpilltesting.org.au/s/29-January-2026-High-Dose-MDMA-Public-Notification-3j4z.pdf"
+      "pdf_url": "https://www.vicpilltesting.org.au/s/29-January-2026-High-Dose-MDMA-Public-Notification-3j4z.pdf",
+      "image_url": "https://images.squarespace-cdn.com/content/v1/68246f9efe435317efa3188a/fcb4dd84-d1b5-4b8f-809c-91ce36c66d90/29+January+2026+-+High+Dose+MDMA+Public+Notification.jpg"
     },
     {
       "date_iso": "2026-01-24",
@@ -170,7 +190,8 @@
       "severity": "general",
       "title": "NN Dimethylpentylone",
       "summary": "N,N-Dimethylpentylone sold as MDMA Two coral-coloured Kenzo tiger pills contained N,N-Dimethylpentylone instead of MDMA 24 Jan.",
-      "pdf_url": "https://www.vicpilltesting.org.au/s/24-January-2026-NN-Dimethylpentylone-Public-Notification.pdf"
+      "pdf_url": "https://www.vicpilltesting.org.au/s/24-January-2026-NN-Dimethylpentylone-Public-Notification.pdf",
+      "image_url": "https://images.squarespace-cdn.com/content/v1/68246f9efe435317efa3188a/ab792f39-6581-4fa8-8b8e-01021da9babe/1.jpg"
     },
     {
       "date_iso": "2026-01-20",
@@ -178,7 +199,8 @@
       "severity": "general",
       "title": "4 CMC sold as 4 MMC",
       "summary": "4-CMC sold as 4-MMC (mephedrone) A sample expected to be 4-MMC (mephedrone) was found to be 4-CMC 20 Jan.",
-      "pdf_url": "https://www.vicpilltesting.org.au/s/20-January-2026-4-CMC-sold-as-4-MMC-Public-Notification.pdf"
+      "pdf_url": "https://www.vicpilltesting.org.au/s/20-January-2026-4-CMC-sold-as-4-MMC-Public-Notification.pdf",
+      "image_url": "https://images.squarespace-cdn.com/content/v1/68246f9efe435317efa3188a/aa218674-4638-4ce7-b815-ae3b4e80cfa4/1.jpg"
     },
     {
       "date_iso": "2026-01-08",
@@ -186,7 +208,8 @@
       "severity": "general",
       "title": "Ketamine, MDMA, methamphetamine and 2C-B",
       "summary": "Ketamine, MDMA, methamphetamine and 2C-B found in pills expected to contain only 2C-B 8 Jan.",
-      "pdf_url": "https://www.vicpilltesting.org.au/s/8-January-2026-2C-B-Public-Notification.pdf"
+      "pdf_url": "https://www.vicpilltesting.org.au/s/8-January-2026-2C-B-Public-Notification.pdf",
+      "image_url": "https://images.squarespace-cdn.com/content/v1/68246f9efe435317efa3188a/3dfb45af-dca2-476a-8f31-775d3bcb4f84/1.jpg"
     },
     {
       "date_iso": "2025-12-24",
@@ -194,7 +217,8 @@
       "severity": "general",
       "title": "n ethylpentylone sold as methylphenidate",
       "summary": "N-ethylpentylone sold as liquid methylphenidate (Ritalin).",
-      "pdf_url": "https://www.vicpilltesting.org.au/s/24-December-2025-n-ethylpentylone-sold-as-methylphenidate.pdf"
+      "pdf_url": "https://www.vicpilltesting.org.au/s/24-December-2025-n-ethylpentylone-sold-as-methylphenidate.pdf",
+      "image_url": "https://images.squarespace-cdn.com/content/v1/68246f9efe435317efa3188a/6a5a27d9-06a1-4fae-92fe-17da051b6851/1.jpg"
     },
     {
       "date_iso": "2025-12-23",
@@ -202,7 +226,8 @@
       "severity": "general",
       "title": "Tramadol",
       "summary": "Tramadol sold as oxycodone 23 Dec.",
-      "pdf_url": "https://www.vicpilltesting.org.au/s/23-December-2025-Tramadol-Public-Notification.pdf"
+      "pdf_url": "https://www.vicpilltesting.org.au/s/23-December-2025-Tramadol-Public-Notification.pdf",
+      "image_url": "https://images.squarespace-cdn.com/content/v1/68246f9efe435317efa3188a/7c559020-5120-48ed-bee9-36880be02138/1.jpg"
     },
     {
       "date_iso": "2025-12-12",
@@ -210,7 +235,8 @@
       "severity": "general",
       "title": "Alprazolam",
       "summary": "Heroin sold as Alprazolam (Xanax) Grids 1cmx1cm 12 Dec 2025 What is Heroin? Heroin is an opioid - a central nervous system depressant that slows breathing and can cause life-threatening overdose, espe…",
-      "pdf_url": "https://www.vicpilltesting.org.au/s/General-Drug-Notification-1212-Alprazolam.pdf"
+      "pdf_url": "https://www.vicpilltesting.org.au/s/General-Drug-Notification-1212-Alprazolam.pdf",
+      "image_url": "https://images.squarespace-cdn.com/content/v1/68246f9efe435317efa3188a/623f7466-a606-4686-9fde-3a7ea3882ade/1.png"
     },
     {
       "date_iso": "2025-12-04",
@@ -218,7 +244,8 @@
       "severity": "general",
       "title": "MDA",
       "summary": "Over one quarter of pills tested in recent months that were expected to be MDMA tablets actually contained MDA (3,4-Methylenedioxyamphetamine) * Some examples of samples submitted …",
-      "pdf_url": "https://www.vicpilltesting.org.au/s/3-December-2025-MDA-Public-Notification.pdf"
+      "pdf_url": "https://www.vicpilltesting.org.au/s/3-December-2025-MDA-Public-Notification.pdf",
+      "image_url": "https://images.squarespace-cdn.com/content/v1/68246f9efe435317efa3188a/f24897bd-80d1-43fb-93bb-c8dd31177efb/1.jpg"
     },
     {
       "date_iso": "2025-11-27",
@@ -226,7 +253,8 @@
       "severity": "high",
       "title": "Medetomidine (meh-deh-toe-mi-deen)",
       "summary": "Medetomidine (meh-deh-toe-mi-deen) found in crystal / powder expected to contain bromazolam 27 Nov.",
-      "pdf_url": "https://www.vicpilltesting.org.au/s/27-Nov2025_Public-Notification2.pdf"
+      "pdf_url": "https://www.vicpilltesting.org.au/s/27-Nov2025_Public-Notification2.pdf",
+      "image_url": "https://images.squarespace-cdn.com/content/v1/68246f9efe435317efa3188a/0322cb2b-f988-47b0-82e8-e735a749e3f0/1.png"
     },
     {
       "date_iso": "2025-10-20",
@@ -234,7 +262,8 @@
       "severity": "general",
       "title": "Tiletamine and N-Benzylcyclohexanamine",
       "summary": "Tiletamine and N-Benzylcyclohexanamine missold as ‘M-CAT’ or 4-MMC Grids 1cmx1cm 20 Oct 2025 What is Tiletamine? Tiletamine is a ketamine analogue that is much more potent and longer lasting (up to 4-…",
-      "pdf_url": "https://www.vicpilltesting.org.au/s/20-Oct-2025_Public-Notification-g2fx.pdf"
+      "pdf_url": "https://www.vicpilltesting.org.au/s/20-Oct-2025_Public-Notification-g2fx.pdf",
+      "image_url": "https://images.squarespace-cdn.com/content/v1/68246f9efe435317efa3188a/06ae6ea4-efd4-433c-b789-71e208bd26f0/20+Oct+2025_Public+Notification.png"
     },
     {
       "date_iso": "2025-09-18",
@@ -242,7 +271,8 @@
       "severity": "general",
       "title": "New detection of a highly potent nitazene",
       "summary": "New detection of a highly potent nitazene – this time N-desethyl isotonitazene We detected a nitazene in a light blue pill.",
-      "pdf_url": "https://www.vicpilltesting.org.au/s/18-Sept-2025_Public-Notification-kd5g.pdf"
+      "pdf_url": "https://www.vicpilltesting.org.au/s/18-Sept-2025_Public-Notification-kd5g.pdf",
+      "image_url": "https://images.squarespace-cdn.com/content/v1/68246f9efe435317efa3188a/5c1f8894-557d-420b-b5d3-6f1072f0ecec/18+Sept+public+notification.png"
     },
     {
       "date_iso": "2025-09-10",
@@ -250,7 +280,8 @@
       "severity": "general",
       "title": "Protonitazene",
       "summary": "Protonitazene found in fake oxycodone tablet Protonitazene was detected in a light blue, counterfeit, oxycodone pill.",
-      "pdf_url": "https://www.vicpilltesting.org.au/s/10-Sept-2025_Public-Notification.pdf"
+      "pdf_url": "https://www.vicpilltesting.org.au/s/10-Sept-2025_Public-Notification.pdf",
+      "image_url": "https://images.squarespace-cdn.com/content/v1/68246f9efe435317efa3188a/404fac2d-ae04-4696-ba35-d1b0e1b2778b/10+Sept+2025_Public+Notification.png"
     }
   ]
 }

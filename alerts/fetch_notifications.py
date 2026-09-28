@@ -161,13 +161,24 @@ def pdftotext(pdf_bytes):
 
 
 def list_pdf_links(html):
-    """Ordered, de-duplicated /s/*.pdf links from the allowed listing page."""
+    """Ordered, de-duplicated (path, image_url) pairs from the allowed listing page.
+
+    Each VPTS notification is a Squarespace image block: the /s/*.pdf link IS the
+    <a> wrapping an <img data-src="..."> right after its opening tag (the image is
+    lazy-loaded, so the real photo URL lives in data-src, not src). Pairing "this
+    href + the nearest data-src after it" is reliable — verified against every
+    entry on the live page (31/31 paired within an 800-char window) before this
+    shipped; the 1500-char window here is a safety margin over that.
+    """
     seen, out = set(), []
     for m in re.finditer(r'href="(/s/[^"]+?\.pdf)"', html, re.IGNORECASE):
         path = m.group(1)
-        if path not in seen:
-            seen.add(path)
-            out.append(path)
+        if path in seen:
+            continue
+        seen.add(path)
+        window = html[m.end():m.end() + 1500]
+        img_m = re.search(r'data-src="([^"]+)"', window)
+        out.append((path, img_m.group(1) if img_m else None))
     return out
 
 
@@ -186,16 +197,16 @@ def main():
 
     log("Fetching listing:", LIST_URL)
     html = fetch(LIST_URL)
-    paths = list_pdf_links(html)
-    log(f"Found {len(paths)} notification PDF links")
-    if not paths:
+    pairs = list_pdf_links(html)
+    log(f"Found {len(pairs)} notification PDF links")
+    if not pairs:
         log("WARNING: no PDF links found — page structure may have changed. "
             "Leaving existing alerts.json untouched.")
         return 0
 
     alerts = []
     new_count = 0
-    for path in paths:
+    for path, image_url in pairs:
         url = BASE + path
         fname = path.rsplit("/", 1)[-1]
         cached = cache.get(url)
@@ -231,6 +242,7 @@ def main():
             "title": title,
             "summary": summary,
             "pdf_url": url,
+            "image_url": image_url,
         })
 
     # newest first; undated sink to the bottom
