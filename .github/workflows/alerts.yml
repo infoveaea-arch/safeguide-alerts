@@ -35,6 +35,8 @@ env:
 
 jobs:
   scrape-and-deploy:
+    # A hung SFTP or scraper must not hold a runner for the 6h default.
+    timeout-minutes: 15
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -81,13 +83,23 @@ jobs:
 
       - name: Deploy to IONOS
         if: steps.diff.outputs.changed == 'true'
+        env:
+          SFTP_KEY: ${{ secrets.SFTP_KEY }}
         run: |
+          # Fail fast: an empty secret would write an empty key and then hang or fail
+          # obscurely inside lftp. The key reaches the shell as an env var, never
+          # spliced into the script text.
+          if [ -z "$SFTP_KEY" ]; then
+            echo "::error::SFTP_KEY repository secret is empty or missing"
+            exit 1
+          fi
           umask 077
           mkdir -p ~/.ssh
-          printf '%s\n' "${{ secrets.SFTP_KEY }}" > ~/.ssh/ci_key
+          printf '%s\n' "$SFTP_KEY" > ~/.ssh/ci_key
           chmod 600 ~/.ssh/ci_key
           # OPERATIONS.md §2.1 — IONOS uploads land 0700 → 403; chmod 644 after put.
           lftp -c "
+            set net:max-retries 2; set net:timeout 20;
             set sftp:auto-confirm yes;
             set sftp:connect-program 'ssh -a -x -i ~/.ssh/ci_key -o StrictHostKeyChecking=accept-new -o BatchMode=yes';
             open -u \"$SFTP_USER,\" sftp://$SFTP_HOST:$SFTP_PORT;
