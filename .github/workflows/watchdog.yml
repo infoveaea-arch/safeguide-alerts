@@ -1,0 +1,45 @@
+name: SafeGuide alerts watchdog
+
+# Independent liveness check for the two alert pipelines. It does not scrape or deploy
+# anything. Every 6 hours it reads the heartbeat files (status.json / status-multi.json)
+# and the feeds the app actually serves from production, and FAILS the run if a check has
+# stopped running (heartbeat older than 36 h = three missed scheduled runs) or production
+# stopped serving a feed. GitHub emails the person who last edited this schedule when a
+# scheduled run fails, so a stall reaches a human before it reaches readers as stale
+# safety information. See alerts/check_heartbeat.py for exactly what counts as a failure.
+#
+# A QUIET SOURCE IS NOT A FAILURE: how old the newest alert is is never checked.
+
+on:
+  schedule:
+    # Offset from alerts.yml (10:15, 22:15 UTC) and alerts-multi.yml (08:00, 20:00 UTC) so
+    # it normally sees a heartbeat that is hours old, not one mid-upload.
+    - cron: "40 3,9,15,21 * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+
+env:
+  BASE: https://app.veaea.org/harm-reduction/alerts
+  MAX_AGE_HOURS: "36"
+
+jobs:
+  check:
+    timeout-minutes: 5
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      # Both are always run (no early exit) so one failure never hides the other.
+      - name: Check both pipelines
+        run: |
+          rc=0
+          python3 alerts/check_heartbeat.py vpts  "$BASE/status.json"       "$BASE/alerts.json"       "$MAX_AGE_HOURS" || rc=1
+          python3 alerts/check_heartbeat.py multi "$BASE/status-multi.json" "$BASE/alerts-multi.json" "$MAX_AGE_HOURS" || rc=1
+          exit $rc

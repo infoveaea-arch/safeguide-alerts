@@ -24,9 +24,10 @@ name: SafeGuide multi-region drug alerts
 
 on:
   schedule:
-    # The Know updates through the day; once daily is plenty. 20:00 UTC ≈ 06:00/07:00
+    # The Know updates through the day. Twice daily (was once) so an urgent alert reaches the
+    # page within about 12 h, not 24 h. 08:00 / 20:00 UTC ≈ 18:00-19:00 / 06:00-07:00
     # Melbourne. Offset from alerts.yml (10:15 & 22:15 UTC) to avoid overlapping SFTP.
-    - cron: "0 20 * * *"
+    - cron: "0 8,20 * * *"
   workflow_dispatch: {}   # allow manual "Run workflow" from the Actions tab
 
 concurrency:
@@ -54,7 +55,7 @@ jobs:
   fetch-and-deploy:
     # A hung SFTP or scraper must not hold a runner for the 6h default.
     timeout-minutes: 15
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04   # pinned: ubuntu-latest moves to Ubuntu 26 on 2026-10-19 (unverified with setup-python 3.11 / lftp)
     steps:
       - uses: actions/checkout@v4
 

@@ -45,7 +45,7 @@ jobs:
   scrape-and-deploy:
     # A hung SFTP or scraper must not hold a runner for the 6h default.
     timeout-minutes: 15
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04   # pinned: ubuntu-latest moves to Ubuntu 26 on 2026-10-19 (unverified with setup-python 3.11 / lftp)
     steps:
       - uses: actions/checkout@v4
 
