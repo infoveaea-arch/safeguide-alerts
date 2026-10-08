@@ -1,9 +1,18 @@
 {
   "source": "https://www.vicpilltesting.org.au/drug-notifications",
   "source_name": "Victorian Pill Testing Service (VPTS)",
-  "generated_at": "2026-09-28T16:30:18+00:00",
-  "count": 31,
+  "generated_at": "2026-10-08T01:55:31+00:00",
+  "count": 32,
   "alerts": [
+    {
+      "date_iso": "2026-10-08",
+      "date_human": "8 October 2026",
+      "severity": "general",
+      "title": "General Methamphetamine in Ketamine",
+      "summary": "Methamphetamine detected in samples expected to be ketamine The samples were found to contain ketamine and methamphetamine 8 October 2026 What has been detected? Three separate samples of white crysta…",
+      "pdf_url": "https://www.vicpilltesting.org.au/s/071026-General-Notification-Methamphetamine-in-Ketamine.pdf",
+      "image_url": "https://images.squarespace-cdn.com/content/v1/68246f9efe435317efa3188a/06218a29-7c13-40f0-a9c5-a475b06584e9/08.10.24+gen+not.png"
+    },
     {
       "date_iso": "2026-09-11",
       "date_human": "11 September 2026",
