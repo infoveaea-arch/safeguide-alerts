@@ -62,7 +62,7 @@
         "parser_status": "TODO",
         "schedule": "daily",
         "description": "NSW Health official public drug warnings (dated entries, each links to a detail page). NUAA and DanceWize NSW repost these as community secondary channels.",
-        "_enabled_note": "Disabled 2026-10-08: no parser exists. NSW Health alerts reach the feed via The Know (source_organisation 'NSW Health'), which carries 47 of them."
+        "_enabled_note": "Disabled 2026-10-08: no parser exists and none is needed. NSW Health's own 2026 public-drug-warnings page (health.nsw.gov.au/aod/public-drug-alerts/Pages/default.aspx, open to scripted access) lists exactly two warnings (Jan 2026 high-dose MDMA, Mar 2026 opioid overdoses after cocaine), and The Know carries both. NSW alerts reach the feed via The Know (source_organisation 'NSW Health')."
       },
       "act": {
         "enabled": false,
@@ -101,7 +101,7 @@
       },
       "_qld_sa_wa_tas": {
         "enabled": false,
-        "note": "QLD, SA, WA, TAS have NO verified standalone public drug-alert URL that can be fetched by script (re-checked 2026-10-08: QLD Health is behind a Cloudflare challenge, SA has no public alert page, WA's Early Warning System has no public feed, TAS publishes occasional notices that The Know carries). ALL FOUR are covered by 'the_know' above. Do NOT invent per-state feeds for them, and do NOT bypass bot protection."
+        "note": "QLD, SA, WA, TAS have NO verified standalone public drug-alert URL that can be fetched by script (re-checked 2026-10-08: QLD Health is behind a Cloudflare challenge, SA has no public alert page, WA's Early Warning System has no public feed, TAS publishes occasional notices that The Know carries). ALL FOUR are covered by 'the_know' above. Do NOT invent per-state feeds for them, and do NOT bypass bot protection. SA's 'NEW DRUG ALERT' banner on knowyouroptions.sa.gov.au links to a nitazene PDF created 2024-07-18, the same alert The Know already holds (stale banner, not a new source)."
       }
     },
     "international": {

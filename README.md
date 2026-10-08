@@ -21,6 +21,14 @@ deploys the result to the live SafeGuide app on IONOS **only when it changes**.
   The feeds' `generated_at` only moves when alerts change, so the page uses the heartbeat to
   tell "quiet source" from "stalled pipeline". Both workflows also redeploy a feed that prod
   no longer serves, and use `lftp` `cmd:fail-exit` so a failed upload fails the run.
+- **Watchdog:** [`.github/workflows/watchdog.yml`](.github/workflows/watchdog.yml) +
+  [`alerts/check_heartbeat.py`](alerts/check_heartbeat.py) run every 6 h and fail if a heartbeat is
+  older than 36 h or production stops serving a feed, so a stall reaches a human (GitHub emails the
+  person who last edited the schedule). A quiet source is never a failure.
+- **The Know coverage:** the parser reads the whole archive and keeps 270 days plus each
+  jurisdiction's latest 2 (up to ~3 years). QLD Health and NT Health block scripted access behind a
+  Cloudflare challenge and are not scraped; The Know republishes them. See
+  `alerts/config/alert-sources.json` (`meta.verification_2026_10_08`).
 
 ## Secret
 
