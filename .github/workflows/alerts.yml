@@ -3,6 +3,12 @@ name: SafeGuide drug alerts
 # Runs the VPTS drug-notification scraper in GitHub's cloud (independent of any
 # local machine) and deploys alerts.json to IONOS only when it changes.
 #
+# Every successful run ALSO uploads alerts/status.json (a heartbeat: when the check
+# last ran and the newest alert date), whether or not the feed changed. The page keys
+# its "feed has stalled" banner off that file, not off alerts.json's generated_at,
+# because generated_at only moves when VPTS publishes (they go 2-4 weeks between
+# notices) and would otherwise raise a false alarm most of the time.
+#
 # Requires ONE repository secret:
 #   SFTP_KEY  — the dedicated CI SSH *private* key (ed25519). Its public half is
 #               registered under IONOS → SSH access for user a2629167.
@@ -30,8 +36,10 @@ env:
   SFTP_USER: a2629167
   SFTP_PORT: "22"
   REMOTE: /app/harm-reduction/alerts/alerts.json
+  REMOTE_STATUS: /app/harm-reduction/alerts/status.json
   LOCAL: staging-site/alerts/alerts.json
   PUBLIC_URL: https://app.veaea.org/harm-reduction/alerts/alerts.json
+  PUBLIC_STATUS_URL: https://app.veaea.org/harm-reduction/alerts/status.json
 
 jobs:
   scrape-and-deploy:
@@ -61,6 +69,11 @@ jobs:
       - name: Run scraper
         run: python3 alerts/fetch_notifications.py
 
+      # Written to RUNNER_TEMP, never into the repo, so it is not committed and does
+      # not add a commit to the audit trail every 12 hours.
+      - name: Write heartbeat
+        run: python3 alerts/heartbeat.py "$LOCAL" "$RUNNER_TEMP/status.json" vpts
+
       - name: Detect change
         id: diff
         run: |
@@ -80,11 +93,26 @@ jobs:
             echo "changed=false" >> "$GITHUB_OUTPUT"
             echo "No change in $LOCAL"
           fi
+          # Self-heal: also redeploy the feed when prod no longer serves it (deleted,
+          # or never deployed), even though the content is unchanged.
+          code=$(curl -s -o /dev/null -w "%{http_code}" -A "Mozilla/5.0" --max-time 20 \
+                   "${PUBLIC_URL}?probe=${GITHUB_RUN_ID}" || true)
+          echo "prod feed probe → HTTP $code"
+          if [ "$code" != "200" ] || [ -n "$(git status --porcelain -- "$LOCAL")" ]; then
+            echo "deploy_feed=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "deploy_feed=false" >> "$GITHUB_OUTPUT"
+          fi
 
+      # Runs every time: the heartbeat always goes up, the feed only when needed.
+      # The feed is put FIRST so the heartbeat can never claim a check that did not
+      # land. `cmd:fail-exit` matters: without it lftp exits 0 after a failed put
+      # in the middle of the batch (only the last command sets the exit code), and
+      # the run goes green having deployed nothing.
       - name: Deploy to IONOS
-        if: steps.diff.outputs.changed == 'true'
         env:
           SFTP_KEY: ${{ secrets.SFTP_KEY }}
+          DEPLOY_FEED: ${{ steps.diff.outputs.deploy_feed }}
         run: |
           # Fail fast: an empty secret would write an empty key and then hang or fail
           # obscurely inside lftp. The key reaches the shell as an env var, never
@@ -97,25 +125,39 @@ jobs:
           mkdir -p ~/.ssh
           printf '%s\n' "$SFTP_KEY" > ~/.ssh/ci_key
           chmod 600 ~/.ssh/ci_key
+          FEED_CMDS=""
+          if [ "$DEPLOY_FEED" = "true" ]; then
+            FEED_CMDS="put \"$LOCAL\" -o \"$REMOTE\"; chmod 644 \"$REMOTE\";"
+          fi
           # OPERATIONS.md §2.1 — IONOS uploads land 0700 → 403; chmod 644 after put.
           lftp -c "
+            set cmd:fail-exit yes;
             set net:max-retries 2; set net:timeout 20;
             set sftp:auto-confirm yes;
             set sftp:connect-program 'ssh -a -x -i ~/.ssh/ci_key -o StrictHostKeyChecking=accept-new -o BatchMode=yes';
             open -u \"$SFTP_USER,\" sftp://$SFTP_HOST:$SFTP_PORT;
-            put \"$LOCAL\" -o \"$REMOTE\";
-            chmod 644 \"$REMOTE\";
+            $FEED_CMDS
+            put \"$RUNNER_TEMP/status.json\" -o \"$REMOTE_STATUS\";
+            chmod 644 \"$REMOTE_STATUS\";
             bye
           "
           rm -f ~/.ssh/ci_key
 
       - name: Verify live URL
-        if: steps.diff.outputs.changed == 'true'
+        if: steps.diff.outputs.deploy_feed == 'true'
         run: |
           code=$(curl -s -o /dev/null -w "%{http_code}" -A "Mozilla/5.0" --max-time 20 \
                    "${PUBLIC_URL}?bust=${GITHUB_RUN_ID}")
           echo "$PUBLIC_URL → HTTP $code"
           [ "$code" = "200" ] || { echo "::error::live verify failed (expected 200)"; exit 1; }
+
+      - name: Verify live heartbeat
+        run: |
+          want=$(python3 -c "import json,os;print(json.load(open(os.environ['RUNNER_TEMP']+'/status.json'))['checked_at'])")
+          got=$(curl -s -A "Mozilla/5.0" --max-time 20 "${PUBLIC_STATUS_URL}?bust=${GITHUB_RUN_ID}" \
+                  | python3 -c "import json,sys;print(json.load(sys.stdin).get('checked_at'))" || true)
+          echo "heartbeat: wrote $want, live serves $got"
+          [ "$want" = "$got" ] || { echo "::error::live heartbeat does not match what was uploaded"; exit 1; }
 
       - name: Commit refreshed alerts.json (audit trail)
         if: steps.diff.outputs.changed == 'true'

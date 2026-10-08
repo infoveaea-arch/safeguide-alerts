@@ -6,8 +6,14 @@ name: SafeGuide multi-region drug alerts
 #
 # This is SEPARATE from alerts.yml (the single-region VPTS pipeline that writes
 # alerts/alerts.json). They target DIFFERENT files and never clobber each other:
-#   alerts.yml        -> alerts/alerts.json        (legacy single-region, VPTS)
-#   alerts-multi.yml  -> alerts/alerts-multi.json  (new multi-region, The Know)
+#   alerts.yml        -> alerts/alerts.json        (VPTS direct scrape, Victoria, with photos)
+#   alerts-multi.yml  -> alerts/alerts-multi.json  (The Know, all states)
+# alerts.html loads BOTH and merges them (VPTS copy preferred for Victorian pill-testing
+# notices, The Know supplies every other state and the Victorian Dept of Health alerts).
+#
+# Every successful run also uploads alerts/status-multi.json, a heartbeat (when the
+# check last ran, newest alert date, source error count), whether or not the feed
+# changed. See alerts.yml for why the page needs it.
 #
 # Reuses the SAME repository secret as alerts.yml:
 #   SFTP_KEY  — the dedicated CI SSH *private* key (ed25519), public half
@@ -34,14 +40,15 @@ env:
   SFTP_HOST: access-5020258978.webspace-host.com
   SFTP_USER: a2629167
   SFTP_PORT: "22"
-  # DEV ONLY. The multi-region feed is still in development and must NOT touch
-  # production (/app/harm-reduction) — prod serves the public build, whose alerts
-  # page reads the legacy alerts/alerts.json maintained by alerts.yml. Pointing
-  # this at prod would silently re-create alerts-multi.json there on every run.
-  # Promote to prod only when the multi-region build itself ships.
-  REMOTE: /app/harm-reduction-dev/alerts/alerts-multi.json
+  # PRODUCTION since 2026-10-08: the alerts page now merges this feed with alerts.json,
+  # so other states' alerts reach production. (Before that it deployed to the dev path
+  # only, and prod served Victoria only.) The dev copy is still refreshed.
+  REMOTE: /app/harm-reduction/alerts/alerts-multi.json
+  REMOTE_DEV: /app/harm-reduction-dev/alerts/alerts-multi.json
+  REMOTE_STATUS: /app/harm-reduction/alerts/status-multi.json
   LOCAL: staging-site/alerts/alerts-multi.json
-  PUBLIC_URL: https://app.veaea.org/harm-reduction-dev/alerts/alerts-multi.json
+  PUBLIC_URL: https://app.veaea.org/harm-reduction/alerts/alerts-multi.json
+  PUBLIC_STATUS_URL: https://app.veaea.org/harm-reduction/alerts/status-multi.json
 
 jobs:
   fetch-and-deploy:
@@ -74,6 +81,10 @@ jobs:
       - name: Run unified fetcher
         run: python3 alerts/fetch_all_sources.py
 
+      # Written to RUNNER_TEMP, never into the repo, so it is not committed.
+      - name: Write heartbeat
+        run: python3 alerts/heartbeat.py "$LOCAL" "$RUNNER_TEMP/status-multi.json" multi
+
       - name: Detect change
         id: diff
         run: |
@@ -91,11 +102,26 @@ jobs:
             echo "changed=false" >> "$GITHUB_OUTPUT"
             echo "No change in $LOCAL"
           fi
+          # Self-heal: also redeploy the feed when prod no longer serves it (deleted,
+          # or never deployed), even though the content is unchanged. This is also what
+          # puts the file on production the first time after the 2026-10-08 promotion.
+          code=$(curl -s -o /dev/null -w "%{http_code}" -A "Mozilla/5.0" --max-time 20 \
+                   "${PUBLIC_URL}?probe=${GITHUB_RUN_ID}" || true)
+          echo "prod feed probe → HTTP $code"
+          if [ "$code" != "200" ] || [ -n "$(git status --porcelain -- "$LOCAL")" ]; then
+            echo "deploy_feed=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "deploy_feed=false" >> "$GITHUB_OUTPUT"
+          fi
 
+      # Runs every time: the heartbeat always goes up, the feed only when needed.
+      # Production first, dev last, so a dev-path problem cannot stop prod updating.
+      # `cmd:fail-exit` matters: without it lftp exits 0 after a failed put in the
+      # middle of the batch, and the run goes green having deployed nothing.
       - name: Deploy to IONOS
-        if: steps.diff.outputs.changed == 'true'
         env:
           SFTP_KEY: ${{ secrets.SFTP_KEY }}
+          DEPLOY_FEED: ${{ steps.diff.outputs.deploy_feed }}
         run: |
           # Fail fast: an empty secret would write an empty key and then hang or fail
           # obscurely inside lftp. The key reaches the shell as an env var, never
@@ -108,25 +134,42 @@ jobs:
           mkdir -p ~/.ssh
           printf '%s\n' "$SFTP_KEY" > ~/.ssh/ci_key
           chmod 600 ~/.ssh/ci_key
+          FEED_CMDS=""
+          DEV_CMDS=""
+          if [ "$DEPLOY_FEED" = "true" ]; then
+            FEED_CMDS="put \"$LOCAL\" -o \"$REMOTE\"; chmod 644 \"$REMOTE\";"
+            DEV_CMDS="put \"$LOCAL\" -o \"$REMOTE_DEV\"; chmod 644 \"$REMOTE_DEV\";"
+          fi
           # OPERATIONS.md §2.1 — IONOS uploads land 0700 → 403; chmod 644 after put.
           lftp -c "
+            set cmd:fail-exit yes;
             set net:max-retries 2; set net:timeout 20;
             set sftp:auto-confirm yes;
             set sftp:connect-program 'ssh -a -x -i ~/.ssh/ci_key -o StrictHostKeyChecking=accept-new -o BatchMode=yes';
             open -u \"$SFTP_USER,\" sftp://$SFTP_HOST:$SFTP_PORT;
-            put \"$LOCAL\" -o \"$REMOTE\";
-            chmod 644 \"$REMOTE\";
+            $FEED_CMDS
+            put \"$RUNNER_TEMP/status-multi.json\" -o \"$REMOTE_STATUS\";
+            chmod 644 \"$REMOTE_STATUS\";
+            $DEV_CMDS
             bye
           "
           rm -f ~/.ssh/ci_key
 
       - name: Verify live URL
-        if: steps.diff.outputs.changed == 'true'
+        if: steps.diff.outputs.deploy_feed == 'true'
         run: |
           code=$(curl -s -o /dev/null -w "%{http_code}" -A "Mozilla/5.0" --max-time 20 \
                    "${PUBLIC_URL}?bust=${GITHUB_RUN_ID}")
           echo "$PUBLIC_URL → HTTP $code"
           [ "$code" = "200" ] || { echo "::error::live verify failed (expected 200)"; exit 1; }
+
+      - name: Verify live heartbeat
+        run: |
+          want=$(python3 -c "import json,os;print(json.load(open(os.environ['RUNNER_TEMP']+'/status-multi.json'))['checked_at'])")
+          got=$(curl -s -A "Mozilla/5.0" --max-time 20 "${PUBLIC_STATUS_URL}?bust=${GITHUB_RUN_ID}" \
+                  | python3 -c "import json,sys;print(json.load(sys.stdin).get('checked_at'))" || true)
+          echo "heartbeat: wrote $want, live serves $got"
+          [ "$want" = "$got" ] || { echo "::error::live heartbeat does not match what was uploaded"; exit 1; }
 
       - name: Commit refreshed alerts-multi.json (audit trail)
         if: steps.diff.outputs.changed == 'true'
