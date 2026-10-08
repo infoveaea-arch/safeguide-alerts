@@ -12,6 +12,15 @@ deploys the result to the live SafeGuide app on IONOS **only when it changes**.
 - **Automation:** [`.github/workflows/alerts.yml`](.github/workflows/alerts.yml) — runs twice
   daily (+ manual dispatch), deploys changed `alerts.json` to IONOS over SSH-key SFTP,
   verifies the live URL returns 200, and commits the refreshed JSON back as an audit trail.
+- **Multi-region feed:** [`alerts/fetch_all_sources.py`](alerts/fetch_all_sources.py) +
+  [`.github/workflows/alerts-multi.yml`](.github/workflows/alerts-multi.yml) — The Know's
+  national aggregate (`alerts-multi.json`), deployed to production (and a dev copy). The app
+  page merges it with `alerts.json`.
+- **Heartbeat:** both workflows upload `status.json` / `status-multi.json`
+  ([`alerts/heartbeat.py`](alerts/heartbeat.py)) on every successful run, changed or not.
+  The feeds' `generated_at` only moves when alerts change, so the page uses the heartbeat to
+  tell "quiet source" from "stalled pipeline". Both workflows also redeploy a feed that prod
+  no longer serves, and use `lftp` `cmd:fail-exit` so a failed upload fails the run.
 
 ## Secret
 
