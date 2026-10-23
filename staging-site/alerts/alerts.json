@@ -1,17 +1,17 @@
 {
   "source": "https://www.vicpilltesting.org.au/drug-notifications",
   "source_name": "Victorian Pill Testing Service (VPTS)",
-  "generated_at": "2026-10-17T13:45:23+00:00",
+  "generated_at": "2026-10-23T15:07:08+00:00",
   "count": 33,
   "alerts": [
     {
-      "date_iso": "2026-10-17",
-      "date_human": "17 October 2026",
+      "date_iso": "2026-10-22",
+      "date_human": "22 October 2026",
       "severity": "high",
       "title": "Nitazene in oxycodone",
-      "summary": "Protonitazene (or a closely related nitazene) detected in pale purple liquid expected to contain oxycodone No oxycodone was detected.",
-      "pdf_url": "https://www.vicpilltesting.org.au/s/17-October-2026-Nitazene-in-oxycodone-liquid.pdf",
-      "image_url": "https://images.squarespace-cdn.com/content/v1/68246f9efe435317efa3188a/8bd1dc92-f3c2-437f-b7fd-2bb0186ed4ff/17+October+2026+-+Nitazene+in+oxycodone+liquid.jpg"
+      "summary": "Protonitazene detected in pale purple liquid expected to contain oxycodone No oxycodone was detected.",
+      "pdf_url": "https://www.vicpilltesting.org.au/s/UPDATE-17-October-2026-Nitazene-in-oxycodone-liquid.pdf",
+      "image_url": "https://images.squarespace-cdn.com/content/v1/68246f9efe435317efa3188a/c881817c-8a45-4f21-9438-bfdfd8b95f21/Screenshot+2026-10-23+114738.png"
     },
     {
       "date_iso": "2026-10-08",
