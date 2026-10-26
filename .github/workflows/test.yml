@@ -3,7 +3,7 @@ name: Alert guard tests
 # Runs the stdlib tests that pin "a failed fetch must never empty the published feed"
 # (alerts/test_guards.py) whenever the fetch code or a workflow changes, and checks that the
 # deploy-time shrink guard in alerts-multi.yml has not been removed. The scheduled data refreshes
-# commit only staging-site/ with [skip ci], so they never start this. No network, no secrets.
+# commit only staging-site/ and skip CI, so they never start this. No network, no secrets.
 
 on:
   push:
