@@ -26,6 +26,7 @@ import importlib.util
 import json
 import os
 import re
+import time
 import urllib.request
 from datetime import datetime, timezone
 from typing import Any, Dict, List
@@ -39,6 +40,9 @@ _spec.loader.exec_module(_fn)  # type: ignore[union-attr]
 API = "https://theknow.org.au/wp-json/wp/v2/alerts_warnings"
 PER_PAGE = 100
 MAX_PAGES = 5   # 200 records at 2026-10-08; hard stop so a pagination bug can never loop
+FETCH_ATTEMPTS = 3          # one slow response (a 45 s timeout on 2026-10-25) must not wipe the feed
+FETCH_BACKOFF_SECONDS = (5, 20)   # wait before attempt 2 and attempt 3
+FETCH_TIMEOUT_SECONDS = 30
 
 # Retention. Reading only the newest 50 records (the original behaviour) silently cut off
 # every alert from the low-volume jurisdictions: at 2026-10-08 The Know held QLD 7 / SA 4 /
@@ -106,22 +110,37 @@ def _fetch_json(url: str):
         return json.loads(r.read().decode("utf-8", "replace"))
 
 
+def _fetch_page(page: int):
+    """One page of records plus the total page count, retried on transient network errors."""
+    url = f"{API}?per_page={PER_PAGE}&page={page}&orderby=date&order=desc"
+    last_error: Exception = RuntimeError("no attempt made")
+    for attempt in range(FETCH_ATTEMPTS):
+        if attempt:
+            time.sleep(FETCH_BACKOFF_SECONDS[min(attempt - 1, len(FETCH_BACKOFF_SECONDS) - 1)])
+        try:
+            req = urllib.request.Request(url, headers={"User-Agent": _fn.UA})
+            with urllib.request.urlopen(req, timeout=FETCH_TIMEOUT_SECONDS) as r:
+                batch = json.loads(r.read().decode("utf-8", "replace"))
+                try:
+                    total_pages = int(r.headers.get("X-WP-TotalPages") or 1)
+                except ValueError:
+                    total_pages = 1
+            if not isinstance(batch, list):
+                raise ValueError("unexpected API response shape")
+            return batch, total_pages
+        except Exception as e:  # noqa: BLE001
+            last_error = e
+            _fn.log(f"The Know page {page} attempt {attempt + 1}/{FETCH_ATTEMPTS} failed:", e)
+    raise last_error
+
+
 def _fetch_all_records() -> List[Dict[str, Any]]:
     """Walk the WordPress pagination (X-WP-TotalPages) and return every record, newest first."""
     records: List[Dict[str, Any]] = []
     total_pages = 1
     page = 1
     while page <= total_pages and page <= MAX_PAGES:
-        url = f"{API}?per_page={PER_PAGE}&page={page}&orderby=date&order=desc"
-        req = urllib.request.Request(url, headers={"User-Agent": _fn.UA})
-        with urllib.request.urlopen(req, timeout=45) as r:
-            batch = json.loads(r.read().decode("utf-8", "replace"))
-            try:
-                total_pages = int(r.headers.get("X-WP-TotalPages") or 1)
-            except ValueError:
-                total_pages = 1
-        if not isinstance(batch, list):
-            raise ValueError("unexpected API response shape")
+        batch, total_pages = _fetch_page(page)
         records.extend(batch)
         page += 1
     return records
@@ -156,11 +175,12 @@ def _apply_retention(alerts: List[Dict[str, Any]], today, retention_days: int,
 
 def parse(source_config: Dict[str, Any]) -> List[Dict[str, Any]]:
     covers = set(source_config.get("covers_state_codes", []))
-    try:
-        records = _fetch_all_records()
-    except Exception as e:  # noqa: BLE001
-        _fn.log("The Know API fetch failed:", e)
-        return []
+    # A failed fetch must RAISE, not return []. fetch_all_sources.py records the exception as a
+    # source error and refuses to overwrite the last good feed. Returning [] here once made a
+    # single timeout look like "The Know has no alerts" and published an empty feed (2026-10-25).
+    records = _fetch_all_records()
+    if not records:
+        raise ValueError("The Know API answered with zero records (expected 200 or more)")
 
     now = datetime.now(timezone.utc).isoformat(timespec="seconds")
     alerts: List[Dict[str, Any]] = []

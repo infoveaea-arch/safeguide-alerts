@@ -204,6 +204,15 @@ def main():
             "Leaving existing alerts.json untouched.")
         return 0
 
+    # The currently deployed feed. Used to keep an alert whose PDF cannot be downloaded this
+    # run (a network blip must not silently delete a safety alert), and to refuse an empty result.
+    try:
+        with open(OUT_JSON, encoding="utf-8") as f:
+            existing = json.load(f)
+    except (OSError, ValueError):
+        existing = None
+    previous_by_url = {a.get("pdf_url"): a for a in (existing or {}).get("alerts") or []}
+
     alerts = []
     new_count = 0
     for path, image_url in pairs:
@@ -225,6 +234,9 @@ def main():
                 new_count += 1
             except Exception as e:  # noqa: BLE001 — never let one bad PDF abort the run
                 log("  ERROR fetching", fname, "->", e)
+                if url in previous_by_url:
+                    log("  keeping the previously published entry for", fname)
+                    alerts.append(previous_by_url[url])
                 continue
         # Derived fields are recomputed every run from cached text, so parser
         # improvements take effect without re-downloading.
@@ -252,15 +264,14 @@ def main():
     with open(CACHE_JSON, "w", encoding="utf-8") as f:
         json.dump(cache, f, ensure_ascii=False, indent=2)
 
+    # Never replace a feed that has alerts with an empty one: that is a failed run, not news.
+    if not alerts and previous_by_url:
+        log(f"ERROR: parsed 0 alerts but {len(previous_by_url)} are published - leaving {OUT_JSON} untouched.")
+        return 1
+
     # Only rewrite the deployed JSON when the alert *content* changes, so the
     # daily job doesn't redeploy an identical file every morning. `generated_at`
     # therefore tracks "alerts last changed", which is the right UI semantic.
-    try:
-        with open(OUT_JSON, encoding="utf-8") as f:
-            existing = json.load(f)
-    except (OSError, ValueError):
-        existing = None
-
     if existing and existing.get("alerts") == alerts:
         log(f"No content change ({len(alerts)} alerts) — leaving {OUT_JSON} as-is")
         return 0

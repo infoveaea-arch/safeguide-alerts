@@ -82,6 +82,25 @@ jobs:
       - name: Run unified fetcher
         run: python3 alerts/fetch_all_sources.py
 
+      # Second line of defence, independent of the guard inside fetch_all_sources.py: never deploy a
+      # feed that lost half or more of its alerts since the committed copy. On 2026-10-25 one source
+      # timeout turned 55 alerts into 0, the run stayed green and production served an empty feed.
+      - name: Refuse to deploy a shrunken feed
+        run: |
+          python3 - <<'PY'
+          import json, os, subprocess, sys
+          path = os.environ["LOCAL"]
+          new = len(json.load(open(path)).get("alerts") or [])
+          try:
+              old = len(json.loads(subprocess.check_output(["git", "show", f"HEAD:{path}"], stderr=subprocess.DEVNULL)).get("alerts") or [])
+          except subprocess.CalledProcessError:
+              old = 0
+          print(f"alerts: committed {old}, this run {new}")
+          if old and new < old * 0.5:
+              print(f"::error::feed would shrink from {old} to {new} alerts; refusing to deploy")
+              sys.exit(1)
+          PY
+
       # Written to RUNNER_TEMP, never into the repo, so it is not committed.
       - name: Write heartbeat
         run: python3 alerts/heartbeat.py "$LOCAL" "$RUNNER_TEMP/status-multi.json" multi

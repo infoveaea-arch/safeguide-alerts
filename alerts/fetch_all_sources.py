@@ -149,8 +149,9 @@ class UnifiedAlertFetcher:
 
         return unique
 
-    def save_output(self, output_path: Path = OUTPUT_PATH) -> bool:
-        """Save normalized alerts to JSON."""
+    def save_output(self, output_path: Path = OUTPUT_PATH, allow_empty: bool = False) -> bool:
+        """Save normalized alerts to JSON. Returns False, leaving the last good file in place,
+        when the new result looks like a failed fetch rather than real data."""
         try:
             # Skip rewriting if the alert *content* is unchanged, so the daily CI
             # job doesn't redeploy an identical file every run just because the
@@ -160,6 +161,18 @@ class UnifiedAlertFetcher:
                     existing = json.load(f)
             except (OSError, ValueError):
                 existing = None
+
+            # Never replace a good feed with a worse one because a source failed. On 2026-10-25 a
+            # single timeout produced an empty result that was written, deployed and served as
+            # "no alerts" while the run went green. Quiet sources are fine; a feed that goes from
+            # many alerts to none, or that shrinks while a source reported an error, is not.
+            previous = (existing or {}).get("alerts") or []
+            if previous and not allow_empty and (not self.alerts or (self.errors and len(self.alerts) < len(previous))):
+                logger.error(
+                    f"Refusing to overwrite {len(previous)} alerts with {len(self.alerts)} "
+                    f"(source errors: {self.errors or 'none'}) - keeping the last good {output_path}"
+                )
+                return False
             # Compare ignoring the volatile per-alert `last_updated` (fetch time),
             # which would otherwise change every run and defeat change-detection.
             def _stable(alerts):
@@ -213,6 +226,8 @@ def main():
     parser.add_argument('--output', type=Path, default=OUTPUT_PATH, help='Output file path')
     parser.add_argument('--sources', type=str, help='Comma-separated source keys to fetch (default: all)')
     parser.add_argument('--dry-run', action='store_true', help='Parse but do not save')
+    parser.add_argument('--allow-empty', action='store_true',
+                        help='Allow an empty result to replace a non-empty feed (default: refuse)')
 
     args = parser.parse_args()
 
@@ -221,13 +236,14 @@ def main():
     fetcher = UnifiedAlertFetcher(args.config)
     fetcher.fetch_all(source_filter)
 
+    saved = True
     if args.dry_run:
         logger.info("Dry run: not saving output")
         print(json.dumps(fetcher.alerts[:3], indent=2))  # Print first 3 as preview
     else:
-        fetcher.save_output(args.output)
+        saved = fetcher.save_output(args.output, allow_empty=args.allow_empty)
 
-    sys.exit(0 if not fetcher.errors else 1)
+    sys.exit(0 if saved and not fetcher.errors else 1)
 
 
 if __name__ == '__main__':
