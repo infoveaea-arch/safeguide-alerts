@@ -1,0 +1,39 @@
+name: Alert guard tests
+
+# Runs the stdlib tests that pin "a failed fetch must never empty the published feed"
+# (alerts/test_guards.py) whenever the fetch code or a workflow changes, and checks that the
+# deploy-time shrink guard in alerts-multi.yml has not been removed. The scheduled data refreshes
+# commit only staging-site/ with [skip ci], so they never start this. No network, no secrets.
+
+on:
+  push:
+    paths:
+      - "alerts/**"
+      - ".github/workflows/**"
+  pull_request:
+    paths:
+      - "alerts/**"
+      - ".github/workflows/**"
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+
+jobs:
+  guards:
+    timeout-minutes: 5
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.11"
+
+      - name: Guard tests
+        run: python3 -m unittest alerts/test_guards.py -v
+
+      # The second line of defence lives in YAML, where no unit test reaches it.
+      - name: Deploy-time shrink guard is still in the multi-region workflow
+        run: grep -q "Refuse to deploy a shrunken feed" .github/workflows/alerts-multi.yml

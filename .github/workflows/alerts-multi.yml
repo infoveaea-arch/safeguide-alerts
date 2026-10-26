@@ -57,7 +57,7 @@ jobs:
     timeout-minutes: 15
     runs-on: ubuntu-24.04   # pinned: ubuntu-latest moves to Ubuntu 26 on 2026-10-19 (unverified with setup-python 3.11 / lftp)
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       - name: Install tools (poppler-utils, lftp)
         run: |
@@ -65,7 +65,7 @@ jobs:
           sudo apt-get install -y -qq poppler-utils lftp
 
       - name: Set up Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
           python-version: "3.11"
 
@@ -74,7 +74,7 @@ jobs:
 
       # Persist the PDF text cache between runs (used only if PDF parsers are enabled).
       - name: Restore PDF cache
-        uses: actions/cache@v4
+        uses: actions/cache@v5
         with:
           path: alerts/.state
           key: safeguide-multi-pdf-cache
