@@ -1,9 +1,18 @@
 {
   "source": "https://www.vicpilltesting.org.au/drug-notifications",
   "source_name": "Victorian Pill Testing Service (VPTS)",
-  "generated_at": "2026-10-23T15:07:08+00:00",
-  "count": 33,
+  "generated_at": "2026-11-06T17:32:55+00:00",
+  "count": 34,
   "alerts": [
+    {
+      "date_iso": "2026-11-06",
+      "date_human": "6 November 2026",
+      "severity": "general",
+      "title": "General NN Dipropyl Dimethocaine",
+      "summary": "N,N-Dipropyl Dimethocaine detected in samples expected to be MDMA No MDMA was detected.",
+      "pdf_url": "https://www.vicpilltesting.org.au/s/061127-General-Notification-NN-Dipropyl-Dimethocaine.pdf",
+      "image_url": "https://images.squarespace-cdn.com/content/v1/68246f9efe435317efa3188a/bbdc7900-9e03-4f26-b0a1-2665690beaf9/06.11.27.png"
+    },
     {
       "date_iso": "2026-10-22",
       "date_human": "22 October 2026",
