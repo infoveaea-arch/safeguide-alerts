@@ -1,9 +1,18 @@
 {
   "source": "https://www.vicpilltesting.org.au/drug-notifications",
   "source_name": "Victorian Pill Testing Service (VPTS)",
-  "generated_at": "2026-11-06T17:32:55+00:00",
-  "count": 34,
+  "generated_at": "2026-11-15T17:13:48+00:00",
+  "count": 35,
   "alerts": [
+    {
+      "date_iso": "2026-11-15",
+      "date_human": "15 November 2026",
+      "severity": "high",
+      "title": "Urgent Chloro Desmethylchlorphine in Bromazolam 2",
+      "summary": "Chloro desmethylchlorphine - a potent synthetic opioid - detected in powder expected to contain bromazolam No bromazolam or filler was detected.",
+      "pdf_url": "https://www.vicpilltesting.org.au/s/151126-Urgent-Notification-Chloro-Desmethylchlorphine-in-Bromazolam-2.pdf",
+      "image_url": "https://images.squarespace-cdn.com/content/v1/68246f9efe435317efa3188a/b9227648-94f9-4867-8107-7aa06c166bdd/1.jpg"
+    },
     {
       "date_iso": "2026-11-06",
       "date_human": "6 November 2026",
